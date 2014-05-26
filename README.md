@@ -2,7 +2,7 @@
 
 PageSpeed Insights for Node
 
-**NOTE: THIS MODULE IS HEAVILY UNDER CONSTRUCTION**
+**NOTE: THIS MODULE IS STILL UNDER CONSTRUCTION**
 
 ## Getting Started
 Install the module with: `npm install pagespeed-insights`
@@ -16,6 +16,8 @@ pagespeed-insights({
 	strategy: 'mobile',
 	threshold: 80}); 
 ```
+
+<img src="http://i.imgur.com/gmID0kz.png">
 
 ## Documentation
 _(Coming soon)_
