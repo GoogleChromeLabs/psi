@@ -13,11 +13,11 @@ function printHelp() {
   console.log(pkg.description);
   console.log('');
   console.log('Usage:');
-  console.log('  $ pagespeed-insights <url> --key=<key>');
+  console.log('  $ psi <url> --key=<key>');
   console.log('');
   console.log('Optional, supply other arguments.');
   console.log('See https://developers.google.com/speed/docs/insights/v1/getting_started for description');
-  console.log('  $ pagespeed-insights <url> --key=<key> --callback=<callback> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>');
+  console.log('  $ psi <url> --key=<key> --callback=<callback> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>');
 }
 
 if (!query || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
