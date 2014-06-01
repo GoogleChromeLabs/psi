@@ -23,7 +23,8 @@
   },
   "files": [
     "index.js",
-    "output.js"
+    "output.js",
+    "cli.js"
   ],
   "keywords": [
     "pagespeed",
