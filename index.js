@@ -3,7 +3,7 @@
  * http://github.com/addyosmani/pagespeed-insights
  *
  * Copyright (c) 2014 Addy Osmani
- * Licensed under the Apache 2.0 license.
+ * Licensed under an MIT license.
  */
 
 'use strict';
