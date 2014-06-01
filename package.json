@@ -30,6 +30,10 @@
     "pagespeed",
     "insights"
   ],
+  "dependencies": {
+    "minimist": "^0.1.0",
+    "request": "^2.36.0"
+  },
   "devDependencies": {
     "mocha": "*",
     "gpagespeed": "0.0.6"
