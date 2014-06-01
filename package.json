@@ -1,18 +1,21 @@
 {
-  "name": "pagespeed-insights",
+  "name": "psi",
   "version": "0.0.1",
-  "main": "lib/pagespeed-insights.js",
+  "main": "index.js",
   "description": "PageSpeed Insights for Node",
-  "homepage": "http://github.com/addyosmani/pagespeed-insights",
-  "bugs": "https://github.com/addyosmani/pagespeed-insights/issues",
+  "homepage": "http://github.com/addyosmani/psi",
+  "bugs": "https://github.com/addyosmani/psi/issues",
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
     "url": "addyosmani.com"
   },
+  "bin": {
+    "psi": "cli.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/addyosmani/pagespeed-insights"
+    "url": "https://github.com/addyosmani/psi"
   },
   "license": "MIT",
   "scripts": {
