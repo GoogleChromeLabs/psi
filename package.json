@@ -32,10 +32,10 @@
   ],
   "dependencies": {
     "minimist": "^0.1.0",
-    "request": "^2.36.0"
+    "request": "^2.36.0",
+    "gpagespeed": "0.0.6"
   },
   "devDependencies": {
-    "mocha": "*",
-    "gpagespeed": "0.0.6"
+    "mocha": "*"
   }
 }
