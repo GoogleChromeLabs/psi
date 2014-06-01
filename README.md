@@ -42,6 +42,10 @@ psi(options, function(err, data){
 });
 ```
 
+## CLI support
+
+Coming soon.
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © [Addy Osmani](http://addyosmani.com)
