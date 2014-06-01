@@ -44,7 +44,23 @@ psi(options, function(err, data){
 
 ## CLI support
 
-Coming soon.
+You will probably want to globally install psi if using as a CLI. This can be done as follows:
+
+```
+npm install -g psi
+```
+
+You can then casually use it with your key:
+
+```
+$ psi http://www.google.com --key 'YOUR_KEY_GOES_HERE'
+```
+
+Per gpagespeed, the following optional flags are also supported:
+
+```
+$ psi <url> --key=<key> --callback=<callback> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
+```
 
 ## License
 
