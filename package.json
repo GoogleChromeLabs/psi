@@ -14,21 +14,20 @@
     "type": "git",
     "url": "https://github.com/addyosmani/pagespeed-insights"
   },
-  "license": "Apache 2.0",
-  "files": [
-    "lib"
-  ],
-  "keywords": [],
-  "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1",
-    "jshint-stylish": "^0.2.0",
-    "gpagespeed": "0.0.6"
-  },
+  "license": "MIT",
   "scripts": {
-    "test": "node ./lib/test.js"
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "output.js"
+  ],
+  "keywords": [
+    "pagespeed",
+    "insights"
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "gpagespeed": "0.0.6"
   }
 }
