@@ -1,32 +1,41 @@
-# pagespeed-insights [![Build Status](https://secure.travis-ci.org/addyosmani/pagespeed-insights.png?branch=master)](http://travis-ci.org/addyosmani/pagespeed-insights)
+# pagespeed-insights [![Build Status](https://travis-ci.org/addyosmani/pagespeed-insights.svg?branch=master)](https://travis-ci.org/addyosmani/pagespeed-insights)
 
-PageSpeed Insights for Node
+> PageSpeed Insights With Reporting
 
-**NOTE: THIS MODULE IS STILL UNDER CONSTRUCTION**
+## Install
 
-## Getting Started
-Install the module with: `npm install pagespeed-insights`
-
-```javascript
-var pagespeed-insights = require('pagespeed-insights');
-pagespeed-insights({
-	key: '...',
-	url: 'http://html5rocks.com',
-	locale: 'en_GB',
-	strategy: 'mobile',
-	threshold: 80}); 
+```bash
+$ npm install --save pagespeed-insights
 ```
 
-<img src="http://i.imgur.com/gmID0kz.png">
+## Preview
 
-## Documentation
-_(Coming soon)_
+<img src="https://camo.githubusercontent.com/b0942adcf4ce21dec89512c6651c0e5ce313eb2b/687474703a2f2f692e696d6775722e636f6d2f676d4944306b7a2e706e67"/>
 
-## Examples
-_(Coming soon)_
+## Usage
 
-## Release History
-_(Nothing yet)_
+```js
+var testData = ({
+	key: 'AIzaSyCHBBOqcgSVUC_shyK6BEAKOZZoBpJCF6g',
+	url: 'http://html5rocks.com',
+	paths: '',           // optional
+	locale: 'en_GB',     // optional
+	strategy: 'mobile',  // optional
+	threshold: 80        // optional
+});	
+
+pagespeed(testData);
+```
+
+Optionally, a callback is also available with access to the response:
+
+```
+pagespeed(options, function(err, data){
+	console.log(data.score);
+	console.log(data.pageStats);
+});
+```
 
 ## License
-Copyright (c) 2014 Addy Osmani, James Cryer. Licensed under the Apache2 license.
+
+[MIT](http://opensource.org/licenses/MIT) © [Addy Osmani](http://addyosmani.com)
