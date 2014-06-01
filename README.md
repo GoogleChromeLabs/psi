@@ -2,6 +2,8 @@
 
 > PageSpeed Insights With Reporting
 
+Node module for auditing a page with [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with fancy reporting for your build.
+
 ## Install
 
 ```bash
@@ -14,9 +16,11 @@ $ npm install --save pagespeed-insights
 
 ## Usage
 
+Note: a developer API key is required from the [Google Developer Console](https://console.developers.google.com/) in order to use this module.
+
 ```js
 var testData = ({
-	key: 'AIzaSyCHBBOqcgSVUC_shyK6BEAKOZZoBpJCF6g',
+	key: '...',
 	url: 'http://html5rocks.com',
 	paths: '',           // optional
 	locale: 'en_GB',     // optional
