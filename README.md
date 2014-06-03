@@ -14,7 +14,7 @@ $ npm install --save psi
 
 ## Preview
 
-<img src="https://camo.githubusercontent.com/b0942adcf4ce21dec89512c6651c0e5ce313eb2b/687474703a2f2f692e696d6775722e636f6d2f676d4944306b7a2e706e67"/>
+<img src="http://i.imgur.com/pbLR4pV.png"/>
 
 ## Usage
 
