@@ -1,4 +1,8 @@
 'use strict';
+// Based on the reporting in grunt-pagespeed by James Cryer
+// TODO: Refactor further as this still uses patterns that 
+// are based on Grunt conventions.
+
 exports.init = function () {
     var addSpacesToWords, bufferSpace, divder, exports, firstToUpperCaseAndAddSpace, generateRuleSetResults, generateScore, generateStatistics, print, score, threshold;
     score = 0;
