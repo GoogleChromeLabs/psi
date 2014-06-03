@@ -1,8 +1,10 @@
-# psi [![Build Status](https://travis-ci.org/addyosmani/psi.svg?branch=master)](https://travis-ci.org/addyosmani/psi)
+# psi
 
 > PageSpeed Insights With Reporting
 
-Node module for auditing a page with [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with fancy reporting for your build. Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/).
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. 
+
+Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/) and the reporter in [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed).
 
 ## Install
 
@@ -59,8 +61,12 @@ $ psi http://www.google.com --key 'YOUR_KEY_GOES_HERE'
 Per gpagespeed, the following optional flags are also supported:
 
 ```
-$ psi <url> --key=<key> --callback=<callback> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
+$ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
 ```
+
+## Sample Gulpfile
+
+A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available. If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task that offers similar PageSpeed reporting options.
 
 ## License
 
