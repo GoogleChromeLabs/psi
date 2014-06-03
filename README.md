@@ -18,21 +18,19 @@ $ npm install --save psi
 
 ## Usage
 
-Note: a developer API key is required from the [Google Developer Console](https://console.developers.google.com/) in order to use this module.
+Note: a developer API key is required from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) in order to use this module.
 
 ```js
 var psi = require('psi');
 
-var options = ({
+psi({
 	key: '...',
 	url: 'http://html5rocks.com',
 	paths: '',           // optional
 	locale: 'en_GB',     // optional
 	strategy: 'mobile',  // optional
 	threshold: 80        // optional
-});	
-
-psi(options);
+});
 ```
 
 Optionally, a callback is also available with access to the response:
