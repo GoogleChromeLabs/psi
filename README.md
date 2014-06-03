@@ -42,6 +42,45 @@ psi(options, function(err, data){
 });
 ```
 
+###Supported properties
+
+####url
+Type: `String`
+
+URL of the page for which the PageSpeed Insights API should generate results.
+
+####locale
+Type: `String`
+
+The locale that results should be generated in (e.g 'en_GB').
+
+####strategy
+Type: `String`
+
+The strategy to use when analyzing the page. Valid values are desktop and mobile.
+
+####threshold
+Type: `Number`
+
+Threshold score that is needed to pass the pagespeed test
+
+####paths
+Type: `Array`
+
+An array of URL paths that are appended to the URL
+
+###Options
+
+####key
+Type: `String`
+
+[Google API Key](https://code.google.com/apis/console/)
+
+####url
+Type: `String`
+
+The URL of the page for which the PageSpeed Insights API should generate results.
+
 ## CLI support
 
 You will probably want to globally install psi if using as a CLI. This can be done as follows:
