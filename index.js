@@ -1,6 +1,6 @@
 /*
- * pagespeed-insights
- * http://github.com/addyosmani/pagespeed-insights
+ * psi
+ * http://github.com/addyosmani/psi
  *
  * Copyright (c) 2014 Addy Osmani
  * Licensed under an MIT license.
