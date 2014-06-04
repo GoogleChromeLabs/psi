@@ -103,11 +103,18 @@ You can then casually use it with your key:
 $ psi http://www.google.com --key 'YOUR_KEY_GOES_HERE'
 ```
 
-Per gpagespeed, the following optional flags are also supported:
+Similar to gpagespeed, the following optional flags are also supported:
 
 ```
 $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
 ```
+
+Most people will probably just want to run this using the free tier key. You can specify this with the `--nokey` flag:
+
+```
+$ psi http://www.html5rocks.com --nokey
+```
+
 
 ## Getting PSI into your build
 
