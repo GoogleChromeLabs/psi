@@ -112,7 +112,7 @@ $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale>
 Most people will probably just want to run this using the free tier key. You can specify this with the `--nokey` flag:
 
 ```
-$ psi http://www.html5rocks.com --nokey
+$ psi http://www.html5rocks.com --nokey --strategy=mobile
 ```
 
 
