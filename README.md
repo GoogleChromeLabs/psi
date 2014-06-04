@@ -18,13 +18,16 @@ $ npm install --save psi
 
 ## Usage
 
-Note: a developer API key is required from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) in order to use this module.
+Note: By default we recommend using the `nokey` option to test-drive PageSpeed Insights. This doesn't require any extra work on your part nor an API key.
+
+For a production-level build process, registering for an API key is recommented from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) in order to use this module.
 
 ```js
 var psi = require('psi');
 
 psi({
-	key: '...',
+	// key: '...', optional
+	nokey: 'true',
 	url: 'http://html5rocks.com',
 	paths: '',           // optional
 	locale: 'en_GB',     // optional
@@ -75,6 +78,11 @@ An array of URL paths that are appended to the URL
 Type: `String`
 
 [Google API Key](https://code.google.com/apis/console/)
+
+####nokey
+Type: `String`
+
+Specify to use the free tier on PageSpeed Insights. Good for getting a feel for how well it works for you.
 
 ####url
 Type: `String`
