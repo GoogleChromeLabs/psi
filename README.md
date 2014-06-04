@@ -2,7 +2,7 @@
 
 > PageSpeed Insights With Reporting
 
-Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. 
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. A sample [Gulpfile](https://github.com/addyosmani/psi-gulp-sample) demonstrating use is also available.
 
 Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/) and the reporter in [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed).
 
@@ -109,7 +109,7 @@ Per gpagespeed, the following optional flags are also supported:
 $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
 ```
 
-## Sample Gulpfile
+## Getting PSI into your build
 
 A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available. If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task that offers similar PageSpeed reporting options.
 
