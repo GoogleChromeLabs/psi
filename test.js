@@ -2,11 +2,10 @@
 var fs = require('fs');
 var assert = require('assert');
 var insights = require('./index');
-var key = 'AIzaSyCHBBOqcgSVUC_shyK6BEAKOZZoBpJCF6g';
 
 it('should throw if no valid URL is provided', function (done) {
 	insights({
-		key: key
+		nokey: true
 	}, function(err, data){
 	    if(/Invalid url/.test(err)) {
 	        return true;
@@ -15,9 +14,9 @@ it('should throw if no valid URL is provided', function (done) {
 	});
 });
 
-it('should return desktop results from PageSpeed Insights', function (done) {	
+it('should return desktop results from PageSpeed Insights', function (done) {
 	insights({
-		key: key,
+		nokey: true,
 		url: 'http://html5rocks.com',
 		strategy: 'desktop',
 		threshold: 80
@@ -30,7 +29,7 @@ it('should return desktop results from PageSpeed Insights', function (done) {
 
 it('should return mobile results from PageSpeed Insights', function (done) {
 	insights({
-		key: key,
+		nokey: true,
 		url: 'http://html5rocks.com',
 		locale: 'en_GB',
 		strategy: 'mobile',
