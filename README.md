@@ -115,10 +115,11 @@ Most people will probably just want to run this using the free tier key. You can
 $ psi http://www.html5rocks.com --nokey --strategy=mobile
 ```
 
-
 ## Getting PSI into your build
 
-A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available. If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task that offers similar PageSpeed reporting options.
+A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available. 
+
+If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
 ## License
 
