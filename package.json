@@ -1,6 +1,6 @@
 {
   "name": "psi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "description": "PageSpeed Insights for Node",
   "homepage": "http://github.com/addyosmani/psi",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/addyosmani/psi"
   },
-  "license": "MIT",
+  "license": "Apache 2",
   "scripts": {
     "test": "mocha"
   },
