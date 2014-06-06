@@ -122,4 +122,5 @@ A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Addy Osmani](http://addyosmani.com)
+Apache 2.0  
+Copyright 2014 Google Inc

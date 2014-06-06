@@ -2,8 +2,8 @@
  * psi
  * http://github.com/addyosmani/psi
  *
- * Copyright (c) 2014 Addy Osmani
- * Licensed under an MIT license.
+ * Copyright (c) 2014 Google Inc.
+ * Licensed under an Apache 2 license.
  */
 
 'use strict';
