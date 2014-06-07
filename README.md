@@ -1,4 +1,4 @@
-# psi [![Dependency Status](https://david-dm.org/addyosmani/psi.svg)](https://david-dm.org/addyosmani/psi) [![devDependency Status](https://david-dm.org/addyosmani/psi/dev-status.svg)](https://david-dm.org/addyosmani/psi#info=devDependencies)
+# psi [![Dependency Status](https://david-dm.org/addyosmani/psi.svg)](https://david-dm.org/addyosmani/psi) [![devDependency Status](https://david-dm.org/addyosmani/psi/dev-status.svg)](https://david-dm.org/addyosmani/psi#info=devDependencies) [![Build Status](https://travis-ci.org/addyosmani/psi.svg?branch=master)](https://travis-ci.org/addyosmani/psi)
 
 > PageSpeed Insights With Reporting
 
