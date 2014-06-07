@@ -20,7 +20,7 @@ $ npm install --save psi
 
 Note: By default we recommend using the `nokey` option to test-drive PageSpeed Insights. This doesn't require any extra work on your part nor an API key.
 
-For a production-level build process, registering for an API key is recommented from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) in order to use this module.
+When using this module for a production-level build process, registering for an API key from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) is recommended.
 
 ```js
 var psi = require('psi');
