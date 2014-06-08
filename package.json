@@ -35,7 +35,8 @@
   ],
   "dependencies": {
     "minimist": "^0.1.0",
-    "gpagespeed": "0.0.6"
+    "gpagespeed": "0.0.6",
+    "pretty-bytes": "^0.1.1"
   },
   "devDependencies": {
     "mocha": "^1.20.1"

@@ -3,6 +3,8 @@
 // TODO: Refactor further as this still uses patterns that
 // are based on Grunt conventions.
 
+var prettyBytes = require('pretty-bytes');
+
 exports.init = function () {
     var addSpacesToWords, bufferSpace, divder, exports, firstToUpperCaseAndAddSpace, generateRuleSetResults, generateScore, generateStatistics, print, score, threshold;
     score = 0;
@@ -32,7 +34,9 @@ exports.init = function () {
         var result, title, _results;
         _results = [];
         for (title in statistics) {
-            result = statistics[title];
+            result = title.indexOf('Bytes') !== -1
+                ? prettyBytes(+statistics[title])
+                : statistics[title];
             title = firstToUpperCaseAndAddSpace(title);
             title += bufferSpace(title);
             _results.push(console.log("" + title + "| " + result));
@@ -59,6 +63,7 @@ exports.init = function () {
         return buffer;
     };
     firstToUpperCaseAndAddSpace = function (msg) {
+        msg = msg.replace('Bytes', '');
         return msg.charAt(0).toUpperCase() + addSpacesToWords(msg.slice(1));
     };
     addSpacesToWords = function (msg) {
