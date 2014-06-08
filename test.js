@@ -33,7 +33,7 @@ it('should return mobile results from PageSpeed Insights', function (done) {
 		url: 'http://html5rocks.com',
 		locale: 'en_GB',
 		strategy: 'mobile',
-		threshold: 80
+		threshold: 73
 	}, function(err, data){
 		assert(data.score == 73);
 		assert(data.responseCode == 200);

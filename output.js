@@ -1,6 +1,6 @@
 'use strict';
 // Based on the reporting in grunt-pagespeed by James Cryer
-// TODO: Refactor further as this still uses patterns that 
+// TODO: Refactor further as this still uses patterns that
 // are based on Grunt conventions.
 
 exports.init = function () {
@@ -78,6 +78,9 @@ exports.init = function () {
     exports.process = function (parameters, response, done) {
         if (done == null) {
             done = (function () {});
+        }
+        if (parameters.threshold !== null) {
+            threshold = parameters.threshold;
         }
         console.log('Pagespeed Insights: Processing results');
         score = response.score;
