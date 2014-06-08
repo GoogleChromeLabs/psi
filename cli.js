@@ -34,7 +34,7 @@ if (query.indexOf('http') !== -1) {
   opts.url = argv._[0];
 }
 
-if(!opts.url || (!argv.key && !argv.nokey)){
+if(!opts.url){
   printHelp();
   return;
 }
@@ -65,10 +65,6 @@ if(argv.locale){
 
 if(argv.strategy){
   opts.strategy = argv.strategy;
-}
-
-if(argv.nokey){
-  opts.nokey = argv.nokey;
 }
 
 insights(opts);

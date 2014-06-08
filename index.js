@@ -12,6 +12,8 @@ var output = require('./output').init();
 
 module.exports = function (opts, cb) {
 	opts = opts || {};
+	opts.nokey = opts.key === void 0;
+
 	cb = cb || function () {};
 	console.log('Running Pagespeed Insights');
 	pagespeed(opts, function(err, data){
@@ -20,7 +22,7 @@ module.exports = function (opts, cb) {
 	  } else {
 		  var response = JSON.parse(data);
 		  output.process(opts, response);
-		  cb(err, response);	  	
+		  cb(err, response);
 		}
 	});
 };

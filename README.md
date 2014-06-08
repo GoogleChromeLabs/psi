@@ -18,8 +18,6 @@ $ npm install --save psi
 
 ## Usage
 
-Note: By default we recommend using the `nokey` option to test-drive PageSpeed Insights. This doesn't require any extra work on your part nor an API key.
-
 When using this module for a production-level build process, registering for an API key from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) is recommended.
 
 ```js
@@ -27,7 +25,6 @@ var psi = require('psi');
 
 psi({
 	// key: '...', optional
-	nokey: 'true',
 	url: 'http://html5rocks.com',
 	paths: '',           // optional
 	locale: 'en_GB',     // optional
@@ -79,10 +76,7 @@ Type: `String`
 
 [Google API Key](https://code.google.com/apis/console/)
 
-####nokey
-Type: `String`
-
-Specify to use the free tier on PageSpeed Insights. Good for getting a feel for how well it works for you.
+Unless Specified defaults to use the free tier on PageSpeed Insights. Good for getting a feel for how well this tool works for you.
 
 ####url
 Type: `String`
@@ -109,10 +103,8 @@ Similar to gpagespeed, the following optional flags are also supported:
 $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
 ```
 
-Most people will probably just want to run this using the free tier key. You can specify this with the `--nokey` flag:
-
 ```
-$ psi http://www.html5rocks.com --nokey --strategy=mobile
+$ psi http://www.html5rocks.com --strategy=mobile
 ```
 
 ## Getting PSI into your build
