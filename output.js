@@ -6,15 +6,13 @@
 var prettyBytes = require('pretty-bytes');
 
 exports.init = function () {
-    var addSpacesToWords, bufferSpace, divder, exports, firstToUpperCaseAndAddSpace, generateRuleSetResults, generateScore, generateStatistics, print, score, threshold;
+    var addSpacesToWords, bufferSpace, divder, exports, firstToUpperCaseAndAddSpace, generateRuleSetResults, generateScore, generateStatistics, score, threshold;
     score = 0;
     threshold = 70;
     exports = {};
 
     generateScore = function (strategy, response) {
-        var output;
-        output = "URL:      " + response.id + "\nStrategy: " + strategy + " \nScore:    " + score;
-        return console.log(output);
+        return "URL:      " + response.id + "\nStrategy: " + strategy + " \nScore:    " + score;
     };
 
     generateRuleSetResults = function (rulesets) {
@@ -25,9 +23,9 @@ exports.init = function () {
             title = firstToUpperCaseAndAddSpace(title);
             title += bufferSpace(title);
             ruleImpact = Math.ceil(result.ruleImpact * 100) / 100;
-            _results.push(console.log("" + title + "| " + ruleImpact));
+            _results.push("" + title + "| " + ruleImpact);
         }
-        return _results;
+        return _results.join("\n");
     };
 
     generateStatistics = function (statistics) {
@@ -39,18 +37,11 @@ exports.init = function () {
                 : statistics[title];
             title = firstToUpperCaseAndAddSpace(title);
             title += bufferSpace(title);
-            _results.push(console.log("" + title + "| " + result));
+            _results.push("" + title + "| " + result);
         }
-        return _results;
+        return _results.join("\n");
     };
-    print = function (msg) {
-        if (score >= threshold) {
-            console.log(msg);
-        }
-        if (score < threshold) {
-            throw new Error(msg);
-        }
-    };
+
     bufferSpace = function (msg, length) {
         var buffer;
         if (length == null) {
@@ -69,37 +60,34 @@ exports.init = function () {
     addSpacesToWords = function (msg) {
         return msg.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, "$1");
     };
-    divder = function (length) {
-        if (length == null) {
-            length = 65;
-        }
-        console.log("");
-        console.log(Array(length).join("-"));
-        return console.log("");
+    divder = function () {
+        return "\n"+Array(65).join("-")+"\n";
     };
     exports.threshold = function (limit) {
         return threshold = limit;
     };
     exports.process = function (parameters, response, done) {
-        if (done == null) {
-            done = (function () {});
-        }
-        if (parameters.threshold !== null) {
-            threshold = parameters.threshold;
-        }
-        console.log('Pagespeed Insights: Processing results');
-        score = response.score;
-        divder();
-        generateScore(parameters.strategy, response);
-        divder();
-        generateStatistics(response.pageStats);
-        divder();
-        generateRuleSetResults(response.formattedResults.ruleResults);
-        divder();
+        var logger  = console.log;
+        done        = done || (function () {});
+        threshold   = parameters.threshold || threshold;
+
+        logger(
+            [
+                divder(),
+                generateScore(parameters.strategy, response),
+                generateStatistics(response.pageStats),
+                divder(),
+                generateRuleSetResults(response.formattedResults.ruleResults),
+                divder()
+            ].join("\n")
+        );
+
         if (response.score < threshold) {
             throw new Error("Threshold of " + threshold + " not met with score of " + response.score);
         }
+
         return done();
     };
+
     return exports;
 };
