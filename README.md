@@ -42,7 +42,7 @@ psi(options, function(err, data){
 });
 ```
 
-###Supported properties
+###Options
 
 ####url
 Type: `String`
@@ -51,16 +51,19 @@ URL of the page for which the PageSpeed Insights API should generate results.
 
 ####locale
 Type: `String`
+Default: `en_US`
 
 The locale that results should be generated in (e.g 'en_GB').
 
 ####strategy
 Type: `String`
+Default: `desktop`
 
 The strategy to use when analyzing the page. Valid values are desktop and mobile.
 
 ####threshold
 Type: `Number`
+Default: `70`
 
 Threshold score that is needed to pass the pagespeed test
 
@@ -69,19 +72,14 @@ Type: `Array`
 
 An array of URL paths that are appended to the URL
 
-###Options
-
 ####key
 Type: `String`
+Default: `nokey`
 
 [Google API Key](https://code.google.com/apis/console/)
 
 Unless Specified defaults to use the free tier on PageSpeed Insights. Good for getting a feel for how well this tool works for you.
 
-####url
-Type: `String`
-
-The URL of the page for which the PageSpeed Insights API should generate results.
 
 ## CLI support
 
@@ -109,7 +107,7 @@ $ psi http://www.html5rocks.com --strategy=mobile
 
 ## Getting PSI into your build
 
-A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available. 
+A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available.
 
 If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
