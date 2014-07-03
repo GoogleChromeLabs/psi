@@ -22,7 +22,7 @@
   },
   "license": "Apache 2",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test"
   },
   "files": [
     "index.js",

@@ -1,7 +1,7 @@
 'use strict';
 var fs = require('fs');
 var assert = require('assert');
-var insights = require('./index');
+var insights = require('../index');
 
 it('should throw if no valid URL is provided', function (done) {
 	insights({}
