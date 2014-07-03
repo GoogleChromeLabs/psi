@@ -2,8 +2,8 @@
 'use strict';
 // Adapted from cli.js in gpagespeed
 
-var insights = require('./index')
-  , pkg = require('./package.json')
+var insights = require('../index')
+  , pkg = require('../package.json')
   , query = process.argv[2]
   , argv = require('minimist')((process.argv.slice(2)))
   , opts = {}
