@@ -111,6 +111,8 @@ A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI
 
 If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
+For testing local project, we recommend using [ngrok](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/).
+
 ## License
 
 Apache 2.0  
