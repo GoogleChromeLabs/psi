@@ -1,6 +1,6 @@
 {
   "name": "psi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "description": "PageSpeed Insights for Node",
   "homepage": "http://github.com/addyosmani/psi",
@@ -11,7 +11,7 @@
     "url": "addyosmani.com"
   },
   "bin": {
-    "psi": "cli.js"
+    "psi": "bin/cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -22,7 +22,7 @@
   },
   "license": "Apache 2",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test"
   },
   "files": [
     "index.js",
@@ -34,8 +34,9 @@
     "insights"
   ],
   "dependencies": {
-    "minimist": "^0.1.0",
-    "gpagespeed": "0.0.6"
+    "minimist": "^0.2.0",
+    "gpagespeed": "0.0.6",
+    "pretty-bytes": "^0.1.1"
   },
   "devDependencies": {
     "mocha": "^1.20.1"

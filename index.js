@@ -12,6 +12,7 @@ var output = require('./output').init();
 
 module.exports = function (opts, cb) {
 	opts = opts || {};
+	opts.strategy = opts.strategy || 'desktop';
 	opts.nokey = opts.key === void 0;
 
 	cb = cb || function () {};
