@@ -7,16 +7,16 @@ var prettyBytes = require('pretty-bytes');
 var utils = require('./lib/utils');
 
 exports.init = function () {
-  var generateRuleSetResults, generateScore, generateStatistics, score, threshold;
-  score = 0;
-  threshold = 70;
-  exports = {};
 
-  generateScore = function (strategy, response) {
+  var score = 0,
+      threshold = 70,
+      exports = {};
+
+  var generateScore = function (strategy, response) {
     return 'URL:      ' + response.id + '\nStrategy: ' + strategy + ' \nScore:    ' + score;
   };
 
-  generateRuleSetResults = function (rulesets) {
+  var generateRuleSetResults = function (rulesets) {
     var result, ruleImpact, title, _results;
     _results = [];
     for (title in rulesets) {
@@ -29,7 +29,7 @@ exports.init = function () {
     return _results.join('\n');
   };
 
-  generateStatistics = function (statistics) {
+  var generateStatistics = function (statistics) {
     var result, title, _results;
     _results = [];
     for (title in statistics) {
