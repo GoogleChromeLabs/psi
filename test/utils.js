@@ -29,4 +29,10 @@ describe('Report utils', function() {
     var msg = 'enableGzipCompression';
     assert.equal(utils.firstToUpperCaseAndAddSpace(msg), expected);
   });
+
+  it('should create label', function() {
+    var expected = 'Enable Gzip Compression                          | ';
+    var msg = 'enableGzipCompression';
+    assert.equal(utils.labelize(msg), expected);
+  });
 });
