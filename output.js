@@ -4,9 +4,10 @@
 // are based on Grunt conventions.
 
 var prettyBytes = require('pretty-bytes');
+var utils = require('./lib/utils');
 
 exports.init = function () {
-  var addSpacesToWords, bufferSpace, divder, exports, firstToUpperCaseAndAddSpace, generateRuleSetResults, generateScore, generateStatistics, score, threshold;
+  var generateRuleSetResults, generateScore, generateStatistics, score, threshold;
   score = 0;
   threshold = 70;
   exports = {};
@@ -20,8 +21,8 @@ exports.init = function () {
     _results = [];
     for (title in rulesets) {
       result = rulesets[title];
-      title = firstToUpperCaseAndAddSpace(title);
-      title += bufferSpace(title);
+      title = utils.firstToUpperCaseAndAddSpace(title);
+      title += utils.bufferSpace(title);
       ruleImpact = Math.ceil(result.ruleImpact * 100) / 100;
       _results.push('' + title + '| ' + ruleImpact);
     }
@@ -35,36 +36,11 @@ exports.init = function () {
       result = title.indexOf('Bytes') !== -1 ?
         prettyBytes(+statistics[title]) :
         statistics[title];
-      title = firstToUpperCaseAndAddSpace(title);
-      title += bufferSpace(title);
+      title = utils.firstToUpperCaseAndAddSpace(title);
+      title += utils.bufferSpace(title);
       _results.push('' + title + '| ' + result);
     }
     return _results.join('\n');
-  };
-
-  bufferSpace = function (msg, length) {
-    var buffer = '';
-
-    if (length === null) {
-        length = 50;
-    }
-    if (length - msg.length > 0) {
-      buffer = new Array(length - msg.length).join(' ');
-    }
-    return buffer;
-  };
-
-  firstToUpperCaseAndAddSpace = function (msg) {
-    msg = msg.replace('Bytes', '');
-    return msg.charAt(0).toUpperCase() + addSpacesToWords(msg.slice(1));
-  };
-
-  addSpacesToWords = function (msg) {
-    return msg.replace(/([A-Z]+)/g, ' $1').replace(/([A-Z][a-z])/g, '$1');
-  };
-
-  divder = function () {
-    return '\n' + new Array(65).join('-') + '\n';
   };
 
   exports.threshold = function (limit) {
@@ -79,19 +55,18 @@ exports.init = function () {
 
     logger(
       [
-        divder(),
+        utils.divider(),
         generateScore(parameters.strategy, response),
         generateStatistics(response.pageStats),
-        divder(),
+        utils.divider(),
         generateRuleSetResults(response.formattedResults.ruleResults),
-        divder()
+        utils.divider()
       ].join('\n')
     );
 
     if (response.score < threshold) {
       throw new Error('Threshold of ' + threshold + ' not met with score of ' + response.score);
     }
-
     return done();
   };
 
