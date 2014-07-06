@@ -22,7 +22,7 @@ exports.init = function () {
     for (title in rulesets) {
       result = rulesets[title];
       title = utils.firstToUpperCaseAndAddSpace(title);
-      title += utils.bufferSpace(title);
+      title += utils.buffer(title);
       ruleImpact = Math.ceil(result.ruleImpact * 100) / 100;
       _results.push('' + title + '| ' + ruleImpact);
     }
@@ -37,7 +37,7 @@ exports.init = function () {
         prettyBytes(+statistics[title]) :
         statistics[title];
       title = utils.firstToUpperCaseAndAddSpace(title);
-      title += utils.bufferSpace(title);
+      title += utils.buffer(title);
       _results.push('' + title + '| ' + result);
     }
     return _results.join('\n');
@@ -55,12 +55,12 @@ exports.init = function () {
 
     logger(
       [
-        utils.divider(),
+        utils.divider,
         generateScore(parameters.strategy, response),
         generateStatistics(response.pageStats),
-        utils.divider(),
+        utils.divider,
         generateRuleSetResults(response.formattedResults.ruleResults),
-        utils.divider()
+        utils.divider
       ].join('\n')
     );
 
