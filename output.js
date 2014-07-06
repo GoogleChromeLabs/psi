@@ -21,10 +21,8 @@ exports.init = function () {
     _results = [];
     for (title in rulesets) {
       result = rulesets[title];
-      title = utils.firstToUpperCaseAndAddSpace(title);
-      title += utils.buffer(title);
       ruleImpact = Math.ceil(result.ruleImpact * 100) / 100;
-      _results.push('' + title + '| ' + ruleImpact);
+      _results.push(utils.labelize(title) + ruleImpact);
     }
     return _results.join('\n');
   };
@@ -36,9 +34,7 @@ exports.init = function () {
       result = title.indexOf('Bytes') !== -1 ?
         prettyBytes(+statistics[title]) :
         statistics[title];
-      title = utils.firstToUpperCaseAndAddSpace(title);
-      title += utils.buffer(title);
-      _results.push('' + title + '| ' + result);
+      _results.push(utils.labelize(title) + result);
     }
     return _results.join('\n');
   };
