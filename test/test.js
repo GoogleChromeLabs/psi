@@ -19,8 +19,8 @@ it('should return desktop results from PageSpeed Insights', function (done) {
 		strategy: 'desktop',
 		threshold: 80
 	}, function(err, data){
-		assert(data.responseCode == 200);
-		assert(data.id == 'http://www.html5rocks.com/en/');
+		assert.equal(data.responseCode, 200, "responseCode");
+		assert.equal(data.id, 'http://www.html5rocks.com/en/', "id");
 		done();
 	});
 });
@@ -32,9 +32,9 @@ it('should return mobile results from PageSpeed Insights', function (done) {
 		strategy: 'mobile',
 		threshold: 73
 	}, function(err, data){
-		assert(data.score == 73);
-		assert(data.responseCode == 200);
-		assert(data.id == 'http://www.html5rocks.com/en/');
+		assert.equal(data.score, 73, "score");
+		assert.equal(data.responseCode, 200, "responseCode");
+		assert.equal(data.id, 'http://www.html5rocks.com/en/', "id");
 		done();
 	});
 });
