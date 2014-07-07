@@ -53,19 +53,14 @@ exports.init = function () {
     done        = done || function () {};
     threshold   = parameters.threshold || threshold;
 
-    var output  = [
+    logger([
       utils.divider,
       generateScore(response.id, parameters.strategy, response.score),
       generateStatistics(response.pageStats),
       utils.labelize(''),
       generateRuleSetResults(response.formattedResults.ruleResults),
       utils.divider
-    ].join('\n');
-
-    if (!chalk.supportsColor) {
-      output = chalk.stripColor(output);
-    }
-    logger(output);
+    ].join('\n'));
 
     if (response.score < threshold) {
       throw new Error('Threshold of ' + threshold + ' not met with score of ' + response.score);
