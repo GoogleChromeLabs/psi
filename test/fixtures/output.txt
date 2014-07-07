@@ -1,9 +1,10 @@
 
 ----------------------------------------------------------------
 
-URL:      http://www.html5rocks.com/en/
-Strategy: desktop 
-Score:    0
+URL:       http://www.html5rocks.com/en/
+Score:     88
+Strategy:  desktop
+
 Number Resources                                 | 25
 Number Hosts                                     | 5
 Total Request                                    | 2.57 kB
@@ -15,9 +16,7 @@ Javascript Response                              | 39.21 kB
 Other Response                                   | 108.92 kB
 Number Js Resources                              | 2
 Number Css Resources                             | 2
-
-----------------------------------------------------------------
-
+                                                 | 
 Avoid Landing Page Redirects                     | 3
 Enable Gzip Compression                          | 0
 Leverage Browser Caching                         | 0
