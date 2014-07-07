@@ -34,8 +34,9 @@
     "insights"
   ],
   "dependencies": {
-    "minimist": "^0.2.0",
+    "chalk": "^0.5.0",
     "gpagespeed": "0.0.6",
+    "minimist": "^0.2.0",
     "pretty-bytes": "^0.1.1"
   },
   "devDependencies": {
