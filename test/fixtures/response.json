@@ -1,0 +1,351 @@
+{
+    "kind": "pagespeedonline#result",
+    "id": "http://www.html5rocks.com/en/",
+    "responseCode": 200,
+    "title": "HTML5 Rocks - A resource for open web HTML5 developers",
+    "score": 88,
+    "pageStats": {
+        "numberResources": 25,
+        "numberHosts": 5,
+        "totalRequestBytes": "2566",
+        "numberStaticResources": 15,
+        "htmlResponseBytes": "17446",
+        "cssResponseBytes": "54089",
+        "imageResponseBytes": "170815",
+        "javascriptResponseBytes": "39208",
+        "otherResponseBytes": "108925",
+        "numberJsResources": 2,
+        "numberCssResources": 2
+    },
+    "formattedResults": {
+        "locale": "en_US",
+        "ruleResults": {
+            "AvoidLandingPageRedirects": {
+                "localizedRuleName": "Avoid landing page redirects",
+                "ruleImpact": 3,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Your page has $1 redirects. Redirects introduce additional delays before the page can be loaded.",
+                            "args": [
+                                {
+                                    "type": "INT_LITERAL",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "header": {
+                            "format": "Avoid landing page redirects for the following chain of redirected URLs.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://html5rocks.com/"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://www.html5rocks.com/"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://www.html5rocks.com/en/"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "EnableGzipCompression": {
+                "localizedRuleName": "Enable compression",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "You have compression enabled. Learn more about enabling compression.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "LeverageBrowserCaching": {
+                "localizedRuleName": "Leverage browser caching",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "You have enabled browser caching. Learn more about browser caching recommendations.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "MainResourceServerResponseTime": {
+                "localizedRuleName": "Reduce server response time",
+                "ruleImpact": 2.2199999999999998,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "In our test, your server responded in $1. There are many factors that can slow down your server response time. Please read our recommendations to learn how you can monitor and measure where your server is spending the most time.",
+                            "args": [
+                                {
+                                    "type": "DURATION",
+                                    "value": "0.31 seconds"
+                                },
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/Server"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "MinifyCss": {
+                "localizedRuleName": "Minify CSS",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Your CSS is minified. Learn more about minifying CSS.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "MinifyHTML": {
+                "localizedRuleName": "Minify HTML",
+                "ruleImpact": 0.0847,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Compacting HTML code, including any inline JavaScript and CSS contained in it, can save many bytes of data and speed up download and parse times."
+                        }
+                    },
+                    {
+                        "header": {
+                            "format": "Minify HTML for the following resources to reduce their size by $2 ($3 reduction).",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                                },
+                                {
+                                    "type": "BYTES",
+                                    "value": "847B"
+                                },
+                                {
+                                    "type": "PERCENTAGE",
+                                    "value": "20%"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "Minifying $1 could save $2 ($3 reduction) after compression.",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://www.html5rocks.com/en/"
+                                        },
+                                        {
+                                            "type": "BYTES",
+                                            "value": "847B"
+                                        },
+                                        {
+                                            "type": "PERCENTAGE",
+                                            "value": "20%"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "MinifyJavaScript": {
+                "localizedRuleName": "Minify JavaScript",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Your JavaScript content is minified. Learn more about minifying JavaScript.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "MinimizeRenderBlockingResources": {
+                "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
+                "ruleImpact": 6,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Your page has $1 blocking script resources and $2 blocking CSS resources. This causes a delay in rendering your page.",
+                            "args": [
+                                {
+                                    "type": "INT_LITERAL",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "INT_LITERAL",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "header": {
+                            "format": "None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML."
+                        }
+                    },
+                    {
+                        "header": {
+                            "format": "Remove render-blocking JavaScript:",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://www.html5rocks.com/static/js/modernizr.custom.82437.js"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "header": {
+                            "format": "Optimize CSS Delivery of the following:",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://www.html5rocks.com/static/css/v2-combined.min.css?20131111"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "$1",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "value": "http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "OptimizeImages": {
+                "localizedRuleName": "Optimize images",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "Your images are optimized. Learn more about optimizing images.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "PrioritizeVisibleContent": {
+                "localizedRuleName": "Prioritize visible content",
+                "ruleImpact": 0,
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "You have the above-the-fold content properly prioritized. Learn more about prioritizing visible content.",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "version": {
+        "major": 1,
+        "minor": 15
+    }
+}
