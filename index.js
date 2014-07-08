@@ -11,19 +11,19 @@ var pagespeed = require('gpagespeed');
 var output = require('./output').init();
 
 module.exports = function (opts, cb) {
-	opts = opts || {};
-	opts.strategy = opts.strategy || 'desktop';
-	opts.nokey = opts.key === void 0;
+  opts = opts || {};
+  cb = cb || function () {};
+  opts.strategy = opts.strategy || 'desktop';
+  opts.nokey = opts.key === undefined;
 
-	cb = cb || function () {};
-	console.log('Running Pagespeed Insights');
-	pagespeed(opts, function(err, data){
-	  if (err) {
-	  	cb(err); return;
-	  } else {
-		  var response = JSON.parse(data);
-		  output.process(opts, response);
-		  cb(err, response);
-		}
-	});
+  pagespeed(opts, function (err, data) {
+    if (err) {
+      cb(err);
+      return;
+    }
+
+    var response = JSON.parse(data);
+    output.process(opts, response);
+    cb(err, response);
+  });
 };
