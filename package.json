@@ -11,7 +11,7 @@
     "url": "addyosmani.com"
   },
   "bin": {
-    "psi": "bin/cli.js"
+    "psi": "./bin/cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -27,7 +27,7 @@
   "files": [
     "index.js",
     "output.js",
-    "cli.js"
+    "bin/cli.js"
   ],
   "keywords": [
     "pagespeed",
