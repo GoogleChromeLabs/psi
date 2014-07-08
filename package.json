@@ -27,7 +27,8 @@
   "files": [
     "index.js",
     "output.js",
-    "bin/cli.js"
+    "bin/cli.js",
+    "lib/utils.js"
   ],
   "keywords": [
     "pagespeed",
