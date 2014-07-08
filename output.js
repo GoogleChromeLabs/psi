@@ -4,16 +4,20 @@
 // are based on Grunt conventions.
 
 var prettyBytes = require('pretty-bytes');
+var chalk = require('chalk');
 var utils = require('./lib/utils');
 
 exports.init = function () {
 
-  var score = 0,
-      threshold = 70,
+  var threshold = 70,
       exports = {};
 
-  var generateScore = function (strategy, response) {
-    return 'URL:      ' + response.id + '\nStrategy: ' + strategy + ' \nScore:    ' + score;
+  var generateScore = function (url, strategy, score) {
+    var color = utils.scoreColor(score);
+    score     = 'Score:     ' + color(score);
+    url       = 'URL:       ' + chalk.cyan(url);
+    strategy  = 'Strategy:  ' + chalk.cyan(strategy);
+    return [url, score, strategy].join('\n') + '\n';
   };
 
   var generateRuleSetResults = function (rulesets) {
@@ -22,7 +26,7 @@ exports.init = function () {
     for (title in rulesets) {
       result = rulesets[title];
       ruleImpact = Math.ceil(result.ruleImpact * 100) / 100;
-      _results.push(utils.labelize(title) + ruleImpact);
+      _results.push(utils.labelize(title) + chalk.cyan(ruleImpact));
     }
     return _results.join('\n');
   };
@@ -34,7 +38,7 @@ exports.init = function () {
       result = title.indexOf('Bytes') !== -1 ?
         prettyBytes(+statistics[title]) :
         statistics[title];
-      _results.push(utils.labelize(title) + result);
+      _results.push(utils.labelize(title) + chalk.cyan(result));
     }
     return _results.join('\n');
   };
@@ -52,9 +56,9 @@ exports.init = function () {
     logger(
       [
         utils.divider,
-        generateScore(parameters.strategy, response),
+        generateScore(response.id, parameters.strategy, response.score),
         generateStatistics(response.pageStats),
-        utils.divider,
+        utils.labelize(''),
         generateRuleSetResults(response.formattedResults.ruleResults),
         utils.divider
       ].join('\n')
