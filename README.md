@@ -6,15 +6,18 @@ Run mobile and desktop performance tests for your deployed site using [Google Pa
 
 Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/) and the reporter in [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed).
 
+
 ## Install
 
-```bash
+```sh
 $ npm install --save psi
 ```
 
+
 ## Preview
 
-<img src="http://i.imgur.com/pbLR4pV.png"/>
+![preview](http://i.imgur.com/pbLR4pV.png)
+
 
 ## Usage
 
@@ -35,45 +38,52 @@ psi({
 
 Optionally, a callback is also available with access to the response:
 
-```
-psi(options, function(err, data){
+```js
+psi(options, function (err, data) {
 	console.log(data.score);
 	console.log(data.pageStats);
 });
 ```
 
-###Options
+### Options
 
-####url
-Type: `String`
+#### url
+
+*Required*  
+Type: `string`
 
 URL of the page for which the PageSpeed Insights API should generate results.
 
-####locale
-Type: `String`
+#### locale
+
+Type: `string`  
 Default: `en_US`
 
 The locale that results should be generated in (e.g 'en_GB').
 
-####strategy
-Type: `String`
+#### strategy
+
+Type: `string`  
 Default: `desktop`
 
 The strategy to use when analyzing the page. Valid values are desktop and mobile.
 
-####threshold
-Type: `Number`
+#### threshold
+
+Type: `number`  
 Default: `70`
 
 Threshold score that is needed to pass the pagespeed test
 
-####paths
-Type: `Array`
+#### paths
+
+Type: `array`
 
 An array of URL paths that are appended to the URL
 
-####key
-Type: `String`
+#### key
+
+Type: `string`  
 Default: `nokey`
 
 [Google API Key](https://code.google.com/apis/console/)
@@ -85,23 +95,23 @@ Unless Specified defaults to use the free tier on PageSpeed Insights. Good for g
 
 You will probably want to globally install psi if using as a CLI. This can be done as follows:
 
-```
-npm install -g psi
+```sh
+$ npm install --global psi
 ```
 
 You can then casually use it with your key:
 
-```
+```sh
 $ psi http://www.google.com --key 'YOUR_KEY_GOES_HERE'
 ```
 
 Similar to gpagespeed, the following optional flags are also supported:
 
-```
+```sh
 $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
 ```
 
-```
+```sh
 $ psi http://www.html5rocks.com --strategy=mobile
 ```
 
@@ -112,6 +122,7 @@ A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI
 If you use Grunt, [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
 For testing local project, we recommend using [ngrok](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/).
+
 
 ## License
 
