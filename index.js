@@ -23,7 +23,8 @@ module.exports = function (opts, cb) {
     }
 
     var response = JSON.parse(data);
-    output.process(opts, response);
-    cb(err, response);
+    output.process(opts, response, function(processErr) {
+      cb(processErr || err, response);
+    });
   });
 };

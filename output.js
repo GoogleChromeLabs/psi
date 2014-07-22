@@ -55,7 +55,9 @@ exports.init = function () {
   };
 
   exports.process = function (parameters, response, done) {
-    var logger = console.log;
+    var logger = console.log,
+        error  = null;
+
     done = done || function () {};
     threshold = parameters.threshold || threshold;
 
@@ -69,10 +71,10 @@ exports.init = function () {
     ].join('\n'));
 
     if (response.score < threshold) {
-      throw new Error('Threshold of ' + threshold + ' not met with score of ' + response.score);
+      error = new Error("Threshold of " + threshold + " not met with score of " + response.score);
     }
 
-    return done();
+    return done(error);
   };
 
   return exports;
