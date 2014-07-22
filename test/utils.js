@@ -38,20 +38,20 @@ describe('Report utils', function() {
   });
 
   it('should select red for scores 20 or less', function() {
-    var expected = chalk.red;
+    var expected = chalk.red.toString();
     var score = 20;
-    assert.equal(utils.scoreColor(score), expected);
+    assert.equal(utils.scoreColor(score).toString(), expected);
   });
 
   it('should select yellow for scores between 21 and 79', function() {
-    var expected = chalk.yellow;
+    var expected = chalk.yellow.toString();
     var score = 50;
-    assert.equal(utils.scoreColor(score), expected);
+    assert.equal(utils.scoreColor(score).toString(), expected);
   });
 
   it('should select green for scores greater than 80', function() {
-    var expected = chalk.green;
+    var expected = chalk.green.toString();
     var score = 80;
-    assert.equal(utils.scoreColor(score), expected);
+    assert.equal(utils.scoreColor(score).toString(), expected);
   });
 });
