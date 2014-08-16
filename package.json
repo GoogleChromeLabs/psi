@@ -1,6 +1,6 @@
 {
   "name": "psi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "description": "PageSpeed Insights for Node",
   "homepage": "http://github.com/addyosmani/psi",
