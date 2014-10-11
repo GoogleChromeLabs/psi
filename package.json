@@ -35,10 +35,10 @@
     "insights"
   ],
   "dependencies": {
-    "chalk": "^0.5.0",
-    "gpagespeed": "0.0.6",
-    "minimist": "^0.2.0",
-    "pretty-bytes": "^0.1.1"
+    "chalk": "^0.5.1",
+    "gpagespeed": "0.0.8",
+    "minimist": "^1.1.0",
+    "pretty-bytes": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "^1.20.1"
