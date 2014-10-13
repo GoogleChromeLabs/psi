@@ -22,7 +22,7 @@ module.exports = function (opts, cb) {
       return;
     }
 
-    var response = JSON.parse(data);
+    var response = (typeof data === "object")?data:JSON.parse(data);
     output.process(opts, response, function(processErr) {
       cb(processErr || err, response);
     });
