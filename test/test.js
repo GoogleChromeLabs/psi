@@ -34,10 +34,9 @@ describe('PSI formatting', function () {
 });
 
 describe('CLI Error handling', function() {
-  it('should throw if no valid URL is provided', function (done) {
-    insights({}, function(err) {
-      assert.equal(err.message, 'Missing required param: url');
-      done();
+  it('should throw if no valid URL is provided', function () {
+    assert.throws(function () {
+      insights({}, function() {});
     });
   });
 });

@@ -38,6 +38,7 @@
     "chalk": "^0.5.1",
     "gpagespeed": "0.0.8",
     "minimist": "^1.1.0",
+    "prepend-http": "^1.0.0",
     "pretty-bytes": "^1.0.1"
   },
   "devDependencies": {
