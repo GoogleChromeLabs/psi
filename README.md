@@ -102,7 +102,13 @@ $ npm install --global psi
 You can then casually use it with your key:
 
 ```sh
-$ psi http://www.google.com --key 'YOUR_KEY_GOES_HERE'
+$ psi http://www.todomvc.com --key 'YOUR_KEY_GOES_HERE'
+```
+
+Humanized URLs are also supported. For example:
+
+```
+$ psi todomvc.com
 ```
 
 Similar to gpagespeed, the following optional flags are also supported:
