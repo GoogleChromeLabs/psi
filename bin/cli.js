@@ -2,12 +2,11 @@
 'use strict';
 // Adapted from cli.js in gpagespeed
 
-var insights = require('../index')
-  , pkg = require('../package.json')
-  , query = process.argv[2]
-  , argv = require('minimist')((process.argv.slice(2)))
-  , opts = {}
-  ;
+var insights = require('../index');
+var pkg = require('../package.json');
+var query = process.argv[2];
+var argv = require('minimist')((process.argv.slice(2)));
+var opts = {};
 
 function printHelp() {
   console.log(pkg.description);
@@ -17,7 +16,7 @@ function printHelp() {
   console.log('');
   console.log('Optional, supply other arguments.');
   console.log('See https://developers.google.com/speed/docs/insights/v1/getting_started for description');
-  console.log('  $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>');
+  console.log('  $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile> --format=<cli|json|tap>');
 }
 
 if (!query || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
@@ -32,37 +31,41 @@ if (process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -
 
 opts.url = argv._[0];
 
-if(!opts.url){
+if (!opts.url) {
   printHelp();
   return;
 }
 
-if(argv.url){
+if (argv.url) {
   opts.url = argv.url;
 }
 
-if(argv.key){
+if (argv.key) {
   opts.key = argv.key;
 }
 
-if(argv.callback){
+if (argv.callback) {
   opts.callback = argv.callback;
 }
 
-if(argv.prettyprint){
+if (argv.prettyprint) {
   opts.prettyprint = argv.prettyprint;
 }
 
-if(argv.userIp){
+if (argv.userIp) {
   opts.userIp = argv.userIp;
 }
 
-if(argv.locale){
+if (argv.locale) {
   opts.locale = argv.locale;
 }
 
-if(argv.strategy){
+if (argv.strategy) {
   opts.strategy = argv.strategy;
+}
+
+if (argv.format) {
+  opts.format = argv.format;
 }
 
 insights(opts);

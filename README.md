@@ -90,6 +90,12 @@ Default: `nokey`
 
 Unless Specified defaults to use the free tier on PageSpeed Insights. Good for getting a feel for how well this tool works for you.
 
+#### format
+
+Type: `string`
+Default: `cli`
+
+The format of the report generated from the PageSpeed Insights API.  Supported formats: cli, json and tap.
 
 ## CLI support
 
@@ -114,7 +120,7 @@ $ psi todomvc.com
 Similar to gpagespeed, the following optional flags are also supported:
 
 ```sh
-$ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile>
+$ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile> --format<cli|json|tap>
 ```
 
 ```sh

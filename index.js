@@ -9,7 +9,7 @@
 'use strict';
 var pagespeed = require('gpagespeed');
 var prependHttp = require('prepend-http');
-var output = require('./output').init();
+var output = require('./lib/output').init();
 
 module.exports = function (opts, cb) {
   opts = opts || {};
@@ -20,16 +20,16 @@ module.exports = function (opts, cb) {
   }
 
   opts.strategy = opts.strategy || 'desktop';
+  opts.format = opts.format || 'cli';
   opts.nokey = opts.key === undefined;
   opts.url = prependHttp(opts.url);
 
-  pagespeed(opts, function (err, data) {
+  pagespeed(opts, function (err, response) {
     if (err) {
       cb(err);
       return;
     }
 
-    var response = data;
     output.process(opts, response, function(processErr) {
       cb(processErr || err, response);
     });
