@@ -26,9 +26,12 @@
   },
   "files": [
     "index.js",
-    "output.js",
     "bin/cli.js",
-    "lib/utils.js"
+    "lib/output.js",
+    "lib/utils.js",
+    "lib/formats/cli.js",
+    "lib/formats/json.js",
+    "lib/formats/tap.js"
   ],
   "keywords": [
     "pagespeed",
@@ -42,6 +45,7 @@
     "pretty-bytes": "^1.0.1"
   },
   "devDependencies": {
+    "lodash": "^2.4.1",
     "mocha": "^2.0.1"
   }
 }
