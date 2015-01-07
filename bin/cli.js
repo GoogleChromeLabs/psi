@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 'use strict';
-// Adapted from cli.js in gpagespeed
-
-var insights = require('../index');
 var pkg = require('../package.json');
-var query = process.argv[2];
 var argv = require('minimist')((process.argv.slice(2)));
+var insights = require('../');
+var query = process.argv[2];
 var opts = {};
 
 function printHelp() {

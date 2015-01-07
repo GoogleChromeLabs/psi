@@ -1,25 +1,24 @@
-/* global describe, beforeEach, afterEach, it */
+/*global describe, beforeEach, afterEach, it */
 'use strict';
-
-var assert    = require('assert');
-var chalk     = require('chalk');
-var insights  = require('../index');
-var Output    = require('../lib/output');
-var fs        = require('fs');
-var Path      = require('path');
+var path = require('path');
+var fs = require('fs');
+var assert = require('assert');
+var chalk = require('chalk');
+var Output = require('../lib/output');
+var insights = require('../');
 
 describe('PSI formatting', function () {
   beforeEach(function () {
-    var World            = this;
-    this.Log             = console.log;
-    this.output          = Output.init();
-    this.response        = require('./fixtures/response');
-    this.Output          = fs.readFileSync(Path.join(__dirname, 'fixtures/output.txt'), 'utf8');
-    this.TapOutput       = fs.readFileSync(Path.join(__dirname, 'fixtures/output-tap.txt'), 'utf8');
-    this.JsonOutput      = fs.readFileSync(Path.join(__dirname, 'fixtures/output-json.txt'), 'utf8');
+    var World = this;
+    this.Log = console.log;
+    this.output = Output.init();
+    this.response = require('./fixtures/response');
+    this.Output = fs.readFileSync(path.join(__dirname, 'fixtures/output.txt'), 'utf8');
+    this.TapOutput = fs.readFileSync(path.join(__dirname, 'fixtures/output-tap.txt'), 'utf8');
+    this.JsonOutput = fs.readFileSync(path.join(__dirname, 'fixtures/output-json.txt'), 'utf8');
     this.formattedOutput = '';
 
-    console.log = function(content) {
+    console.log = function (content) {
       World.formattedOutput += content + '\n';
       this.Log(content);
     }.bind(this);
@@ -50,10 +49,10 @@ describe('PSI formatting', function () {
   });
 });
 
-describe('CLI Error handling', function() {
+describe('CLI Error handling', function () {
   it('should throw if no valid URL is provided', function () {
     assert.throws(function () {
-      insights({}, function() {});
+      insights({}, function () {});
     });
   });
 });

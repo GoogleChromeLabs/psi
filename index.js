@@ -5,7 +5,6 @@
  * Copyright (c) 2014 Google Inc.
  * Licensed under an Apache 2 license.
  */
-
 'use strict';
 var pagespeed = require('gpagespeed');
 var prependHttp = require('prepend-http');
@@ -30,7 +29,7 @@ module.exports = function (opts, cb) {
       return;
     }
 
-    output.process(opts, response, function(processErr) {
+    output.process(opts, response, function (processErr) {
       cb(processErr || err, response);
     });
   });
