@@ -42,7 +42,8 @@
     "gpagespeed": "0.0.8",
     "minimist": "^1.1.0",
     "prepend-http": "^1.0.0",
-    "pretty-bytes": "^1.0.1"
+    "pretty-bytes": "^1.0.1",
+    "repeating": "^1.1.1"
   },
   "devDependencies": {
     "lodash": "^2.4.1",

@@ -3,6 +3,7 @@
 
 var assert = require('assert');
 var chalk = require('chalk');
+var repeating = require('repeating');
 var utils = require('../lib/utils');
 
 describe('Report utils', function() {
@@ -20,8 +21,8 @@ describe('Report utils', function() {
   });
 
   it('should create buffer space, defaulting to 50 spaces', function() {
-    var expected = new Array(31).join(' ');
-    var msg = new Array(20).join('a');
+    var expected = repeating(' ', 30);
+    var msg = repeating('a', 19);
     assert.equal(utils.buffer(msg), expected);
   });
 
