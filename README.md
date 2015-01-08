@@ -97,9 +97,8 @@ Default: `cli`
 
 The format of the report generated from the PageSpeed Insights API.  Supported formats: cli, json and tap.
 
-## CLI support
 
-You will probably want to globally install psi if using as a CLI. This can be done as follows:
+## CLI
 
 ```sh
 $ npm install --global psi
@@ -108,16 +107,16 @@ $ npm install --global psi
 You can then casually use it with your key:
 
 ```sh
-$ psi http://www.todomvc.com --key 'YOUR_KEY_GOES_HERE'
+$ psi http://todomvc.com --key 'YOUR_KEY_GOES_HERE'
 ```
 
-Humanized URLs are also supported. For example:
+Humanized URLs are also supported:
 
 ```
 $ psi todomvc.com
 ```
 
-Similar to gpagespeed, the following optional flags are also supported:
+The following optional flags are also supported:
 
 ```sh
 $ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile> --format<cli|json|tap>

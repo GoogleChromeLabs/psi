@@ -1,10 +1,3 @@
-/*
- * psi
- * http://github.com/addyosmani/psi
- *
- * Copyright (c) 2014 Google Inc.
- * Licensed under an Apache 2 license.
- */
 'use strict';
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
@@ -30,8 +23,8 @@ module.exports = function (opts, cb) {
       return;
     }
 
-    output.process(opts, response, function (processErr) {
-      cb(processErr || err, response);
+    output.process(opts, response, function (err) {
+      cb(err, response);
     });
   });
 };

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-var pkg = require('../package.json');
+var pkg = require('./package.json');
 var argv = require('minimist')((process.argv.slice(2)));
-var insights = require('../');
+var insights = require('./');
 var query = process.argv[2];
 var opts = {};
 

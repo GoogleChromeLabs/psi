@@ -1,41 +1,35 @@
 {
   "name": "psi",
   "version": "0.1.6",
-  "main": "index.js",
   "description": "PageSpeed Insights for Node",
-  "homepage": "http://github.com/addyosmani/psi",
-  "bugs": "https://github.com/addyosmani/psi/issues",
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
     "url": "addyosmani.com"
   },
-  "bin": {
-    "psi": "./bin/cli.js"
-  },
+  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/addyosmani/psi"
-  },
-  "license": "Apache 2",
+  "repository": "addyosmani/psi",
+  "license": "Apache-2.0",
   "scripts": {
     "test": "mocha test"
   },
   "files": [
+    "cli.js",
     "index.js",
-    "bin/cli.js",
-    "lib/output.js",
-    "lib/utils.js",
-    "lib/formats/cli.js",
-    "lib/formats/json.js",
-    "lib/formats/tap.js"
+    "lib"
   ],
   "keywords": [
     "pagespeed",
-    "insights"
+    "insights",
+    "speed",
+    "page",
+    "website",
+    "measure",
+    "optimize",
+    "size"
   ],
   "dependencies": {
     "chalk": "^0.5.1",
