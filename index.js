@@ -6,9 +6,10 @@
  * Licensed under an Apache 2 license.
  */
 'use strict';
-var pagespeed = require('gpagespeed');
+var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var output = require('./lib/output').init();
+var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 
 module.exports = function (opts, cb) {
   opts = opts || {};
