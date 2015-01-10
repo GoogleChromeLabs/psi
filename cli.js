@@ -2,6 +2,7 @@
 'use strict';
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
+var output = require('./lib/output').init();
 var psi = require('./');
 
 var cli = meow({
@@ -31,13 +32,16 @@ if (!cli.input[0]) {
     process.exit(1);
 }
 
-cli.flags.url = cli.input[0];
+var opts = cli.flags;
+opts.url = cli.input[0];
+opts.format = opts.format || 'cli';
 
-psi(cli.flags, function (err) {
+psi(opts, function (err, res) {
   if (err) {
     console.error(err);
     process.exit(1);
   }
 
+  output.process(opts, res);
   process.exit(0);
 });

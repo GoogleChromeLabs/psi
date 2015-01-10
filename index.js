@@ -1,7 +1,6 @@
 'use strict';
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
-var output = require('./lib/output').init();
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 
 module.exports = function (opts, cb) {
@@ -13,7 +12,6 @@ module.exports = function (opts, cb) {
   }
 
   opts.strategy = opts.strategy || 'desktop';
-  opts.format = opts.format || 'cli';
   opts.nokey = opts.key === undefined;
   opts.url = prependHttp(opts.url);
 
@@ -23,8 +21,6 @@ module.exports = function (opts, cb) {
       return;
     }
 
-    output.process(opts, response, function (err) {
-      cb(err, response);
-    });
+    cb(err, response);
   });
 };
