@@ -2,6 +2,7 @@
 'use strict';
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
+var prependHttp = require('prepend-http');
 var output = require('./lib/output').init();
 var psi = require('./');
 
@@ -33,8 +34,9 @@ if (!cli.input[0]) {
 }
 
 var opts = cli.flags;
-opts.url = cli.input[0];
+opts.url = prependHttp(cli.input[0]);
 opts.format = opts.format || 'cli';
+opts.strategy = opts.strategy || 'desktop';
 
 psi(opts, function (err, res) {
   if (err) {

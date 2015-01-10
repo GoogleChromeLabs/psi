@@ -5,14 +5,16 @@ var objectAssign = require('object-assign');
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 
 module.exports = function (opts, cb) {
-  opts = objectAssign({}, opts);
+  opts = objectAssign({
+    strategy: 'desktop'
+  }, opts);
+
   cb = cb || function () {};
 
   if (!opts.url) {
     throw new Error('URL required');
   }
 
-  opts.strategy = opts.strategy || 'desktop';
   opts.nokey = opts.key === undefined;
   opts.url = prependHttp(opts.url);
 
