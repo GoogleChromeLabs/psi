@@ -1,10 +1,11 @@
 'use strict';
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
+var objectAssign = require('object-assign');
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 
 module.exports = function (opts, cb) {
-  opts = opts || {};
+  opts = objectAssign({}, opts);
   cb = cb || function () {};
 
   if (!opts.url) {

@@ -35,6 +35,7 @@
     "chalk": "^0.5.1",
     "googleapis": "^1.0.22",
     "meow": "^2.1.0",
+    "object-assign": "^2.0.0",
     "prepend-http": "^1.0.0",
     "pretty-bytes": "^1.0.1",
     "repeating": "^1.1.1",
