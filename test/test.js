@@ -1,58 +1,38 @@
 /*global describe, beforeEach, afterEach, it */
 'use strict';
-var path = require('path');
-var fs = require('fs');
 var assert = require('assert');
 var chalk = require('chalk');
-var Output = require('../lib/output');
-var insights = require('../');
+var output = require('../lib/output');
 
 describe('PSI formatting', function () {
   beforeEach(function () {
-    var World = this;
-    this.Log = console.log;
-    this.output = Output.init();
+    this.log = console.log;
     this.response = require('./fixtures/response');
-    this.Output = fs.readFileSync(path.join(__dirname, 'fixtures/output.txt'), 'utf8');
-    this.TapOutput = fs.readFileSync(path.join(__dirname, 'fixtures/output-tap.txt'), 'utf8');
-    this.JsonOutput = fs.readFileSync(path.join(__dirname, 'fixtures/output-json.txt'), 'utf8');
+    this.output = output.init();
     this.formattedOutput = '';
 
     console.log = function (content) {
-      World.formattedOutput += content + '\n';
-      this.Log(content);
+      this.formattedOutput += content + '\n';
+      this.log(content);
     }.bind(this);
   });
 
   afterEach(function () {
-    console.log = this.Log;
+    console.log = this.log;
   });
 
   it('should correctly format PageSpeed Insights response', function () {
     this.output.process({strategy: 'desktop'}, this.response);
-    assert.equal(chalk.stripColor(this.formattedOutput), this.Output);
-  });
-
-  it('should prevent invalid formats from being used', function () {
-    this.output.process({strategy: 'desktop', format: 'xml'}, this.response);
-    assert.equal(chalk.stripColor(this.formattedOutput), this.Output);
+    assert(/Score:     88/.test(chalk.stripColor(this.formattedOutput)));
   });
 
   it('should format PageSpeed Insights response as TAP output', function () {
     this.output.process({strategy: 'desktop', format: 'tap'}, this.response);
-    assert.equal(this.formattedOutput, this.TapOutput);
+    assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
   });
 
   it('should format PageSpeed Insights response as JSON output', function () {
     this.output.process({strategy: 'desktop', format: 'json'}, this.response);
-    assert.equal(this.formattedOutput, this.JsonOutput);
-  });
-});
-
-describe('CLI Error handling', function () {
-  it('should throw if no valid URL is provided', function () {
-    assert.throws(function () {
-      insights({}, function () {});
-    });
+    assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
   });
 });

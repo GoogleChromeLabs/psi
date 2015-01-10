@@ -2,12 +2,11 @@
 'use strict';
 var assert = require('assert');
 var chalk = require('chalk');
-var repeating = require('repeating');
 var utils = require('../lib/utils');
 
 describe('Report utils', function () {
   it('should create a divider', function () {
-    var expected = '\n----------------------------------------------------------------\n';
+    var expected = '\n--------------------------------------------------------\n';
     assert.equal(chalk.stripColor(utils.divider), expected);
   });
 
@@ -18,12 +17,6 @@ describe('Report utils', function () {
     assert.equal(utils.buffer(msg, length), expected);
   });
 
-  it('should create buffer space, defaulting to 50 spaces', function () {
-    var expected = repeating(' ', 30);
-    var msg = repeating('a', 19);
-    assert.equal(utils.buffer(msg), expected);
-  });
-
   it('should create human label from data label', function () {
     var expected = 'Enable Gzip Compression';
     var msg = 'enableGzipCompression';
@@ -31,7 +24,7 @@ describe('Report utils', function () {
   });
 
   it('should create label', function () {
-    var expected = 'Enable Gzip Compression                          | ';
+    var expected = 'Enable Gzip Compression                    | ';
     var msg = 'enableGzipCompression';
     assert.equal(chalk.stripColor(utils.labelize(msg)), expected);
   });
