@@ -4,8 +4,6 @@
 
 Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. A sample [Gulpfile](https://github.com/addyosmani/psi-gulp-sample) demonstrating use is also available.
 
-Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/) and the reporter in [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed).
-
 
 ## Install
 
@@ -137,5 +135,5 @@ For testing local project, we recommend using [ngrok](http://www.jamescryer.com/
 
 ## License
 
-Apache 2.0  
+Apache-2.0  
 Copyright 2014 Google Inc
