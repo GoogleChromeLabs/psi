@@ -95,7 +95,7 @@ Unless Specified defaults to use the free tier on PageSpeed Insights. Good for g
 Type: `string`
 Default: `cli`
 
-The format of the report generated from the PageSpeed Insights API.  Supported formats: cli, json and tap.
+The format of the report generated from the PageSpeed Insights API. Supported formats: cli, json and tap.
 
 
 ## CLI
