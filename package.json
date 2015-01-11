@@ -41,10 +41,10 @@
     "pretty-bytes": "^1.0.1",
     "repeating": "^1.1.1",
     "sort-on": "^1.0.0",
-    "update-notifier": "^0.2.2"
+    "update-notifier": "^0.2.2",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
-    "lodash": "^2.4.1",
     "mocha": "^2.0.1"
   }
 }
