@@ -3,6 +3,7 @@ var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var objectAssign = require('object-assign');
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
+var output = require('./lib/output');
 
 module.exports = function (opts, cb) {
   opts = objectAssign({
@@ -27,3 +28,5 @@ module.exports = function (opts, cb) {
     cb(err, response);
   });
 };
+
+module.exports.output = output;

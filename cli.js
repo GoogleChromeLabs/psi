@@ -3,7 +3,6 @@
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
 var prependHttp = require('prepend-http');
-var output = require('./lib/output');
 var psi = require('./');
 
 var cli = meow({
@@ -47,6 +46,6 @@ psi(opts, function (err, res) {
     }
   }
 
-  output(opts, res);
+  psi.output(opts, res);
   process.exit(0);
 });
