@@ -39,9 +39,17 @@ describe('Formatting', function () {
 
 describe('API', function () {
   it('should get data from PageSpeed Insights', function (cb) {
-    psi({url: 'google.com'}, function (err, data) {
+    psi('google.com', function (err, data) {
       assert(!err, err);
       assert.strictEqual(data.title, 'Google');
+      cb();
+    });
+  });
+
+  it('should support options', function (cb) {
+    psi('google.com', {locale: 'no'}, function (err, data) {
+      assert(!err, err);
+      assert.strictEqual(data.formattedResults.locale, 'no');
       cb();
     });
   });

@@ -5,23 +5,28 @@ var objectAssign = require('object-assign');
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 var output = require('./lib/output');
 
-function handleOpts(opts) {
-  opts = objectAssign({
-    strategy: 'mobile'
-  }, opts);
-
+function handleOpts(url, opts) {
+  opts = objectAssign({strategy: 'mobile'}, opts);
   opts.nokey = opts.key === undefined;
-  opts.url = prependHttp(opts.url);
-
+  opts.url = prependHttp(url);
   return opts;
 }
 
-var psi = module.exports = function (opts, cb) {
-  if (!opts.url) {
+var psi = module.exports = function (url, opts, cb) {
+  if (typeof opts !== 'object') {
+      cb = opts;
+      opts = {};
+  }
+
+  if (!url) {
     throw new Error('URL required');
   }
 
-  pagespeed(handleOpts(opts), function (err, response) {
+  if (typeof cb !== 'function') {
+    throw new Error('Callback required');
+  }
+
+  pagespeed(handleOpts(url, opts), function (err, response) {
     if (err) {
       cb(err);
       return;
@@ -31,17 +36,21 @@ var psi = module.exports = function (opts, cb) {
   });
 };
 
-module.exports.output = function (opts, cb) {
-  cb = cb || function () {};
-  opts = handleOpts(opts);
+module.exports.output = function (url, opts, cb) {
+  if (typeof opts !== 'object') {
+      cb = opts;
+      opts = {};
+  }
 
-  psi(opts, function (err, data) {
+  cb = cb || function () {};
+
+  psi(url, opts, function (err, data) {
     if (err) {
       cb(err);
       return;
     }
 
-    output(opts, data);
+    output(handleOpts(url, opts), data);
     cb();
   });
 };

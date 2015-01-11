@@ -20,13 +20,13 @@ $ npm install --save psi
 var psi = require('psi');
 
 // get the PageSpeed Insights report
-psi({url: 'html5rocks.com'}, function (err, data) {
+psi('html5rocks.com', function (err, data) {
   console.log(data.score);
   console.log(data.pageStats);
 });
 
 // output a formatted report to the terminal
-psi.output({url: 'html5rocks.com'}, function (err) {
+psi.output('html5rocks.com', function (err) {
   console.log('done');
 });
 ```
@@ -34,19 +34,18 @@ psi.output({url: 'html5rocks.com'}, function (err) {
 
 ## API
 
-### psi(options, callback)
+### psi(url, [options], callback)
 
-#### options
-
-*Required*  
-Type: `object`
-
-##### url
+#### url
 
 *Required*  
 Type: `string`
 
 URL of the page for which the PageSpeed Insights API should generate results.
+
+#### options
+
+Type: `object`
 
 ##### key
 
@@ -88,16 +87,11 @@ Type: `object`
 
 The response from Google PageSpeed Insights.
 
-### psi.output(options, [callback])
+### psi.output(url, [options], [callback])
 
 Output the formatted report to the terminal.
 
-#### options
-
-*Required*  
-Type: `object`
-
-Same as for `psi()`.
+`url` and `options` is the same as `psi()`.
 
 #### callback(error)
 

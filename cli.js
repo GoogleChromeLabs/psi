@@ -2,7 +2,6 @@
 'use strict';
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
-var prependHttp = require('prepend-http');
 var psi = require('./');
 
 var cli = meow({
@@ -33,9 +32,7 @@ if (!cli.input[0]) {
   process.exit(1);
 }
 
-cli.flags.url = cli.input[0];
-
-psi.output(cli.flags, function (err, res) {
+psi.output(cli.input[0], cli.flags, function (err, res) {
   if (err) {
     if (err.noStack) {
       console.error(err.message);
