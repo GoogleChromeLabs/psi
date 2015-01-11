@@ -5,21 +5,23 @@ var objectAssign = require('object-assign');
 var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 var output = require('./lib/output');
 
-module.exports = function (opts, cb) {
+function handleOpts(opts) {
   opts = objectAssign({
     strategy: 'mobile'
   }, opts);
 
-  cb = cb || function () {};
+  opts.nokey = opts.key === undefined;
+  opts.url = prependHttp(opts.url);
 
+  return opts;
+}
+
+var psi = module.exports = function (opts, cb) {
   if (!opts.url) {
     throw new Error('URL required');
   }
 
-  opts.nokey = opts.key === undefined;
-  opts.url = prependHttp(opts.url);
-
-  pagespeed(opts, function (err, response) {
+  pagespeed(handleOpts(opts), function (err, response) {
     if (err) {
       cb(err);
       return;
@@ -29,4 +31,17 @@ module.exports = function (opts, cb) {
   });
 };
 
-module.exports.output = output;
+module.exports.output = function (opts, cb) {
+  cb = cb || function () {};
+  opts = handleOpts(opts);
+
+  psi(opts, function (err, data) {
+    if (err) {
+      cb(err);
+      return;
+    }
+
+    output(opts, data);
+    cb();
+  });
+};

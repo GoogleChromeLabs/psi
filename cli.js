@@ -32,11 +32,9 @@ if (!cli.input[0]) {
   process.exit(1);
 }
 
-var opts = cli.flags;
-opts.url = prependHttp(cli.input[0]);
-opts.strategy = opts.strategy || 'mobile';
+cli.flags.url = cli.input[0];
 
-psi(opts, function (err, res) {
+psi.output(cli.flags, function (err, res) {
   if (err) {
     if (err.noStack) {
       console.error(err.message);
@@ -46,6 +44,5 @@ psi(opts, function (err, res) {
     }
   }
 
-  psi.output(opts, res);
   process.exit(0);
 });

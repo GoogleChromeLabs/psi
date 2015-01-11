@@ -3,7 +3,7 @@
 var assert = require('assert');
 var chalk = require('chalk');
 var response = require('./fixtures/response');
-var psi = require('../');
+var output = require('../lib/output');
 
 describe('PSI formatting', function () {
   beforeEach(function () {
@@ -21,17 +21,17 @@ describe('PSI formatting', function () {
   });
 
   it('should correctly format PageSpeed Insights response', function () {
-    psi.output({strategy: 'desktop'}, response);
+    output({strategy: 'desktop'}, response);
     assert(/Score:     88/.test(chalk.stripColor(this.formattedOutput)));
   });
 
   it('should format PageSpeed Insights response as TAP output', function () {
-    psi.output({strategy: 'desktop', format: 'tap'}, response);
+    output({strategy: 'desktop', format: 'tap'}, response);
     assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
   });
 
   it('should format PageSpeed Insights response as JSON output', function () {
-    psi.output({strategy: 'desktop', format: 'json'}, response);
+    output({strategy: 'desktop', format: 'json'}, response);
     assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
   });
 });
