@@ -38,6 +38,8 @@ describe('Formatting', function () {
 });
 
 describe('API', function () {
+  this.timeout(50000);
+
   it('should get data from PageSpeed Insights', function (cb) {
     psi('google.com', function (err, data) {
       assert(!err, err);
