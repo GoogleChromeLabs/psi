@@ -15,10 +15,11 @@ var cli = meow({
     '',
     'Options',
     '  --key          Google API Key. By default the free tier is used.',
-    '  --format       Output format: cli|json|tap',
     '  --strategy     Strategy to use when analyzing the page: mobile|desktop',
-    '  --prettyprint  Pretty print the result.',
-    '  --locale       Locale results should be generated in.'
+    '  --format       Output format: cli|json|tap',
+    '  --locale       Locale results should be generated in.',
+    '  --threshold    Threshold score to pass the PageSpeed test.',
+    '  --prettyprint  Pretty print the result.'
   ].join('\n')
 });
 
