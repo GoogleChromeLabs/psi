@@ -17,15 +17,9 @@ describe('Report utils', function () {
     assert.equal(utils.buffer(msg, length), expected);
   });
 
-  it('should create human label from data label', function () {
-    var expected = 'Enable Gzip Compression';
-    var msg = 'enableGzipCompression';
-    assert.equal(utils.firstToUpperCaseAndAddSpace(msg), expected);
-  });
-
   it('should create label', function () {
-    var expected = 'Enable Gzip Compression                    | ';
-    var msg = 'enableGzipCompression';
+    var expected = 'Enable GZIP compression                    | ';
+    var msg = 'EnableGzipCompression';
     assert.equal(chalk.stripColor(utils.labelize(msg)), expected);
   });
 
