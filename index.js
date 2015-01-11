@@ -6,7 +6,7 @@ var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
 
 module.exports = function (opts, cb) {
   opts = objectAssign({
-    strategy: 'desktop'
+    strategy: 'mobile'
   }, opts);
 
   cb = cb || function () {};

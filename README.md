@@ -62,9 +62,10 @@ The locale that results should be generated in (e.g 'en_GB').
 #### strategy
 
 Type: `string`  
-Default: `desktop`
+Default: `mobile`
+Values: `mobile`, `desktop`
 
-The strategy to use when analyzing the page. Valid values are desktop and mobile.
+The strategy to use when analyzing the page.
 
 #### threshold
 
@@ -117,7 +118,7 @@ $ psi todomvc.com
 The following optional flags are also supported:
 
 ```sh
-$ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<desktop|mobile> --format<cli|json|tap>
+$ psi <url> --key=<key> --prettyprint=<true> --userIp=<userIp> --locale=<locale> --strategy=<mobile|desktop> --format<cli|json|tap>
 ```
 
 ```sh

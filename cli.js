@@ -17,7 +17,7 @@ var cli = meow({
     'Options',
     '  --key          Google API Key. By default the free tier is used.',
     '  --format       Output format: cli|json|tap',
-    '  --strategy     Strategy to use when analyzing the page: desktop|mobile',
+    '  --strategy     Strategy to use when analyzing the page: mobile|desktop',
     '  --prettyprint  Pretty print the result.',
     '  --locale       Locale results should be generated in.'
   ].join('\n')
@@ -35,7 +35,7 @@ if (!cli.input[0]) {
 
 var opts = cli.flags;
 opts.url = prependHttp(cli.input[0]);
-opts.strategy = opts.strategy || 'desktop';
+opts.strategy = opts.strategy || 'mobile';
 
 psi(opts, function (err, res) {
   if (err) {
