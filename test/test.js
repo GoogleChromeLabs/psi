@@ -4,8 +4,9 @@ var assert = require('assert');
 var chalk = require('chalk');
 var response = require('./fixtures/response');
 var output = require('../lib/output');
+var psi = require('../');
 
-describe('PSI formatting', function () {
+describe('Formatting', function () {
   beforeEach(function () {
     this.log = console.log;
     this.formattedOutput = '';
@@ -33,5 +34,15 @@ describe('PSI formatting', function () {
   it('should format PageSpeed Insights response as JSON output', function () {
     output({strategy: 'desktop', format: 'json'}, response);
     assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
+  });
+});
+
+describe('API', function () {
+  it('should get data from PageSpeed Insights', function (cb) {
+    psi({url: 'google.com'}, function (err, data) {
+      assert(!err, err);
+      assert.strictEqual(data.title, 'Google');
+      cb();
+    });
   });
 });
