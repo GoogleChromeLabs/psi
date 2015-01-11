@@ -1,7 +1,7 @@
 {
   "name": "psi",
   "version": "0.1.6",
-  "description": "PageSpeed Insights",
+  "description": "PageSpeed Insights with reporting",
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
