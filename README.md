@@ -2,6 +2,8 @@
 
 > PageSpeed Insights With Reporting
 
+![](screenshot.png)
+
 Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. A sample [Gulpfile](https://github.com/addyosmani/psi-gulp-sample) demonstrating use is also available.
 
 
@@ -10,11 +12,6 @@ Run mobile and desktop performance tests for your deployed site using [Google Pa
 ```sh
 $ npm install --save psi
 ```
-
-
-## Preview
-
-![preview](http://i.imgur.com/pbLR4pV.png)
 
 
 ## Usage
