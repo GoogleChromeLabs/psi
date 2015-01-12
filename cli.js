@@ -7,18 +7,17 @@ var psi = require('./');
 var cli = meow({
   help: [
     'Usage',
-    '  a11y <url>',
+    '  psi <url> <options>',
     '',
     'Example',
-    '  a11y todomvc.com',
+    '  psi todomvc.com --strategy=mobile',
     '',
     'Options',
     '  --key          Google API Key. By default the free tier is used.',
     '  --strategy     Strategy to use when analyzing the page: mobile|desktop',
     '  --format       Output format: cli|json|tap',
     '  --locale       Locale results should be generated in.',
-    '  --threshold    Threshold score to pass the PageSpeed test.',
-    '  --prettyprint  Pretty print the result.'
+    '  --threshold    Threshold score to pass the PageSpeed test.'
   ].join('\n')
 });
 
