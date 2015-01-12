@@ -28,11 +28,15 @@ var psi = module.exports = function (url, opts, cb) {
 
   pagespeed(handleOpts(url, opts), function (err, response) {
     if (err) {
+      // `googleapis` doesn't return an Error instance as it should
+      // https://github.com/google/google-api-nodejs-client/issues/345
+      err = new Error(err.message);
+      err.noStack = true;
       cb(err);
       return;
     }
 
-    cb(err, response);
+    cb(null, response);
   });
 };
 
