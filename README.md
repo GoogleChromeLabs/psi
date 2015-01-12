@@ -108,10 +108,10 @@ $ npm install --global psi
 $ psi --help
 
   Usage
-    a11y <url>
+    psi <url> <options>
 
   Example
-    a11y todomvc.com
+    psi todomvc.com --strategy=mobile
 
   Options
     --key          Google API Key. By default the free tier is used.
@@ -119,7 +119,6 @@ $ psi --help
     --format       Output format: cli|json|tap
     --locale       Locale results should be generated in.
     --threshold    Threshold score to pass the PageSpeed test.
-    --prettyprint  Pretty print the result.
 ```
 
 
@@ -135,4 +134,4 @@ For testing local project, we recommend using [ngrok](http://www.jamescryer.com/
 ## License
 
 Apache-2.0  
-Copyright 2014 Google Inc
+Copyright 2015 Google Inc
