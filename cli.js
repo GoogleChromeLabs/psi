@@ -22,10 +22,7 @@ var cli = meow({
   ].join('\n')
 });
 
-updateNotifier({
-  packageName: cli.pkg.name,
-  packageVersion: cli.pkg.version
-}).notify();
+updateNotifier({pkg: cli.pkg}).notify();
 
 if (!cli.input[0]) {
   console.error('Please supply an URL');
