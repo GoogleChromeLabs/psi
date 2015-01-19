@@ -8,6 +8,7 @@
     "url": "addyosmani.com"
   },
   "bin": "cli.js",
+  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
   },
