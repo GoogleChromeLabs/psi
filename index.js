@@ -51,7 +51,13 @@ module.exports.output = function (url, opts, cb) {
       return;
     }
 
-    output(handleOpts(url, opts), data);
+    try {
+      output(handleOpts(url, opts), data);
+    } catch (err) {
+      cb(err);
+      return;
+    }
+
     cb();
   });
 };

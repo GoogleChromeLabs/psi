@@ -35,6 +35,12 @@ describe('Formatting', function () {
     output({strategy: 'desktop', format: 'json'}, response);
     assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
   });
+
+  it('should throw when threshold is not met', function () {
+    assert.throws(function () {
+      output({threshold: 100}, response);
+    });
+  });
 });
 
 describe('API', function () {
