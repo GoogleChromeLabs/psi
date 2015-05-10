@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "googleapis": "^1.1.0",
+    "googleapis": "^2.0.3",
     "humanize-url": "^1.0.0",
     "lodash": "^3.2.0",
     "meow": "^3.0.0",
@@ -43,7 +43,7 @@
     "pretty-bytes": "^1.0.1",
     "repeating": "^1.1.1",
     "sort-on": "^1.0.0",
-    "update-notifier": "^0.3.0"
+    "update-notifier": "^0.5.0"
   },
   "devDependencies": {
     "mocha": "^2.0.1"
