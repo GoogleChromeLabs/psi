@@ -4,7 +4,7 @@
 
 ![](screenshot.png)
 
-Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process.
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v2/getting_started) with tidy reporting for your build process.
 
 
 ## Install
@@ -21,7 +21,7 @@ var psi = require('psi');
 
 // get the PageSpeed Insights report
 psi('html5rocks.com', function (err, data) {
-  console.log(data.score);
+  console.log(data.ruleGroups.SPEED.score);
   console.log(data.pageStats);
 });
 
@@ -117,6 +117,7 @@ $ psi --help
     --key          Google API Key. By default the free tier is used.
     --strategy     Strategy to use when analyzing the page: mobile|desktop
     --format       Output format: cli|json|tap
+    --screenshot   jpg screenshot
     --locale       Locale results should be generated in.
     --threshold    Threshold score to pass the PageSpeed test.
 ```

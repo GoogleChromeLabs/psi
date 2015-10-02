@@ -2,7 +2,7 @@
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var objectAssign = require('object-assign');
-var pagespeed = googleapis.pagespeedonline('v1').pagespeedapi.runpagespeed;
+var pagespeed = googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed;
 var output = require('./lib/output');
 
 function handleOpts(url, opts) {
