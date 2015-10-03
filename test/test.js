@@ -36,10 +36,11 @@ describe('Formatting', function () {
     assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
   });
 
-  it('should throw when threshold is not met', function () {
-    assert.throws(function () {
-      output({threshold: 100}, response);
-    });
+  it('should have an error in the callback if threshold is not met', function (done) {
+      output({threshold: 100}, response, function (err, result) {
+        assert.equal(err.name, 'Error', 'Expcted an error.');
+        done();
+      });
   });
 });
 
