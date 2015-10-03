@@ -120,6 +120,8 @@ $ psi --help
     --screenshot   jpg screenshot
     --locale       Locale results should be generated in.
     --threshold    Threshold score to pass the PageSpeed test.
+    --optimized    Get the URL of optimized resources.
+    --download     Download optimised resources.
 ```
 
 

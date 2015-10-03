@@ -53,13 +53,6 @@ module.exports.output = function (url, opts, cb) {
 
     console.log(data);
 
-    try {
-      output(handleOpts(url, opts), data);
-    } catch (err) {
-      cb(err);
-      return;
-    }
-
-    cb();
+    output(handleOpts(url, opts), data, cb);
   });
 };

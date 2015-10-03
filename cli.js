@@ -17,7 +17,9 @@ var cli = meow({
     '  --strategy     Strategy to use when analyzing the page: mobile|desktop',
     '  --format       Output format: cli|json|tap',
     '  --locale       Locale results should be generated in.',
-    '  --threshold    Threshold score to pass the PageSpeed test.'
+    '  --threshold    Threshold score to pass the PageSpeed test.',
+    '  --optimized    Get the URL of optimized resources.',
+    '  --download     Download optimized resources.'
   ]
 });
 
