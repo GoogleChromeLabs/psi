@@ -40,12 +40,7 @@ module.exports.output = function (url, opts) {
     opts = {};
   }
 
-  psi(url, opts, function (err, data) {
-    if (err) {
-      cb(err);
-      return;
-    }
-
+  return psi(url, opts).then(function (data) {
     console.log(data);
 
     return output(handleOpts(url, opts), data);
