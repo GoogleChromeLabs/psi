@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 'use strict';
+var loudRejection = require('loud-rejection');
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
 var psi = require('./');
+
+loudRejection();
 
 var cli = meow({
   help: [
@@ -30,15 +33,13 @@ if (!cli.input[0]) {
   process.exit(1);
 }
 
-psi.output(cli.input[0], cli.flags, function (err, res) {
-  if (err) {
-    if (err.noStack) {
-      console.error(err.message);
-      process.exit(1);
-    } else {
-      throw err;
-    }
-  }
-
+psi.output(cli.input[0], cli.flags).then(function () {
   process.exit(0);
+}, function (err) {
+  if (err.noStack) {
+    console.error(err.message);
+    process.exit(1);
+  } else {
+    throw err;
+  }
 });

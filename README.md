@@ -20,13 +20,13 @@ $ npm install --save psi
 var psi = require('psi');
 
 // get the PageSpeed Insights report
-psi('html5rocks.com', function (err, data) {
+psi('html5rocks.com').then(function (data) {
   console.log(data.ruleGroups.SPEED.score);
   console.log(data.pageStats);
 });
 
 // output a formatted report to the terminal
-psi.output('html5rocks.com', function (err) {
+psi.output('html5rocks.com').then(function () {
   console.log('done');
 });
 ```
@@ -34,7 +34,9 @@ psi.output('html5rocks.com', function (err) {
 
 ## API
 
-### psi(url, [options], callback)
+### psi(url, [options])
+
+Returns a promise that resolves with the response data from Google PageSpeed Insights.
 
 #### url
 
@@ -76,26 +78,13 @@ Default: `70`
 
 Threshold score to pass the PageSpeed test.
 
-#### callback(error, data)
-
-*Required*  
-Type: `function`
-
-##### data
-
-Type: `object`
-
-The response from Google PageSpeed Insights.
-
-### psi.output(url, [options], [callback])
+### psi.output(url, [options])
 
 Output the formatted report to the terminal.
 
+Returns a promise that resolves with the response data from Google PageSpeed Insights.
+
 `url` and `options` is the same as `psi()`.
-
-#### callback(error)
-
-Type: `function`
 
 
 ## CLI

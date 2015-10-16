@@ -1,4 +1,5 @@
 'use strict';
+var Promise = require('pinkie-promise');
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var objectAssign = require('object-assign');
@@ -12,38 +13,32 @@ function handleOpts(url, opts) {
   return opts;
 }
 
-var psi = module.exports = function (url, opts, cb) {
-  if (typeof opts !== 'object') {
-      cb = opts;
+var psi = module.exports = function (url, opts) {
+  return new Promise(function (resolve, reject) {
+    if (typeof opts !== 'object') {
       opts = {};
-  }
-
-  if (!url) {
-    throw new Error('URL required');
-  }
-
-  if (typeof cb !== 'function') {
-    throw new Error('Callback required');
-  }
-
-  pagespeed(handleOpts(url, opts), function (err, response) {
-    if (err) {
-      err.noStack = true;
-      cb(err);
-      return;
     }
 
-    cb(null, response);
+    if (!url) {
+      throw new Error('URL required');
+    }
+
+    pagespeed(handleOpts(url, opts), function (err, response) {
+      if (err) {
+        err.noStack = true;
+        reject(err);
+        return;
+      }
+
+      resolve(response);
+    });
   });
 };
 
-module.exports.output = function (url, opts, cb) {
+module.exports.output = function (url, opts) {
   if (typeof opts !== 'object') {
-      cb = opts;
-      opts = {};
+    opts = {};
   }
-
-  cb = cb || function () {};
 
   psi(url, opts, function (err, data) {
     if (err) {
@@ -53,6 +48,6 @@ module.exports.output = function (url, opts, cb) {
 
     console.log(data);
 
-    output(handleOpts(url, opts), data, cb);
+    return output(handleOpts(url, opts), data);
   });
 };

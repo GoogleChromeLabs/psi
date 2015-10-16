@@ -36,30 +36,27 @@ describe('Formatting', function () {
     assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
   });
 
-  it('should have an error in the callback if threshold is not met', function (done) {
-      output({threshold: 100}, response, function (err, result) {
-        assert.equal(err.name, 'Error', 'Expcted an error.');
-        done();
-      });
+  it('should have an error in the callback if threshold is not met', function () {
+    return output({threshold: 100}, response).catch(function (err) {
+      return err;
+    }).then(function (err) {
+      assert.equal(err.name, 'Error', 'Expected an error.');
+    });
   });
 });
 
 describe('API', function () {
   this.timeout(50000);
 
-  it('should get data from PageSpeed Insights', function (cb) {
-    psi('google.com', function (err, data) {
-      assert(!err, err);
+  it('should get data from PageSpeed Insights', function () {
+    return psi('google.com').then(function (data) {
       assert.strictEqual(data.title, 'Google');
-      cb();
     });
   });
 
-  it('should support options', function (cb) {
-    psi('google.com', {locale: 'no'}, function (err, data) {
-      assert(!err, err);
+  it('should support options', function () {
+    return psi('google.com', {locale: 'no'}).then(function (data) {
       assert.strictEqual(data.formattedResults.locale, 'no');
-      cb();
     });
   });
 });
