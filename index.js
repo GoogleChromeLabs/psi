@@ -51,8 +51,6 @@ module.exports.output = function (url, opts, cb) {
       return;
     }
 
-    console.log(data);
-
     output(handleOpts(url, opts), data, cb);
   });
 };
