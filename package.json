@@ -33,20 +33,22 @@
     "size"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "download": "^4.2.0",
-    "googleapis": "^2.0.3",
-    "humanize-url": "^1.0.0",
-    "lodash": "^3.2.0",
-    "meow": "^3.3.0",
-    "object-assign": "^2.0.0",
-    "prepend-http": "^1.0.0",
-    "pretty-bytes": "^1.0.1",
-    "repeating": "^1.1.1",
-    "sort-on": "^1.0.0",
+    "chalk": "^1.1.1",
+    "download": "^4.4.1",
+    "googleapis": "^2.1.6",
+    "humanize-url": "^1.0.1",
+    "lodash": "^3.10.1",
+    "meow": "^3.5.0",
+    "object-assign": "^4.0.1",
+    "pify": "^2.3.0",
+    "pinkie-promise": "^1.0.0",
+    "prepend-http": "^1.0.3",
+    "pretty-bytes": "^2.0.1",
+    "repeating": "^2.0.0",
+    "sort-on": "^1.2.2",
     "update-notifier": "^0.5.0"
   },
   "devDependencies": {
-    "mocha": "^2.0.1"
+    "mocha": "^2.3.3"
   }
 }

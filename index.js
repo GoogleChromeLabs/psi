@@ -1,8 +1,10 @@
 'use strict';
+var Promise = require('pinkie-promise');
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var objectAssign = require('object-assign');
-var pagespeed = googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed;
+var pify = require('pify');
+var pagespeed = pify(googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed, Promise);
 var output = require('./lib/output');
 
 function handleOpts(url, opts) {
@@ -12,45 +14,26 @@ function handleOpts(url, opts) {
   return opts;
 }
 
-var psi = module.exports = function (url, opts, cb) {
-  if (typeof opts !== 'object') {
-      cb = opts;
+var psi = module.exports = function (url, opts) {
+  return Promise.resolve().then(function () {
+    if (typeof opts !== 'object') {
       opts = {};
-  }
-
-  if (!url) {
-    throw new Error('URL required');
-  }
-
-  if (typeof cb !== 'function') {
-    throw new Error('Callback required');
-  }
-
-  pagespeed(handleOpts(url, opts), function (err, response) {
-    if (err) {
-      err.noStack = true;
-      cb(err);
-      return;
     }
 
-    cb(null, response);
+    if (!url) {
+      throw new Error('URL required');
+    }
+    
+    return pagespeed(handleOpts(url, opts));
   });
 };
 
-module.exports.output = function (url, opts, cb) {
+module.exports.output = function (url, opts) {
   if (typeof opts !== 'object') {
-      cb = opts;
-      opts = {};
+    opts = {};
   }
 
-  cb = cb || function () {};
-
-  psi(url, opts, function (err, data) {
-    if (err) {
-      cb(err);
-      return;
-    }
-
-    output(handleOpts(url, opts), data, cb);
+  return psi(url, opts).then(function (data) {
+    return output(handleOpts(url, opts), data);
   });
 };
