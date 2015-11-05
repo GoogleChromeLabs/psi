@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-var loudRejection = require('loud-rejection');
 var meow = require('meow');
 var updateNotifier = require('update-notifier');
 var psi = require('./');
-
-loudRejection();
 
 var cli = meow({
   help: [

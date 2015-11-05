@@ -38,7 +38,6 @@
     "googleapis": "^2.0.3",
     "humanize-url": "^1.0.0",
     "lodash": "^3.2.0",
-    "loud-rejection": "^1.0.0",
     "meow": "^3.3.0",
     "object-assign": "^4.0.1",
     "pinkie-promise": "^1.0.0",
