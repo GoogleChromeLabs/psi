@@ -1,4 +1,3 @@
-/*global describe, beforeEach, afterEach, it */
 'use strict';
 var assert = require('assert');
 var chalk = require('chalk');
@@ -23,7 +22,7 @@ describe('Formatting', function () {
 
   it('should correctly format PageSpeed Insights response', function () {
     return output({strategy: 'desktop'}, response).then(function () {
-      assert(/Score:     88/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/Score: +88/.test(chalk.stripColor(this.formattedOutput)));
     }.bind(this));
   });
 
