@@ -16,23 +16,15 @@ function handleOpts(url, opts) {
 
 var psi = module.exports = function (url, opts) {
   return Promise.resolve().then(function () {
-    if (typeof opts !== 'object') {
-      opts = {};
-    }
-
     if (!url) {
       throw new Error('URL required');
     }
-    
+
     return pagespeed(handleOpts(url, opts));
   });
 };
 
 module.exports.output = function (url, opts) {
-  if (typeof opts !== 'object') {
-    opts = {};
-  }
-
   return psi(url, opts).then(function (data) {
     return output(handleOpts(url, opts), data);
   });
