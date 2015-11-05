@@ -41,8 +41,6 @@ module.exports.output = function (url, opts) {
   }
 
   return psi(url, opts).then(function (data) {
-    console.log(data);
-
     return output(handleOpts(url, opts), data);
   });
 };
