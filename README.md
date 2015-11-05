@@ -36,7 +36,7 @@ psi.output('html5rocks.com').then(function () {
 
 ### psi(url, [options])
 
-Returns a promise that resolves with the response data from Google PageSpeed Insights.
+Returns a promise for the response data from Google PageSpeed Insights.
 
 #### url
 
@@ -82,7 +82,7 @@ Threshold score to pass the PageSpeed test.
 
 Output the formatted report to the terminal.
 
-Returns a promise that resolves with the response data from Google PageSpeed Insights.
+Returns a promise for the response data from Google PageSpeed Insights.
 
 `url` and `options` is the same as `psi()`.
 
