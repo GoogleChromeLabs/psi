@@ -3,7 +3,8 @@ var Promise = require('pinkie-promise');
 var googleapis = require('googleapis');
 var prependHttp = require('prepend-http');
 var objectAssign = require('object-assign');
-var pagespeed = googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed;
+var pify = require('pify');
+var pagespeed = pify(googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed, Promise);
 var output = require('./lib/output');
 
 function handleOpts(url, opts) {
@@ -14,7 +15,7 @@ function handleOpts(url, opts) {
 }
 
 var psi = module.exports = function (url, opts) {
-  return new Promise(function (resolve, reject) {
+  return Promise.resolve().then(function () {
     if (typeof opts !== 'object') {
       opts = {};
     }
@@ -22,16 +23,8 @@ var psi = module.exports = function (url, opts) {
     if (!url) {
       throw new Error('URL required');
     }
-
-    pagespeed(handleOpts(url, opts), function (err, response) {
-      if (err) {
-        err.noStack = true;
-        reject(err);
-        return;
-      }
-
-      resolve(response);
-    });
+    
+    return pagespeed(handleOpts(url, opts));
   });
 };
 

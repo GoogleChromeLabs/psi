@@ -22,18 +22,21 @@ describe('Formatting', function () {
   });
 
   it('should correctly format PageSpeed Insights response', function () {
-    output({strategy: 'desktop'}, response);
-    assert(/Score:     88/.test(chalk.stripColor(this.formattedOutput)));
+    return output({strategy: 'desktop'}, response).then(function () {
+      assert(/Score:     88/.test(chalk.stripColor(this.formattedOutput)));
+    }.bind(this));
   });
 
   it('should format PageSpeed Insights response as TAP output', function () {
-    output({strategy: 'desktop', format: 'tap'}, response);
-    assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
+    return output({strategy: 'desktop', format: 'tap'}, response).then(function () {
+      assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
+    }.bind(this));
   });
 
   it('should format PageSpeed Insights response as JSON output', function () {
-    output({strategy: 'desktop', format: 'json'}, response);
-    assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
+    return output({strategy: 'desktop', format: 'json'}, response).then(function () {
+      assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
+    }.bind(this));
   });
 
   it('should have an error in the callback if threshold is not met', function () {
