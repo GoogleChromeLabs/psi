@@ -82,7 +82,7 @@ Locale results should be generated in.
 Type: `number`  
 Default: `70`
 
-Threshold score to pass the PageSpeed test.
+Threshold score to pass the PageSpeed test. Useful for setting a performance budget.
 
 ### psi.output(url, [options])
 
@@ -120,7 +120,7 @@ $ psi --help
 ```
 
 
-## Getting PSI into your build
+## Getting PSI into your build process
 
 A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available.
 
