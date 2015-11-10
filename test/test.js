@@ -22,7 +22,7 @@ describe('Formatting', function () {
 
   it('should correctly format PageSpeed Insights response', function () {
     return output({strategy: 'desktop'}, response).then(function () {
-      assert(/Score: +88/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/Speed: +88/.test(chalk.stripColor(this.formattedOutput)));
     }.bind(this));
   });
 
@@ -34,7 +34,7 @@ describe('Formatting', function () {
 
   it('should format PageSpeed Insights response as JSON output', function () {
     return output({strategy: 'desktop', format: 'json'}, response).then(function () {
-      assert(/"Score": 88/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/"Speed": 88/.test(chalk.stripColor(this.formattedOutput)));
     }.bind(this));
   });
 
