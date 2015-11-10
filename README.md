@@ -29,6 +29,12 @@ psi('html5rocks.com').then(function (data) {
 psi.output('html5rocks.com').then(function () {
   console.log('done');
 });
+
+// Supply options to PSI and get back speed and usability scores
+psi('html5rocks.com', { nokey: 'true', strategy: 'mobile' }).then(function (data) {
+  console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+  console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+});
 ```
 
 
