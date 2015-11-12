@@ -20,23 +20,24 @@ $ npm install --save psi
 var psi = require('psi');
 
 // get the PageSpeed Insights report
-psi('html5rocks.com').then(function (data) {
+psi('theverge.com').then(function (data) {
   console.log(data.ruleGroups.SPEED.score);
   console.log(data.pageStats);
 });
 
 // output a formatted report to the terminal
-psi.output('html5rocks.com').then(function () {
+psi.output('theverge.com').then(function () {
   console.log('done');
 });
 
 // Supply options to PSI and get back speed and usability scores
-psi('html5rocks.com', { nokey: 'true', strategy: 'mobile' }).then(function (data) {
+psi('theverge.com', { nokey: 'true', strategy: 'mobile' }).then(function (data) {
   console.log('Speed score: ' + data.ruleGroups.SPEED.score);
   console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
 });
 ```
 
+As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores. The latter is based on [usability rules](https://developers.google.com/speed/docs/insights/rules) that score a page based on factors like the presence of a sensible mobile [viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport).
 
 ## API
 
