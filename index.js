@@ -9,6 +9,10 @@ var output = require('./lib/output');
 
 function handleOpts(url, opts) {
   opts = objectAssign({strategy: 'mobile'}, opts);
+  // The environment variable GOOGLE_API_KEY can hold a default API key
+  if (process.env.GOOGLE_API_KEY) {
+    opts = objectAssign({key: process.env.GOOGLE_API_KEY}, opts);
+  }
   opts.nokey = opts.key === undefined;
   opts.url = prependHttp(url);
   return opts;
