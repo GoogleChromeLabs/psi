@@ -17,27 +17,28 @@ $ npm install --save psi
 ## Usage
 
 ```js
-var psi = require('psi');
+const psi = require('psi');
 
 // get the PageSpeed Insights report
-psi('theverge.com').then(function (data) {
+psi('theverge.com').then(data => {
   console.log(data.ruleGroups.SPEED.score);
   console.log(data.pageStats);
 });
 
 // output a formatted report to the terminal
-psi.output('theverge.com').then(function () {
+psi.output('theverge.com').then(() => {
   console.log('done');
 });
 
 // Supply options to PSI and get back speed and usability scores
-psi('theverge.com', { nokey: 'true', strategy: 'mobile' }).then(function (data) {
+psi('theverge.com', {nokey: 'true', strategy: 'mobile'}).then(data => {
   console.log('Speed score: ' + data.ruleGroups.SPEED.score);
   console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
 });
 ```
 
 As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores. The latter is based on [usability rules](https://developers.google.com/speed/docs/insights/rules) that score a page based on factors like the presence of a sensible mobile [viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport).
+
 
 ## API
 
@@ -47,7 +48,6 @@ Returns a promise for the response data from Google PageSpeed Insights.
 
 #### url
 
-*Required*  
 Type: `string`
 
 URL of the page for which the PageSpeed Insights API should generate results.
@@ -58,29 +58,29 @@ Type: `object`
 
 ##### key
 
-Type: `string`  
-Default: `Free tier`
+Type: `string`<br>
+Default: Free tier
 
 When using this module for a production-level build process, registering for an API key from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) is recommended.
 
 ##### strategy
 
-Type: `string`  
-Default: `mobile`  
+Type: `string`<br>
+Default: `mobile`<br>
 Values: `mobile`, `desktop`
 
 Strategy to use when analyzing the page.
 
 ##### locale
 
-Type: `string`  
+Type: `string`<br>
 Default: `en_US`
 
 Locale results should be generated in.
 
 ##### threshold
 
-Type: `number`  
+Type: `number`<br>
 Default: `70`
 
 Threshold score to pass the PageSpeed test. Useful for setting a performance budget.
@@ -104,19 +104,19 @@ $ npm install --global psi
 $ psi --help
 
   Usage
-    psi <url> <options>
+    $ psi <url>
 
   Example
-    psi todomvc.com --strategy=mobile
+    $ psi todomvc.com --strategy=mobile
 
   Options
-    --key          Google API Key. By default the free tier is used.
-    --strategy     Strategy to use when analyzing the page: mobile|desktop
-    --format       Output format: cli|json|tap
-    --locale       Locale results should be generated in.
-    --threshold    Threshold score to pass the PageSpeed test.
-    --optimized    Get the URL of optimized resources.
-    --download     Download optimised resources.
+    --key        Google API Key. By default the free tier is used.
+    --strategy   Strategy to use when analyzing the page: mobile|desktop
+    --format     Output format: cli|json|tap
+    --locale     Locale results should be generated in.
+    --threshold  Threshold score to pass the PageSpeed test.
+    --optimized  Get the URL of optimized resources.
+    --download   Download optimized resources.
 ```
 
 
@@ -131,5 +131,4 @@ For testing local project, we recommend using [ngrok](http://www.jamescryer.com/
 
 ## License
 
-Apache-2.0  
-Copyright 2015 Google Inc
+Apache-2.0 - Copyright 2015 Google Inc

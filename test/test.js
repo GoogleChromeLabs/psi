@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-env mocha */
 var assert = require('assert');
 var chalk = require('chalk');
 var response = require('./fixtures/response');

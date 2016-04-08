@@ -24,12 +24,12 @@ var cli = meow([
 updateNotifier({pkg: cli.pkg}).notify();
 
 if (!cli.input[0]) {
-  console.error('Please supply an URL');
+  console.error('Please specify a URL');
   process.exit(1);
 }
 
 psi.output(cli.input[0], cli.flags).then(function () {
-  process.exit(0);
+  process.exit();
 }).catch(function (err) {
   if (err.noStack) {
     console.error(err.message);

@@ -8,7 +8,6 @@
     "url": "addyosmani.com"
   },
   "bin": "cli.js",
-  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
   },
@@ -50,13 +49,9 @@
   },
   "devDependencies": {
     "mocha": "^2.3.3",
-    "xo": "^0.10.1"
+    "xo": "^0.13.0"
   },
   "xo": {
-    "space": true,
-    "envs": [
-      "node",
-      "mocha"
-    ]
+    "space": true
   }
 }
