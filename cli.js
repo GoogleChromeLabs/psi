@@ -18,7 +18,9 @@ var cli = meow([
   '  --locale     Locale results should be generated in.',
   '  --threshold  Threshold score to pass the PageSpeed test.',
   '  --optimized  Get the URL of optimized resources.',
-  '  --download   Download optimized resources.'
+  '  --download   Download optimized resources.',
+  '',
+  'The environment variable GOOGLE_API_KEY can hold can hold a default API key.'
 ]);
 
 updateNotifier({pkg: cli.pkg}).notify();
