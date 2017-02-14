@@ -9,7 +9,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "repository": "addyosmani/psi",
   "license": "Apache-2.0",
@@ -34,22 +34,19 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "download": "^4.4.1",
-    "googleapis": "^7.1.0",
+    "googleapis": "^16.1.0",
     "humanize-url": "^1.0.1",
     "lodash": "^4.5.1",
     "meow": "^3.5.0",
-    "object-assign": "^4.0.1",
     "pify": "^2.3.0",
-    "pinkie-promise": "^2.0.0",
     "prepend-http": "^1.0.3",
-    "pretty-bytes": "^3.0.1",
-    "repeating": "^2.0.0",
+    "pretty-bytes": "^4.0.2",
     "sort-on": "^1.2.2",
-    "update-notifier": "^0.6.0"
+    "update-notifier": "^2.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.3",
-    "xo": "^0.13.0"
+    "mocha": "^3.2.0",
+    "xo": "^0.17.1"
   },
   "xo": {
     "space": true

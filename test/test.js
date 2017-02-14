@@ -1,20 +1,20 @@
-'use strict';
 /* eslint-env mocha */
-var assert = require('assert');
-var chalk = require('chalk');
-var response = require('./fixtures/response');
-var output = require('../lib/output');
-var psi = require('../');
+'use strict';
+const assert = require('assert');
+const chalk = require('chalk');
+const output = require('../lib/output');
+const psi = require('..');
+const response = require('./fixtures/response');
 
-describe('Formatting', function () {
+describe('Formatting', () => {
   beforeEach(function () {
     this.log = console.log;
     this.formattedOutput = '';
 
-    console.log = function (content) {
+    console.log = content => {
       this.formattedOutput += content + '\n';
       this.log(content);
-    }.bind(this);
+    };
   });
 
   afterEach(function () {
@@ -22,27 +22,25 @@ describe('Formatting', function () {
   });
 
   it('should correctly format PageSpeed Insights response', function () {
-    return output({strategy: 'desktop'}, response).then(function () {
+    return output({strategy: 'desktop'}, response).then(() => {
       assert(/Speed: +88/.test(chalk.stripColor(this.formattedOutput)));
-    }.bind(this));
+    });
   });
 
   it('should format PageSpeed Insights response as TAP output', function () {
-    return output({strategy: 'desktop', format: 'tap'}, response).then(function () {
+    return output({strategy: 'desktop', format: 'tap'}, response).then(() => {
       assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
-    }.bind(this));
+    });
   });
 
   it('should format PageSpeed Insights response as JSON output', function () {
-    return output({strategy: 'desktop', format: 'json'}, response).then(function () {
+    return output({strategy: 'desktop', format: 'json'}, response).then(() => {
       assert(/"Speed": 88/.test(chalk.stripColor(this.formattedOutput)));
-    }.bind(this));
+    });
   });
 
-  it('should have an error in the callback if threshold is not met', function () {
-    return output({threshold: 100}, response).catch(function (err) {
-      return err;
-    }).then(function (err) {
+  it('should have an error in the callback if threshold is not met', () => {
+    return output({threshold: 100}, response).catch(err => {
       assert.equal(err.name, 'Error', 'Expected an error.');
     });
   });
@@ -51,14 +49,14 @@ describe('Formatting', function () {
 describe('API', function () {
   this.timeout(50000);
 
-  it('should get data from PageSpeed Insights', function () {
-    return psi('google.com').then(function (data) {
+  it('should get data from PageSpeed Insights', () => {
+    return psi('google.com').then(data => {
       assert.strictEqual(data.title, 'Google');
     });
   });
 
-  it('should support options', function () {
-    return psi('google.com', {locale: 'no'}).then(function (data) {
+  it('should support options', () => {
+    return psi('google.com', {locale: 'no'}).then(data => {
       assert.strictEqual(data.formattedResults.locale, 'no');
     });
   });
