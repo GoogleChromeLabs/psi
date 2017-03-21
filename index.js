@@ -13,14 +13,14 @@ function handleOpts(url, opts) {
   return opts;
 }
 
-const psi = module.exports = (url, opts) => {
-  return Promise.resolve().then(() => {
-    if (!url) {
-      throw new Error('URL required');
-    }
+const psi = (url, opts) => Promise.resolve().then(() => {
+  if (!url) {
+    throw new Error('URL required');
+  }
 
-    return pagespeed(handleOpts(url, opts));
-  });
-};
+  return pagespeed(handleOpts(url, opts));
+});
+
+module.exports = psi;
 
 module.exports.output = (url, opts) => psi(url, opts).then(data => output(handleOpts(url, opts), data));
