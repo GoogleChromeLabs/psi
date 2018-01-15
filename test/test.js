@@ -51,7 +51,7 @@ describe('API', function () {
 
   it('should get data from PageSpeed Insights', () => {
     return psi('google.com').then(data => {
-      assert.strictEqual(data.title, 'Google');
+      assert.strictEqual(data.title, 'http://google.com/');
     });
   });
 
