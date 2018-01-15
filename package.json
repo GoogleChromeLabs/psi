@@ -2,6 +2,8 @@
   "name": "psi",
   "version": "3.0.0",
   "description": "PageSpeed Insights with reporting",
+  "license": "Apache-2.0",
+  "repository": "addyosmani/psi",
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
@@ -11,8 +13,6 @@
   "engines": {
     "node": ">=4"
   },
-  "repository": "addyosmani/psi",
-  "license": "Apache-2.0",
   "scripts": {
     "test": "xo && mocha"
   },
@@ -32,20 +32,21 @@
     "size"
   ],
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^2.3.0",
     "download": "^4.4.1",
-    "googleapis": "^16.1.0",
+    "googleapis": "^24.0.0",
     "humanize-url": "^1.0.1",
     "lodash": "^4.5.1",
-    "meow": "^3.5.0",
-    "pify": "^2.3.0",
-    "prepend-http": "^1.0.3",
+    "meow": "^4.0.0",
+    "pify": "^3.0.0",
+    "prepend-http": "^2.0.0",
     "pretty-bytes": "^4.0.2",
-    "sort-on": "^1.2.2",
+    "sort-on": "^2.0.0",
+    "strip-ansi": "^4.0.0",
     "update-notifier": "^2.0.0"
   },
   "devDependencies": {
-    "mocha": "^3.2.0",
+    "mocha": "^4.1.0",
     "xo": "^0.18.0"
   },
   "xo": {

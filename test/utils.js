@@ -2,12 +2,13 @@
 /* eslint-env mocha */
 const assert = require('assert');
 const chalk = require('chalk');
+const stripAnsi = require('strip-ansi');
 const utils = require('../lib/utils');
 
 describe('Report utils', () => {
   it('should create a divider', () => {
     const expected = '\n--------------------------------------------------------\n';
-    assert.equal(chalk.stripColor(utils.divider), expected);
+    assert.equal(stripAnsi(utils.divider), expected);
   });
 
   it('should create buffer space', () => {
@@ -20,7 +21,7 @@ describe('Report utils', () => {
   it('should create label', () => {
     const expected = 'Enable GZIP compression                    | ';
     const msg = 'EnableGzipCompression';
-    assert.equal(chalk.stripColor(utils.labelize(msg)), expected);
+    assert.equal(stripAnsi(utils.labelize(msg)), expected);
   });
 
   it('should select red for scores 20 or less', () => {

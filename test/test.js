@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 'use strict';
 const assert = require('assert');
-const chalk = require('chalk');
+const stripAnsi = require('strip-ansi');
 const output = require('../lib/output');
 const psi = require('..');
 const response = require('./fixtures/response');
@@ -23,19 +23,19 @@ describe('Formatting', () => {
 
   it('should correctly format PageSpeed Insights response', function () {
     return output({strategy: 'desktop'}, response).then(() => {
-      assert(/Speed: +88/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/Speed: +88/.test(stripAnsi(this.formattedOutput)));
     });
   });
 
   it('should format PageSpeed Insights response as TAP output', function () {
     return output({strategy: 'desktop', format: 'tap'}, response).then(() => {
-      assert(/ok 1 - psi/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/ok 1 - psi/.test(stripAnsi(this.formattedOutput)));
     });
   });
 
   it('should format PageSpeed Insights response as JSON output', function () {
     return output({strategy: 'desktop', format: 'json'}, response).then(() => {
-      assert(/"Speed": 88/.test(chalk.stripColor(this.formattedOutput)));
+      assert(/"Speed": 88/.test(stripAnsi(this.formattedOutput)));
     });
   });
 

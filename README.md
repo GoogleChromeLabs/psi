@@ -10,7 +10,7 @@ Run mobile and desktop performance tests for your deployed site using [Google Pa
 ## Install
 
 ```
-$ npm install --save psi
+$ npm install psi
 ```
 
 
