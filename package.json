@@ -1,6 +1,6 @@
 {
   "name": "psi",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "PageSpeed Insights with reporting",
   "license": "Apache-2.0",
   "repository": "addyosmani/psi",
