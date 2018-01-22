@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require('meow');
+const chalk = require('chalk');
 const updateNotifier = require('update-notifier');
 const psi = require('.');
 
@@ -32,7 +33,7 @@ psi.output(cli.input[0], cli.flags).then(() => {
   process.exit();
 }).catch(err => {
   if (err.noStack) {
-    console.error(err.message);
+    console.error(chalk.red(err.message));
     process.exit(1);
   } else {
     throw err;
