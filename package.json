@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "test": "xo && mocha"
@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "chalk": "^2.3.0",
-    "download": "^4.4.1",
+    "download": "^7.0.0",
     "googleapis": "^24.0.0",
     "humanize-url": "^1.0.1",
     "lodash": "^4.5.1",
