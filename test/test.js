@@ -51,13 +51,13 @@ describe('API', function () {
 
   it('should get data from PageSpeed Insights', () => {
     return psi('google.com').then(data => {
-      assert.strictEqual(data.title, 'Google');
+      assert.strictEqual(data.data.title, 'Google');
     });
   });
 
   it('should support options', () => {
     return psi('google.com', {locale: 'no'}).then(data => {
-      assert.strictEqual(data.formattedResults.locale, 'no');
+      assert.strictEqual(data.data.formattedResults.locale, 'no');
     });
   });
 });

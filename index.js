@@ -1,10 +1,9 @@
 'use strict';
-const googleapis = require('googleapis');
+const {google} = require('googleapis');
 const prependHttp = require('prepend-http');
-const pify = require('pify');
 const output = require('./lib/output');
 
-const pagespeed = pify(googleapis.pagespeedonline('v2').pagespeedapi.runpagespeed);
+const pagespeedonline = google.pagespeedonline('v4');
 
 function handleOpts(url, opts) {
   opts = Object.assign({strategy: 'mobile'}, opts);
@@ -18,7 +17,7 @@ const psi = (url, opts) => Promise.resolve().then(() => {
     throw new Error('URL required');
   }
 
-  return pagespeed(handleOpts(url, opts));
+  return pagespeedonline.pagespeedapi.runpagespeed(handleOpts(url, opts));
 });
 
 module.exports = psi;

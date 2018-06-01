@@ -1,5 +1,7 @@
 {
-    "kind": "pagespeedonline#result",
+    "data":
+    {
+        "kind": "pagespeedonline#result",
     "id": "http://www.html5rocks.com/en/",
     "responseCode": 200,
     "title": "HTML5 Rocks - A resource for open web HTML5 developers",
@@ -410,4 +412,7 @@
         "major": 1,
         "minor": 15
     }
+        
+    }
+    
 }
