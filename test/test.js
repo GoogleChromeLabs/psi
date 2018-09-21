@@ -47,7 +47,7 @@ describe('Formatting', () => {
 });
 
 describe('API', function () {
-  this.timeout(50000);
+  this.timeout(60000);
 
   it('should get data from PageSpeed Insights', () => {
     return psi('google.com').then(data => {
