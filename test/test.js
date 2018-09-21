@@ -50,13 +50,13 @@ describe('API', function () {
   this.timeout(50000);
 
   it('should get data from PageSpeed Insights', () => {
-    return psi('https://www.google.com').then(data => {
-      assert.strictEqual(data.data.title, 'Google');
+    return psi('addyosmani.com/').then(data => {
+      assert.strictEqual(data.data.title, 'AddyOsmani.com');
     });
   });
 
   it('should support options', () => {
-    return psi('https://www.google.com', {locale: 'no'}).then(data => {
+    return psi('addyosmani.com/', {locale: 'no'}).then(data => {
       assert.strictEqual(data.data.formattedResults.locale, 'no');
     });
   });
