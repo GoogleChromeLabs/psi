@@ -47,10 +47,12 @@ describe('Formatting', () => {
 });
 
 describe('API', function () {
-  this.timeout(60000);
+  this.timeout(50000);
 
   it('should get data from PageSpeed Insights', () => {
     return psi('google.com').then(data => {
+      // Trying to find error in travis :-/ REMOVE
+      console.log(`data.data 👉 ${JSON.stringify(data.data)}`);
       assert.strictEqual(data.data.title, 'Google');
     });
   });
