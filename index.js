@@ -6,21 +6,21 @@ const output = require('./lib/output');
 
 const pagespeed = pify(googleapis.google.pagespeedonline('v4').pagespeedapi);
 
-function handleOpts(url, opts) {
-  opts = Object.assign({strategy: 'mobile'}, opts);
-  opts.nokey = opts.key === undefined;
-  opts.url = prependHttp(url);
-  return opts;
+function handleOpts(url, options) {
+  options = Object.assign({strategy: 'mobile'}, options);
+  options.nokey = options.key === undefined;
+  options.url = prependHttp(url);
+  return options;
 }
 
-const psi = (url, opts) => Promise.resolve().then(() => {
+const psi = (url, options) => Promise.resolve().then(() => {
   if (!url) {
     throw new Error('URL required');
   }
 
-  return pagespeed.runpagespeed(handleOpts(url, opts));
+  return pagespeed.runpagespeed(handleOpts(url, options));
 });
 
 module.exports = psi;
 
-module.exports.output = (url, opts) => psi(url, opts).then(data => output(handleOpts(url, opts), data.data));
+module.exports.output = (url, options) => psi(url, options).then(data => output(handleOpts(url, options), data.data));

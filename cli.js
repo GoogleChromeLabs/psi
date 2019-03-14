@@ -19,7 +19,7 @@ const cli = meow(`
     --download   Download optimized resources
 
   Example
-    $ psi todomvc.com --strategy=mobile
+    $ psi https://addyosmani.com --strategy=mobile
 `);
 
 updateNotifier({pkg: cli.pkg}).notify();

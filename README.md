@@ -118,7 +118,7 @@ $ psi --help
     --download   Download optimized resources
 
   Example
-    $ psi todomvc.com --strategy=mobile
+    $ psi https://addyosmani.com --strategy=mobile
 ```
 
 

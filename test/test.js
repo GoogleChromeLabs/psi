@@ -13,7 +13,7 @@ describe('Formatting', () => {
     this.formattedOutput = '';
 
     console.log = content => {
-      this.formattedOutput += content + '\n';
+      this.formattedOutput += `${content}\n`;
       this.log(content);
     };
   });
