@@ -4,7 +4,7 @@
 
 ![](screenshot.png)
 
-Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v2/getting-started) V2 with tidy reporting for your build process.
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights v4](https://developers.google.com/speed/docs/insights/v4/about) with tidy reporting for your build process.
 
 
 ## Install
@@ -19,22 +19,24 @@ $ npm install psi
 ```js
 const psi = require('psi');
 
-// Get the PageSpeed Insights report
-psi('theverge.com').then(data => {
+(async () => {
+  // Get the PageSpeed Insights report
+  const data = await psi('https://theverge.com');
   console.log(data.ruleGroups.SPEED.score);
   console.log(data.pageStats);
-});
 
-// Output a formatted report to the terminal
-psi.output('theverge.com').then(() => {
-  console.log('done');
-});
+  // Output a formatted report to the terminal
+  await psi.output('https://theverge.com');
+  console.log('Done');
 
-// Supply options to PSI and get back speed and usability scores
-psi('theverge.com', {nokey: 'true', strategy: 'mobile'}).then(data => {
+  // Supply options to PSI and get back speed and usability scores
+  const data2 = await psi('https://theverge.com', {
+    nokey: 'true',
+    strategy: 'mobile'
+  });
   console.log('Speed score:', data.ruleGroups.SPEED.score);
   console.log('Usability score:', data.ruleGroups.USABILITY.score);
-});
+})();
 ```
 
 As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores. The latter is based on [usability rules](https://developers.google.com/speed/docs/insights/rules) that score a page based on factors like the presence of a sensible mobile [viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport).
@@ -44,7 +46,7 @@ As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores.
 
 ### psi(url, [options])
 
-Returns a `Promise` for the response data from Google PageSpeed Insights.
+Returns a promise for the response data from Google PageSpeed Insights.
 
 #### url
 
@@ -91,7 +93,7 @@ Output the formatted report to the terminal.
 
 Returns a promise for the response data from Google PageSpeed Insights.
 
-`url` and `options` is the same as `psi()`.
+`url` and `options` are the same as `psi()`.
 
 
 ## CLI
@@ -126,7 +128,7 @@ A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI
 
 If you use Grunt, [`grunt-pagespeed`](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
-For testing local project, we recommend using [ngrok](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/).
+For testing local projects, we recommend using [`ngrok`](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/).
 
 
 ## License
