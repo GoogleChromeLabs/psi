@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+/* eslint-disable node/no-deprecated-api */
 'use strict';
 const assert = require('assert');
 const stripAnsi = require('strip-ansi');
@@ -12,7 +13,7 @@ describe('Formatting', () => {
     this.formattedOutput = '';
 
     console.log = content => {
-      this.formattedOutput += content + '\n';
+      this.formattedOutput += `${content}\n`;
       this.log(content);
     };
   });
@@ -40,8 +41,8 @@ describe('Formatting', () => {
   });
 
   it('should have an error in the callback if threshold is not met', () => {
-    return output({threshold: 100}, response).catch(err => {
-      assert.equal(err.name, 'Error', 'Expected an error.');
+    return output({threshold: 100}, response).catch(error => {
+      assert.equal(error.name, 'Error', 'Expected an error.');
     });
   });
 });
@@ -50,14 +51,14 @@ describe('API', function () {
   this.timeout(50000);
 
   it('should get data from PageSpeed Insights', () => {
-    return psi('google.com').then(data => {
-      assert.strictEqual(data.title, 'Google');
+    return psi('addyosmani.com/').then(data => {
+      assert.strictEqual(data.data.title, 'AddyOsmani.com');
     });
   });
 
   it('should support options', () => {
-    return psi('google.com', {locale: 'no'}).then(data => {
-      assert.strictEqual(data.formattedResults.locale, 'no');
+    return psi('addyosmani.com/', {locale: 'no'}).then(data => {
+      assert.strictEqual(data.data.formattedResults.locale, 'no');
     });
   });
 });

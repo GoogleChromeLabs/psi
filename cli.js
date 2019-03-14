@@ -19,7 +19,7 @@ const cli = meow(`
     --download   Download optimized resources
 
   Example
-    $ psi todomvc.com --strategy=mobile
+    $ psi https://addyosmani.com --strategy=mobile
 `);
 
 updateNotifier({pkg: cli.pkg}).notify();
@@ -31,11 +31,11 @@ if (!cli.input[0]) {
 
 psi.output(cli.input[0], cli.flags).then(() => {
   process.exit();
-}).catch(err => {
-  if (err.noStack) {
-    console.error(chalk.red(err.message));
+}).catch(error => {
+  if (error.noStack) {
+    console.error(chalk.red(error.message));
     process.exit(1);
   } else {
-    throw err;
+    throw error;
   }
 });
