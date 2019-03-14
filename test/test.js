@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+/* eslint-disable node/no-deprecated-api */
 'use strict';
 const assert = require('assert');
 const stripAnsi = require('strip-ansi');
@@ -40,8 +41,8 @@ describe('Formatting', () => {
   });
 
   it('should have an error in the callback if threshold is not met', () => {
-    return output({threshold: 100}, response).catch(err => {
-      assert.equal(err.name, 'Error', 'Expected an error.');
+    return output({threshold: 100}, response).catch(error => {
+      assert.equal(error.name, 'Error', 'Expected an error.');
     });
   });
 });

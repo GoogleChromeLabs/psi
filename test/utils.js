@@ -1,5 +1,6 @@
-'use strict';
 /* eslint-env mocha */
+/* eslint-disable node/no-deprecated-api */
+'use strict';
 const assert = require('assert');
 const chalk = require('chalk');
 const stripAnsi = require('strip-ansi');
