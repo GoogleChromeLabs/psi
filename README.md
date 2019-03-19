@@ -4,7 +4,7 @@
 
 ![](screenshot.png)
 
-Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights v4](https://developers.google.com/speed/docs/insights/v4/about) with tidy reporting for your build process.
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights v5](https://developers.google.com/speed/docs/insights/v5/about) with tidy reporting for your build process.
 
 
 ## Install

@@ -14,7 +14,8 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && mocha"
+    "lint": "xo",
+    "test": "mocha"
   },
   "files": [
     "cli.js",
@@ -34,18 +35,20 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "download": "^7.0.0",
-    "googleapis": "^33.0.0",
+    "googleapis": "^38.0.0",
     "humanize-url": "^1.0.1",
     "lodash": "^4.17.11",
     "meow": "^5.0.0",
     "pify": "^4.0.0",
     "prepend-http": "^2.0.0",
     "pretty-bytes": "^5.1.0",
+    "pretty-ms": "^4.0.0",
     "sort-on": "^3.0.0",
     "strip-ansi": "^5.1.0",
     "update-notifier": "^2.5.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^6.0.2",
     "xo": "^0.24.0"
   },
