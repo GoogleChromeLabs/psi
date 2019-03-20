@@ -14,8 +14,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "lint": "xo",
-    "test": "mocha"
+    "test": "xo && mocha"
   },
   "files": [
     "cli.js",
