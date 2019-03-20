@@ -1,9 +1,7 @@
 /* eslint-env mocha */
-/* eslint-disable node/no-deprecated-api */
 'use strict';
-const { assert } = require('chai');
-let psi = require('..');
-
+const {assert} = require('chai');
+const psi = require('..');
 
 describe('API', function () {
   this.timeout(50000);

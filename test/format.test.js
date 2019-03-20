@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 'use strict';
 const {assert} = require('chai');
 const stripAnsi = require('strip-ansi');

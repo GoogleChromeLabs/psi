@@ -1,10 +1,10 @@
 'use strict';
-const { google } = require('googleapis');
+const {google} = require('googleapis');
 const prependHttp = require('prepend-http');
 const pify = require('pify');
 const output = require('./lib/output');
 
-const { runpagespeed } = pify(google.pagespeedonline('v5').pagespeedapi);
+const {runpagespeed} = pify(google.pagespeedonline('v5').pagespeedapi);
 
 function handleOpts(url, options) {
   options = Object.assign({strategy: 'mobile'}, options);
