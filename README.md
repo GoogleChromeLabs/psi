@@ -16,6 +16,8 @@ $ npm install psi
 
 ## Usage
 
+<!-- TODO Update this section with v5+ information -->
+
 ```js
 const psi = require('psi');
 
@@ -114,8 +116,6 @@ $ psi --help
     --format     Output format: cli|json|tap
     --locale     Locale results should be generated in
     --threshold  Threshold score to pass the PageSpeed test
-    --optimized  Get the URL of optimized resources
-    --download   Download optimized resources
 
   Example
     $ psi https://addyosmani.com --strategy=mobile
