@@ -1,413 +1,1448 @@
 {
-    "kind": "pagespeedonline#result",
-    "id": "http://www.html5rocks.com/en/",
-    "responseCode": 200,
-    "title": "HTML5 Rocks - A resource for open web HTML5 developers",
-    "ruleGroups": {
-        "SPEED": {
-            "score": 88
-        }
+  "captchaResult": "CAPTCHA_NOT_NEEDED",
+  "kind": "pagespeedonline#result",
+  "id": "https://www.html5rocks.com/en/",
+  "loadingExperience": {
+    "id": "https://www.html5rocks.com/en/",
+    "metrics": {
+      "FIRST_CONTENTFUL_PAINT_MS": {
+        "percentile": 2384,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 1000,
+            "proportion": 0.4537037037037037
+          },
+          {
+            "min": 1000,
+            "max": 2500,
+            "proportion": 0.45648148148148154
+          },
+          {
+            "min": 2500,
+            "proportion": 0.08981481481481485
+          }
+        ],
+        "category": "AVERAGE"
+      },
+      "FIRST_INPUT_DELAY_MS": {
+        "percentile": 7,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 50,
+            "proportion": 0.9911111111111109
+          },
+          {
+            "min": 50,
+            "max": 250,
+            "proportion": 0.004444444444444444
+          },
+          {
+            "min": 250,
+            "proportion": 0.004444444444444444
+          }
+        ],
+        "category": "FAST"
+      }
     },
-    "pageStats": {
-        "numberResources": 25,
-        "numberHosts": 6,
-        "totalRequestBytes": "2938",
-        "numberStaticResources": 14,
-        "htmlResponseBytes": "18805",
-        "cssResponseBytes": "53940",
-        "imageResponseBytes": "114871",
-        "javascriptResponseBytes": "80851",
-        "otherResponseBytes": "105025",
-        "numberJsResources": 3,
-        "numberCssResources": 2
+    "overall_category": "AVERAGE",
+    "initial_url": "https://www.html5rocks.com/en/"
+  },
+  "originLoadingExperience": {
+    "id": "https://www.html5rocks.com",
+    "metrics": {
+      "FIRST_CONTENTFUL_PAINT_MS": {
+        "percentile": 2561,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 1000,
+            "proportion": 0.36666955542074703
+          },
+          {
+            "min": 1000,
+            "max": 2500,
+            "proportion": 0.5267209752433776
+          },
+          {
+            "min": 2500,
+            "proportion": 0.10660946933587546
+          }
+        ],
+        "category": "SLOW"
+      },
+      "FIRST_INPUT_DELAY_MS": {
+        "percentile": 14,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 50,
+            "proportion": 0.9737322145202479
+          },
+          {
+            "min": 50,
+            "max": 250,
+            "proportion": 0.018059102517329437
+          },
+          {
+            "min": 250,
+            "proportion": 0.008208682962422472
+          }
+        ],
+        "category": "FAST"
+      }
     },
-    "formattedResults": {
-        "locale": "en_US",
-        "ruleResults": {
-            "AvoidLandingPageRedirects": {
-                "localizedRuleName": "Avoid landing page redirects",
-                "ruleImpact": 0,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Your page has no redirects. Learn more about {{BEGIN_LINK}}avoiding landing page redirects{{END_LINK}}.",
-                    "args": [
-                        {
-                            "type": "HYPERLINK",
-                            "key": "LINK",
-                            "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
-                        }
-                    ]
-                }
-            },
-            "EnableGzipCompression": {
-                "localizedRuleName": "Enable compression",
-                "ruleImpact": 0,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "You have compression enabled. Learn more about {{BEGIN_LINK}}enabling compression{{END_LINK}}.",
-                    "args": [
-                        {
-                            "type": "HYPERLINK",
-                            "key": "LINK",
-                            "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
-                        }
-                    ]
-                }
-            },
-            "LeverageBrowserCaching": {
-                "localizedRuleName": "Leverage browser caching",
-                "ruleImpact": 0.9932349537037037,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network."
-                },
-                "urlBlocks": [
-                    {
-                        "header": {
-                            "format": "{{BEGIN_LINK}}Leverage browser caching{{END_LINK}} for the following cacheable resources:",
-                            "args": [
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
-                                }
-                            ]
-                        },
-                        "urls": [
-                            {
-                                "result": {
-                                    "format": "{{URL}} ({{LIFETIME}})",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.googletagmanager.com/gtm.js?id=GTM-MB3LRF"
-                                        },
-                                        {
-                                            "type": "DURATION",
-                                            "key": "LIFETIME",
-                                            "value": "16.4 minutes"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "result": {
-                                    "format": "{{URL}} ({{LIFETIME}})",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.google-analytics.com/analytics.js"
-                                        },
-                                        {
-                                            "type": "DURATION",
-                                            "key": "LIFETIME",
-                                            "value": "2 hours"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "MainResourceServerResponseTime": {
-                "localizedRuleName": "Reduce server response time",
-                "ruleImpact": 0.31,
-                "groups": [
-                    "SPEED"
-                ],
-                "urlBlocks": [
-                    {
-                        "header": {
-                            "format": "In our test, your server responded in {{RESPONSE_TIME}}. There are many factors that can slow down your server response time. {{BEGIN_LINK}}Please read our recommendations{{END_LINK}} to learn how you can monitor and measure where your server is spending the most time.",
-                            "args": [
-                                {
-                                    "type": "DURATION",
-                                    "key": "RESPONSE_TIME",
-                                    "value": "0.23 seconds"
-                                },
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/Server"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "MinifyCss": {
-                "localizedRuleName": "Minify CSS",
-                "ruleImpact": 0,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Your CSS is minified. Learn more about {{BEGIN_LINK}}minifying CSS{{END_LINK}}.",
-                    "args": [
-                        {
-                            "type": "HYPERLINK",
-                            "key": "LINK",
-                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
-                        }
-                    ]
-                }
-            },
-            "MinifyHTML": {
-                "localizedRuleName": "Minify HTML",
-                "ruleImpact": 0.0873,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Compacting HTML code, including any inline JavaScript and CSS contained in it, can save many bytes of data and speed up download and parse times."
-                },
-                "urlBlocks": [
-                    {
-                        "header": {
-                            "format": "{{BEGIN_LINK}}Minify HTML{{END_LINK}} for the following resources to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
-                            "args": [
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
-                                },
-                                {
-                                    "type": "BYTES",
-                                    "key": "SIZE_IN_BYTES",
-                                    "value": "873B"
-                                },
-                                {
-                                    "type": "PERCENTAGE",
-                                    "key": "PERCENTAGE",
-                                    "value": "19%"
-                                }
-                            ]
-                        },
-                        "urls": [
-                            {
-                                "result": {
-                                    "format": "Minifying {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction) after compression.",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.html5rocks.com/en/"
-                                        },
-                                        {
-                                            "type": "BYTES",
-                                            "key": "SIZE_IN_BYTES",
-                                            "value": "873B"
-                                        },
-                                        {
-                                            "type": "PERCENTAGE",
-                                            "key": "PERCENTAGE",
-                                            "value": "19%"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "MinifyJavaScript": {
-                "localizedRuleName": "Minify JavaScript",
-                "ruleImpact": 0,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Your JavaScript content is minified. Learn more about {{BEGIN_LINK}}minifying JavaScript{{END_LINK}}.",
-                    "args": [
-                        {
-                            "type": "HYPERLINK",
-                            "key": "LINK",
-                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
-                        }
-                    ]
-                }
-            },
-            "MinimizeRenderBlockingResources": {
-                "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
-                "ruleImpact": 6,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Your page has {{NUM_SCRIPTS}} blocking script resources and {{NUM_CSS}} blocking CSS resources. This causes a delay in rendering your page.",
-                    "args": [
-                        {
-                            "type": "INT_LITERAL",
-                            "key": "NUM_SCRIPTS",
-                            "value": "1"
-                        },
-                        {
-                            "type": "INT_LITERAL",
-                            "key": "NUM_CSS",
-                            "value": "2"
-                        }
-                    ]
-                },
-                "urlBlocks": [
-                    {
-                        "header": {
-                            "format": "None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML."
-                        }
-                    },
-                    {
-                        "header": {
-                            "format": "{{BEGIN_LINK}}Remove render-blocking JavaScript{{END_LINK}}:",
-                            "args": [
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
-                                }
-                            ]
-                        },
-                        "urls": [
-                            {
-                                "result": {
-                                    "format": "{{URL}}",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.html5rocks.com/static/js/modernizr.custom.82437.js"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "header": {
-                            "format": "{{BEGIN_LINK}}Optimize CSS Delivery{{END_LINK}} of the following:",
-                            "args": [
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
-                                }
-                            ]
-                        },
-                        "urls": [
-                            {
-                                "result": {
-                                    "format": "{{URL}}",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.html5rocks.com/static/css/v2-combined.min.css?20131111"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "result": {
-                                    "format": "{{URL}}",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "OptimizeImages": {
-                "localizedRuleName": "Optimize images",
-                "ruleImpact": 0.6536000000000001,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "Properly formatting and compressing images can save many bytes of data."
-                },
-                "urlBlocks": [
-                    {
-                        "header": {
-                            "format": "{{BEGIN_LINK}}Optimize the following images{{END_LINK}} to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
-                            "args": [
-                                {
-                                    "type": "HYPERLINK",
-                                    "key": "LINK",
-                                    "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
-                                },
-                                {
-                                    "type": "BYTES",
-                                    "key": "SIZE_IN_BYTES",
-                                    "value": "6.1KiB"
-                                },
-                                {
-                                    "type": "PERCENTAGE",
-                                    "key": "PERCENTAGE",
-                                    "value": "29%"
-                                }
-                            ]
-                        },
-                        "urls": [
-                            {
-                                "result": {
-                                    "format": "Losslessly compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
-                                    "args": [
-                                        {
-                                            "type": "URL",
-                                            "key": "URL",
-                                            "value": "http://www.html5rocks.com/static/images/profiles/75/samthorogood.75.png"
-                                        },
-                                        {
-                                            "type": "BYTES",
-                                            "key": "SIZE_IN_BYTES",
-                                            "value": "6.1KiB"
-                                        },
-                                        {
-                                            "type": "PERCENTAGE",
-                                            "key": "PERCENTAGE",
-                                            "value": "29%"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "PrioritizeVisibleContent": {
-                "localizedRuleName": "Prioritize visible content",
-                "ruleImpact": 0,
-                "groups": [
-                    "SPEED"
-                ],
-                "summary": {
-                    "format": "You have the above-the-fold content properly prioritized. Learn more about {{BEGIN_LINK}}prioritizing visible content{{END_LINK}}.",
-                    "args": [
-                        {
-                            "type": "HYPERLINK",
-                            "key": "LINK",
-                            "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
-                        }
-                    ]
-                }
+    "overall_category": "SLOW",
+    "initial_url": "https://www.html5rocks.com/en/"
+  },
+  "lighthouseResult": {
+    "requestedUrl": "http://www.html5rocks.com/en/",
+    "finalUrl": "https://www.html5rocks.com/en/",
+    "lighthouseVersion": "4.1.0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/72.0.3603.0 Safari/537.36",
+    "fetchTime": "2019-03-15T16:34:41.321Z",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3559.0 Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/72.0.3603.0 Safari/537.36",
+      "benchmarkIndex": 610.0
+    },
+    "runWarnings": [],
+    "configSettings": {
+      "emulatedFormFactor": "desktop",
+      "locale": "en-US",
+      "onlyCategories": [
+        "performance"
+      ]
+    },
+    "audits": {
+      "metrics": {
+        "id": "metrics",
+        "title": "Metrics",
+        "description": "Collects all available metrics.",
+        "score": null,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "items": [
+            {
+              "observedDomContentLoadedTs": 3.084869888469E12,
+              "observedSpeedIndex": 893.0,
+              "estimatedInputLatency": 13.0,
+              "observedFirstPaint": 890.0,
+              "observedLastVisualChange": 942.0,
+              "firstContentfulPaint": 570.0,
+              "observedFirstPaintTs": 3.084869914934E12,
+              "speedIndex": 799.0,
+              "observedSpeedIndexTs": 3.084869917934E12,
+              "observedFirstContentfulPaint": 890.0,
+              "observedNavigationStartTs": 3.084869024709E12,
+              "observedFirstVisualChange": 892.0,
+              "observedLoadTs": 3.084869976896E12,
+              "firstMeaningfulPaint": 570.0,
+              "observedTraceEnd": 2031.0,
+              "observedFirstMeaningfulPaint": 890.0,
+              "firstCPUIdle": 570.0,
+              "observedTraceEndTs": 3.084871055469E12,
+              "observedFirstMeaningfulPaintTs": 3.084869914938E12,
+              "observedDomContentLoaded": 864.0,
+              "observedFirstVisualChangeTs": 3.084869916709E12,
+              "observedNavigationStart": 0.0,
+              "interactive": 570.0,
+              "observedFirstContentfulPaintTs": 3.084869914936E12,
+              "observedLoad": 952.0,
+              "observedLastVisualChangeTs": 3.084869966709E12
             }
+          ]
         }
+      },
+      "time-to-first-byte": {
+        "id": "time-to-first-byte",
+        "title": "Server response times are low (TTFB)",
+        "description": "Time To First Byte identifies the time at which your server sends a response. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/ttfb).",
+        "score": 1.0,
+        "scoreDisplayMode": "binary",
+        "displayValue": "Root document took 550 ms",
+        "details": {
+          "overallSavingsMs": -47.307000000000016,
+          "headings": [],
+          "items": [],
+          "type": "opportunity"
+        }
+      },
+      "render-blocking-resources": {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources).",
+        "score": 0.81,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Potential savings of 230 ms",
+        "details": {
+          "items": [
+            {
+              "totalBytes": 25733.0,
+              "wastedMs": 110.0,
+              "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808"
+            },
+            {
+              "wastedMs": 230.0,
+              "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800",
+              "totalBytes": 1346.0
+            },
+            {
+              "totalBytes": 6100.0,
+              "wastedMs": 150.0,
+              "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js"
+            }
+          ],
+          "type": "opportunity",
+          "overallSavingsMs": 230.0,
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Size (KB)"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Potential Savings (ms)"
+            }
+          ]
+        }
+      },
+      "uses-optimized-images": {
+        "id": "uses-optimized-images",
+        "title": "Efficiently encode images",
+        "description": "Optimized images load faster and consume less cellular data. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/optimize-images).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "warnings": [],
+        "details": {
+          "items": [],
+          "type": "opportunity",
+          "overallSavingsBytes": 0.0,
+          "overallSavingsMs": 0.0,
+          "headings": []
+        }
+      },
+      "uses-text-compression": {
+        "id": "uses-text-compression",
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/text-compression).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "details": {
+          "items": [],
+          "type": "opportunity",
+          "overallSavingsBytes": 0.0,
+          "overallSavingsMs": 0.0,
+          "headings": []
+        }
+      },
+      "network-requests": {
+        "id": "network-requests",
+        "title": "Network Requests",
+        "description": "Lists the network requests that were made during page load.",
+        "score": null,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "items": [
+            {
+              "transferSize": 239.0,
+              "url": "http://www.html5rocks.com/en/",
+              "statusCode": 301.0,
+              "mimeType": "text/html",
+              "endTime": 141.9099997729063,
+              "startTime": 0.0
+            },
+            {
+              "transferSize": 2542.0,
+              "url": "https://www.html5rocks.com/en/",
+              "statusCode": 200.0,
+              "resourceType": "Document",
+              "mimeType": "text/html",
+              "endTime": 695.2060000039637,
+              "startTime": 142.3709997907281
+            },
+            {
+              "resourceType": "Stylesheet",
+              "mimeType": "text/css",
+              "endTime": 763.5529995895922,
+              "startTime": 707.3739999905229,
+              "transferSize": 25733.0,
+              "statusCode": 200.0,
+              "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808"
+            },
+            {
+              "resourceType": "Stylesheet",
+              "mimeType": "text/css",
+              "endTime": 764.0639999881387,
+              "startTime": 707.5049998238683,
+              "transferSize": 1346.0,
+              "statusCode": 200.0,
+              "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800"
+            },
+            {
+              "transferSize": 6100.0,
+              "statusCode": 200.0,
+              "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js",
+              "resourceType": "Script",
+              "mimeType": "application/javascript",
+              "endTime": 764.4369998015463,
+              "startTime": 707.5629997998476
+            },
+            {
+              "transferSize": 44868.0,
+              "url": "https://www.html5rocks.com/static/images/mastheads/h5r-shadow.png",
+              "statusCode": 200.0,
+              "resourceType": "Image",
+              "mimeType": "image/png",
+              "endTime": 766.4079996757209,
+              "startTime": 707.7469998039305
+            },
+            {
+              "endTime": 766.2289999425411,
+              "startTime": 707.8259997069836,
+              "transferSize": 5414.0,
+              "url": "https://www.html5rocks.com/static/images/google_logo.png",
+              "statusCode": 200.0,
+              "resourceType": "Image",
+              "mimeType": "image/png"
+            },
+            {
+              "resourceType": "Image",
+              "mimeType": "image/png",
+              "endTime": 858.0339998006821,
+              "startTime": 857.9779998399317,
+              "transferSize": 0.0,
+              "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAA",
+              "statusCode": 200.0
+            },
+            {
+              "transferSize": 0.0,
+              "url": "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAUAgCdASoBAAEAL/3+/3+CAB/AAAFzrNsAAP5QAAAAAA==",
+              "statusCode": 200.0,
+              "resourceType": "Image",
+              "mimeType": "image/webp",
+              "endTime": 860.5869999155402,
+              "startTime": 860.5439998209476
+            },
+            {
+              "resourceType": "Script",
+              "mimeType": "text/javascript",
+              "endTime": 921.7149997130036,
+              "startTime": 862.8739998675883,
+              "transferSize": 18031.0,
+              "statusCode": 200.0,
+              "url": "https://www.google-analytics.com/analytics.js"
+            },
+            {
+              "resourceType": "Font",
+              "mimeType": "font/woff2",
+              "endTime": 922.0559997484088,
+              "startTime": 866.866999771446,
+              "transferSize": 15193.0,
+              "statusCode": 200.0,
+              "url": "https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2"
+            }
+          ],
+          "type": "table",
+          "headings": [
+            {
+              "text": "URL",
+              "key": "url",
+              "itemType": "url"
+            },
+            {
+              "text": "Start Time",
+              "granularity": 1.0,
+              "key": "startTime",
+              "itemType": "ms"
+            },
+            {
+              "text": "End Time",
+              "granularity": 1.0,
+              "key": "endTime",
+              "itemType": "ms"
+            },
+            {
+              "key": "transferSize",
+              "itemType": "bytes",
+              "text": "Transfer Size",
+              "granularity": 1.0,
+              "displayUnit": "kb"
+            },
+            {
+              "key": "statusCode",
+              "itemType": "text",
+              "text": "Status Code"
+            },
+            {
+              "text": "MIME Type",
+              "key": "mimeType",
+              "itemType": "text"
+            },
+            {
+              "key": "resourceType",
+              "itemType": "text",
+              "text": "Resource Type"
+            }
+          ]
+        }
+      },
+      "uses-long-cache-ttl": {
+        "id": "uses-long-cache-ttl",
+        "title": "Uses efficient cache policy on static assets",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/cache-policy).",
+        "score": 0.94,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "5 resources found",
+        "details": {
+          "summary": {
+            "wastedBytes": 21207.195530726254
+          },
+          "headings": [
+            {
+              "key": "url",
+              "itemType": "url",
+              "text": "URL"
+            },
+            {
+              "text": "Cache TTL",
+              "displayUnit": "duration",
+              "itemType": "ms",
+              "key": "cacheLifetimeMs"
+            },
+            {
+              "text": "Size (KB)",
+              "granularity": 1.0,
+              "displayUnit": "kb",
+              "key": "totalBytes",
+              "itemType": "bytes"
+            }
+          ],
+          "type": "table",
+          "items": [
+            {
+              "totalBytes": 18031.0,
+              "cacheHitProbability": 0.25,
+              "url": "https://www.google-analytics.com/analytics.js",
+              "wastedBytes": 13523.25,
+              "cacheControl": {
+                "max-age": 7200.0,
+                "public": true
+              },
+              "cacheLifetimeMs": 7200000.0
+            },
+            {
+              "totalBytes": 44868.0,
+              "cacheHitProbability": 0.9064245810055866,
+              "url": "https://www.html5rocks.com/static/images/mastheads/h5r-shadow.png",
+              "wastedBytes": 4198.5418994413385,
+              "cacheControl": {
+                "max-age": 2592000.0,
+                "public": true
+              },
+              "cacheLifetimeMs": 2.592E9
+            },
+            {
+              "wastedBytes": 2407.9762569832387,
+              "cacheControl": {
+                "public": true,
+                "max-age": 2592000.0
+              },
+              "cacheLifetimeMs": 2.592E9,
+              "totalBytes": 25733.0,
+              "cacheHitProbability": 0.9064245810055866,
+              "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808"
+            },
+            {
+              "totalBytes": 6100.0,
+              "cacheHitProbability": 0.9064245810055866,
+              "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js",
+              "wastedBytes": 570.8100558659214,
+              "cacheControl": {
+                "public": true,
+                "max-age": 2592000.0
+              },
+              "cacheLifetimeMs": 2.592E9
+            },
+            {
+              "url": "https://www.html5rocks.com/static/images/google_logo.png",
+              "wastedBytes": 506.6173184357539,
+              "cacheControl": {
+                "public": true,
+                "max-age": 2592000.0
+              },
+              "cacheLifetimeMs": 2.592E9,
+              "totalBytes": 5414.0,
+              "cacheHitProbability": 0.9064245810055866
+            }
+          ]
+        }
+      },
+      "interactive": {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to interactive is the amount of time it takes for the page to become fully interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/consistently-interactive).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.6 s"
+      },
+      "screenshot-thumbnails": {
+        "id": "screenshot-thumbnails",
+        "title": "Screenshot Thumbnails",
+        "description": "This is what the load of your site looked like.",
+        "score": null,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "items": [
+            {
+              "timestamp": 3.084869324709E12,
+              "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAFMAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP1ToAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgD//Z",
+              "timing": 300.0
+            },
+            {
+              "timestamp": 3.084869624709E12,
+              "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAFMAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP1ToAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgD//Z",
+              "timing": 600.0
+            },
+            {
+              "timestamp": 3.084869924709E12,
+              "data": "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",
+              "timing": 900.0
+            },
+            {
+              "timestamp": 3.084870224709E12,
+              "data": "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",
+              "timing": 1200.0
+            },
+            {
+              "timing": 1500.0,
+              "timestamp": 3.084870524709E12,
+              "data": "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"
+            },
+            {
+              "timestamp": 3.084870824709E12,
+              "data": "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",
+              "timing": 1800.0
+            },
+            {
+              "timing": 2100.0,
+              "timestamp": 3.084871124709E12,
+              "data": "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"
+            },
+            {
+              "timestamp": 3.084871424709E12,
+              "data": "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",
+              "timing": 2400.0
+            },
+            {
+              "timing": 2700.0,
+              "timestamp": 3.084871724709E12,
+              "data": "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"
+            },
+            {
+              "timestamp": 3.084872024709E12,
+              "data": "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",
+              "timing": 3000.0
+            }
+          ],
+          "type": "filmstrip",
+          "scale": 3000.0
+        }
+      },
+      "font-display": {
+        "id": "font-display",
+        "title": "Ensure text remains visible during webfont load",
+        "description": "Leverage the font-display CSS feature to ensure text is user-visible while webfonts are loading. [Learn more](https://developers.google.com/web/updates/2016/02/font-display).",
+        "score": 0.0,
+        "scoreDisplayMode": "binary",
+        "details": {
+          "headings": [
+            {
+              "key": "url",
+              "itemType": "url",
+              "text": "URL"
+            },
+            {
+              "key": "wastedMs",
+              "itemType": "ms",
+              "text": "Potential Savings (ms)"
+            }
+          ],
+          "type": "table",
+          "items": [
+            {
+              "wastedMs": 55.188999976962805,
+              "url": "https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2"
+            }
+          ]
+        }
+      },
+      "estimated-input-latency": {
+        "id": "estimated-input-latency",
+        "title": "Estimated Input Latency",
+        "description": "Estimated Input Latency is an estimate of how long your app takes to respond to user input, in milliseconds, during the busiest 5s window of page load. If your latency is higher than 50 ms, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "10 ms"
+      },
+      "uses-rel-preconnect": {
+        "id": "uses-rel-preconnect",
+        "title": "Preconnect to required origins",
+        "description": "Consider adding preconnect or dns-prefetch resource hints to establish early connections to important third-party origins. [Learn more](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "warnings": [],
+        "details": {
+          "type": "opportunity",
+          "items": [],
+          "overallSavingsMs": 0.0,
+          "headings": []
+        }
+      },
+      "bootup-time": {
+        "id": "bootup-time",
+        "title": "JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/bootup).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.1 s",
+        "details": {
+          "summary": {
+            "wastedMs": 108.83900000000006
+          },
+          "headings": [
+            {
+              "text": "URL",
+              "key": "url",
+              "itemType": "url"
+            },
+            {
+              "text": "Total",
+              "granularity": 1.0,
+              "key": "total",
+              "itemType": "ms"
+            },
+            {
+              "itemType": "ms",
+              "key": "scripting",
+              "text": "Script Evaluation",
+              "granularity": 1.0
+            },
+            {
+              "text": "Script Parse",
+              "granularity": 1.0,
+              "key": "scriptParseCompile",
+              "itemType": "ms"
+            }
+          ],
+          "type": "table",
+          "items": [
+            {
+              "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js",
+              "total": 108.83900000000006,
+              "scripting": 86.05200000000006,
+              "scriptParseCompile": 1.601
+            }
+          ]
+        }
+      },
+      "unminified-css": {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/minify-css).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "details": {
+          "overallSavingsMs": 0.0,
+          "headings": [],
+          "type": "opportunity",
+          "items": [],
+          "overallSavingsBytes": 0.0
+        }
+      },
+      "offscreen-images": {
+        "id": "offscreen-images",
+        "title": "Defer offscreen images",
+        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/offscreen-images).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "warnings": [],
+        "details": {
+          "items": [],
+          "type": "opportunity",
+          "overallSavingsBytes": 0.0,
+          "overallSavingsMs": 0.0,
+          "headings": []
+        }
+      },
+      "uses-responsive-images": {
+        "id": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/oversized-images).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Potential savings of 4 KB",
+        "warnings": [],
+        "details": {
+          "overallSavingsMs": 0.0,
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "thumbnail"
+            },
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Size (KB)"
+            },
+            {
+              "valueType": "bytes",
+              "label": "Potential Savings (KB)",
+              "key": "wastedBytes"
+            }
+          ],
+          "type": "opportunity",
+          "items": [
+            {
+              "url": "https://www.html5rocks.com/static/images/google_logo.png",
+              "totalBytes": 5087.0,
+              "wastedBytes": 3815.0,
+              "wastedPercent": 75.0
+            }
+          ],
+          "overallSavingsBytes": 3815.0
+        }
+      },
+      "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Defer unused CSS",
+        "description": "Remove unused rules from stylesheets to reduce unnecessary bytes consumed by network activity. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/unused-css).",
+        "score": 0.97,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Potential savings of 24 KB",
+        "details": {
+          "items": [
+            {
+              "totalBytes": 25733.0,
+              "wastedBytes": 24960.0,
+              "wastedPercent": 96.99711260827719,
+              "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808"
+            }
+          ],
+          "type": "opportunity",
+          "overallSavingsBytes": 24960.0,
+          "overallSavingsMs": 40.0,
+          "headings": [
+            {
+              "valueType": "url",
+              "label": "URL",
+              "key": "url"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Size (KB)"
+            },
+            {
+              "valueType": "bytes",
+              "label": "Potential Savings (KB)",
+              "key": "wastedBytes"
+            }
+          ]
+        }
+      },
+      "speed-index": {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/speed-index).",
+        "score": 0.99,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.8 s"
+      },
+      "first-cpu-idle": {
+        "id": "first-cpu-idle",
+        "title": "First CPU Idle",
+        "description": "First CPU Idle marks the first time at which the page's main thread is quiet enough to handle input. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-interactive).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.6 s"
+      },
+      "total-byte-weight": {
+        "id": "total-byte-weight",
+        "title": "Avoids enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/network-payloads).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Total size was 117 KB",
+        "details": {
+          "type": "table",
+          "items": [
+            {
+              "totalBytes": 44868.0,
+              "url": "https://www.html5rocks.com/static/images/mastheads/h5r-shadow.png"
+            },
+            {
+              "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808",
+              "totalBytes": 25733.0
+            },
+            {
+              "url": "https://www.google-analytics.com/analytics.js",
+              "totalBytes": 18031.0
+            },
+            {
+              "url": "https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2",
+              "totalBytes": 15193.0
+            },
+            {
+              "totalBytes": 6100.0,
+              "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js"
+            },
+            {
+              "totalBytes": 5414.0,
+              "url": "https://www.html5rocks.com/static/images/google_logo.png"
+            },
+            {
+              "totalBytes": 2542.0,
+              "url": "https://www.html5rocks.com/en/"
+            },
+            {
+              "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800",
+              "totalBytes": 1346.0
+            },
+            {
+              "totalBytes": 239.0,
+              "url": "http://www.html5rocks.com/en/"
+            }
+          ],
+          "headings": [
+            {
+              "key": "url",
+              "itemType": "url",
+              "text": "URL"
+            },
+            {
+              "text": "Size (KB)",
+              "key": "totalBytes",
+              "itemType": "bytes"
+            }
+          ]
+        }
+      },
+      "mainthread-work-breakdown": {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimizes main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this.",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.2 s",
+        "details": {
+          "items": [
+            {
+              "group": "scriptEvaluation",
+              "duration": 108.05900000000008,
+              "groupLabel": "Script Evaluation"
+            },
+            {
+              "group": "styleLayout",
+              "duration": 33.608999999999995,
+              "groupLabel": "Style & Layout"
+            },
+            {
+              "groupLabel": "Other",
+              "group": "other",
+              "duration": 18.325000000000017
+            },
+            {
+              "group": "scriptParseCompile",
+              "duration": 7.296,
+              "groupLabel": "Script Parsing & Compilation"
+            },
+            {
+              "group": "parseHTML",
+              "duration": 6.9769999999999985,
+              "groupLabel": "Parse HTML & CSS"
+            },
+            {
+              "group": "paintCompositeRender",
+              "duration": 3.033,
+              "groupLabel": "Rendering"
+            },
+            {
+              "group": "garbageCollection",
+              "duration": 2.776,
+              "groupLabel": "Garbage Collection"
+            }
+          ],
+          "type": "table",
+          "headings": [
+            {
+              "text": "Category",
+              "itemType": "text",
+              "key": "groupLabel"
+            },
+            {
+              "text": "Time Spent",
+              "granularity": 1.0,
+              "key": "duration",
+              "itemType": "ms"
+            }
+          ]
+        }
+      },
+      "first-contentful-paint": {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint).",
+        "score": 0.99,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.6 s"
+      },
+      "uses-webp-images": {
+        "id": "uses-webp-images",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/webp).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Potential savings of 11 KB",
+        "warnings": [],
+        "details": {
+          "type": "opportunity",
+          "items": [
+            {
+              "url": "https://www.html5rocks.com/static/images/mastheads/h5r-shadow.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 44540.0,
+              "wastedBytes": 11448.0
+            }
+          ],
+          "overallSavingsBytes": 11448.0,
+          "overallSavingsMs": 0.0,
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "thumbnail"
+            },
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Size (KB)"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Potential Savings (KB)"
+            }
+          ]
+        }
+      },
+      "critical-request-chains": {
+        "id": "critical-request-chains",
+        "title": "Minimize Critical Requests Depth",
+        "description": "The Critical Request Chains below show you what resources are loaded with a high priority. Consider reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/critical-request-chains).",
+        "score": null,
+        "scoreDisplayMode": "informative",
+        "displayValue": "4 chains found",
+        "details": {
+          "type": "criticalrequestchain",
+          "chains": {
+            "305209AA1BB396A8C722D79F7E2C5D51": {
+              "children": {
+                "305209AA1BB396A8C722D79F7E2C5D51:redirect": {
+                  "children": {
+                    "1000000074.44": {
+                      "request": {
+                        "transferSize": 15193.0,
+                        "url": "https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2",
+                        "responseReceivedTime": 3084869.947456,
+                        "endTime": 3084869.947646,
+                        "startTime": 3084869.892457
+                      }
+                    },
+                    "1000000074.3": {
+                      "request": {
+                        "endTime": 3084869.789654,
+                        "startTime": 3084869.733095,
+                        "transferSize": 1346.0,
+                        "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800",
+                        "responseReceivedTime": 3084869.789304
+                      }
+                    },
+                    "1000000074.4": {
+                      "request": {
+                        "endTime": 3084869.790027,
+                        "startTime": 3084869.733153,
+                        "transferSize": 6100.0,
+                        "url": "https://www.html5rocks.com/static/js/modernizr.custom.82437.js",
+                        "responseReceivedTime": 3084869.789788
+                      }
+                    },
+                    "1000000074.2": {
+                      "request": {
+                        "endTime": 3084869.789143,
+                        "startTime": 3084869.732964,
+                        "transferSize": 25733.0,
+                        "url": "https://www.html5rocks.com/static/css/v2-combined.min.css?20170808",
+                        "responseReceivedTime": 3084869.788497
+                      }
+                    }
+                  },
+                  "request": {
+                    "transferSize": 2542.0,
+                    "url": "https://www.html5rocks.com/en/",
+                    "responseReceivedTime": 3084869.719654,
+                    "endTime": 3084869.720796,
+                    "startTime": 3084869.167961
+                  }
+                }
+              },
+              "request": {
+                "endTime": 3084869.1675,
+                "startTime": 3084869.02559,
+                "transferSize": 239.0,
+                "url": "http://www.html5rocks.com/en/",
+                "responseReceivedTime": 3084869.167196
+              }
+            }
+          },
+          "longestChain": {
+            "transferSize": 15193.0,
+            "duration": 922.0559997484088,
+            "length": 3.0
+          }
+        }
+      },
+      "dom-size": {
+        "id": "dom-size",
+        "title": "Avoids an excessive DOM size",
+        "description": "Browser engineers recommend pages contain fewer than ~1,500 DOM nodes. The sweet spot is a tree depth \u003c 32 elements and fewer than 60 children/parent element. A large DOM can increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn more](https://developers.google.com/web/tools/lighthouse/audits/dom-size).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "41 nodes",
+        "details": {
+          "headings": [
+            {
+              "key": "statistic",
+              "itemType": "text",
+              "text": "Statistic"
+            },
+            {
+              "text": "Element",
+              "itemType": "code",
+              "key": "element"
+            },
+            {
+              "text": "Value",
+              "key": "value",
+              "itemType": "numeric"
+            }
+          ],
+          "type": "table",
+          "items": [
+            {
+              "statistic": "Total DOM Nodes",
+              "value": "41"
+            },
+            {
+              "element": {
+                "type": "code",
+                "value": "\u003ch2\u003e"
+              },
+              "statistic": "Maximum DOM Depth",
+              "value": "7"
+            },
+            {
+              "statistic": "Maximum Child Elements",
+              "element": {
+                "type": "code",
+                "value": "\u003chead\u003e"
+              },
+              "value": "18"
+            }
+          ]
+        }
+      },
+      "uses-rel-preload": {
+        "id": "uses-rel-preload",
+        "title": "Preload key requests",
+        "description": "Consider using \u003clink rel=preload\u003e to prioritize fetching resources that are currently requested later in page load. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/preload).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "details": {
+          "overallSavingsMs": 0.0,
+          "headings": [],
+          "type": "opportunity",
+          "items": []
+        }
+      },
+      "unminified-javascript": {
+        "id": "unminified-javascript",
+        "title": "Minify JavaScript",
+        "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn more](https://developers.google.com/speed/docs/insights/MinifyResources).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "warnings": [],
+        "details": {
+          "overallSavingsMs": 0.0,
+          "headings": [],
+          "items": [],
+          "type": "opportunity",
+          "overallSavingsBytes": 0.0
+        }
+      },
+      "redirects": {
+        "id": "redirects",
+        "title": "Avoid multiple page redirects",
+        "description": "Redirects introduce additional delays before the page can be loaded. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/redirects).",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "Potential savings of 190 ms",
+        "details": {
+          "overallSavingsMs": 190.0,
+          "headings": [
+            {
+              "valueType": "url",
+              "label": "URL",
+              "key": "url"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Time Spent"
+            }
+          ],
+          "type": "opportunity",
+          "items": [
+            {
+              "wastedMs": 0.0,
+              "url": "(Initial: http://www.html5rocks.com/en/)"
+            },
+            {
+              "wastedMs": 190.0,
+              "url": "https://www.html5rocks.com/en/"
+            }
+          ]
+        }
+      },
+      "user-timings": {
+        "id": "user-timings",
+        "title": "User Timing marks and measures",
+        "description": "Consider instrumenting your app with the User Timing API to measure your app's real-world performance during key user experiences. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/user-timing).",
+        "score": null,
+        "scoreDisplayMode": "notApplicable",
+        "details": {
+          "type": "table",
+          "items": [],
+          "headings": []
+        }
+      },
+      "first-meaningful-paint": {
+        "id": "first-meaningful-paint",
+        "title": "First Meaningful Paint",
+        "description": "First Meaningful Paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).",
+        "score": 0.99,
+        "scoreDisplayMode": "numeric",
+        "displayValue": "0.6 s"
+      },
+      "final-screenshot": {
+        "id": "final-screenshot",
+        "title": "Final Screenshot",
+        "description": "The last screenshot captured of the pageload.",
+        "score": null,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "timestamp": 3.084869966932E9,
+          "data": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAFcAfQDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAIDBQEECAYH/8QARRAAAgIBAQMJBQYDCAECBwAAAAECAwQRBRIhBhMUFzFBVJTRUVJhkqEiMnGBkbE0csEHFRYjQlOC8CQz4jZDVmJjdIT/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAoEQEAAQMDAwMEAwAAAAAAAAAAAQIREgMTMSFBUQRhgSJxkbEF0fD/2gAMAwEAAhEDEQA/APxwAB2AAAAAAAAcx7SxFa7SaIiaJruK0TQFiJogmTQE13FiK0TTKJonEgiSAtRJEIsmgqyJNFSZNMCxFkWVJk0wq1EkVpk0wLIssTKUztU1/wDjTtl2dkUEcJkkylSJKQFykc7yK4xm12HO5P2fUo5ctSLZGWq7U0RciDlshJl2JGNuTCEuyWq+hVk1yptlCXau/wBoFTIs5bIthXDK2SkytsDhkGSbINhEWQZJkGBGRWycmQYRFkJEmQb4gRZBkmQZBCRFkpEGBFkJEmQkBEAFUAAAAAAAAAAAAAAAAAAAAACcWQOU9Ai1EkytMkmQWxZNMqTJxYFqZNMqTJpgWpkkytMkmUWxZYmUJk0wq5MmmUpk0wLUyaZSmSTAuTJqRQmSUgru4tTvm4xfYtTUvhrjyrXYo6RR09lLSu1vg20v+/qd9TkvvaJd/eVmZY0NZSSXaztwjGHxl7TicIQum6+x/QRfDjxIXb2Lh4s8SmFkLHffjXZCsU9FDcU9I7unHXm3rx7/AIcc7Donl5HNVuEdIuUpzekYxS1bf5I3tn8zjR2NZfCy++zHnTDDrX2pRnKxOUvYt2fD2/BcTm2WPRZdTRj4n+ZhXyd1W99pqU470eLSTUez4hLvn87Hli2quyUJpxU4yg9Yyi1qmv8Aup0L6t1b0ezvXsNPa8v4P/8AVh/U6Kbcexae19hVur2c0sqMm0lHV6t6fA7+0MfpG7KOm9FPX9OH1/cqoxFzb9revFP2cP3JVTdKVUlLVLRNvXXv7gkyxnIi5HOSty+xaaJSaRS5EaSbItkXIi5ActkGzhs4bANkJMORBsA2QYbIthCTISYbINgGyDZy2VtkHDIs5bINgGVvtJSZAAACqAAAAAAAAAAAAAAAAAAAAAAAAknoTTKjlPQiLkySZUmSTAuTJplKZJMC5MmmUpkkwL0ySZSpElIouTJKRSmSTAvUiSZ11IkpBV6kSUihSJbwH0+E08OuUUtXFa/iuH9C7huvX8jqbLajhx3Hvp8UvZ7U/wA9Tua6w0a/EMMxy3m9e8b3Arb0bT7uA1Kr6mnOnbLJ2nhVRunZW4ZuO1rOEGt2Tg+1QafauMeCfDtoozVnOGJs3Zs+kul41b55z0g2221ouPGXHgkn2cNTQ5A4WNZhbY2jk35VPRatN7HklJRkm218Vu8DZ2RsvZmLtTH3HykonkWqP/kVbldsuLSk9OPeyMvhts3Vyy414842V0VwpU12ScUk5L4N66fDQ6KbfCWrj7E9DucoMOvZu2s3DplOVdFjhFz01aXtOjGSUW+xpariGndw7kpy49vbqW3pSmpaauJ0sFyak1wb04l9MkrJwbct16rXubCM3azUb4xikuGvD4s6DkdnasovJclLWUuLS7Eu5HRcg1CbkcNlbkRcgqxyIORBs4bCJNkWyLkRcgOWyLZFsi2By2QbDkQbIDZFs4bItgctkJMNkAAAKoAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5T0JKRABFqZJMpTJqRBamTUilM5TAvUiSkUJklIC9SJKRQpElIXF6kcqRQpElIovTOd4o3jneA3tg3T+3XpvQ1119jNa2yST3I66drfBHyONkToujOt6Ps/Few+rt5lWuF+XRBx4ShvS4P9AkunlxSs34/dnxKE9G9TRm8OcGnm436y4fQ6jpoTemfiv2fal6BH339mePLM5P8pcapJ2XVKuKb04uE0jZ2LszOs2/i5GVsudLrudtuRZCmLX+XJaKUOM9ZST1fsPy3Gssxd7ou2IUb3GXNXThr+OiLun5v/1BPzVoSzs8uP8A4t2qv/zyMqhKxyi+O8tFx7H+BK2EbbJWW7Sx7LJPVynOTbfxbRbjRxa2nPPxm0tNE5egVdi183SteDfElNbsW91yaXDTvJ8/ieOx/wBX6GdtzIcMSMsa6uyucnBzg3qnproBiWzbtm5aa68dOwr1K3I4cg0s1OHIqcjhyAsciLkQciLkLibkRciDkRciCbkRciDZFsCTZFs4bIuQHLZFyODgoAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOUySkQARamcplJLeZBcpHKkUqRypAX7xypFKY3gL1I7GHGm3IhDItdNcuG+o66fj8Do7xdi02ZWRCmiDnZN6JIDavwMPGvdduTkKSf+ytH8V9rsPrtjYexcpbWntmcYWRzaI1yXGWjk9VpquD4avuR8tnY2TGmjFqxsi5UcHc65cX7Fw+6u41qtnYW0bJ3XUZlN0nvSjYnFa/B6aFZlvZK2DVj7UjDZ2zpSp2isWqXOT1dUm/tfe46dz7OHE1o7M5F2ZObDGjU7IZNMZRst0jCLsUGoPXimlKTfHhJdh+V5eRs/Hyrqeh3S5ubhvdIS10enulaztnd+z7/M/wDtBZ+ibA2DgUbR2nVtOnZ865WRnj2TyIThTVrPVtK2L04R9o5I4PJ27YCe044NuS7blpKxxssjGOsVB7yUXr2anwqydic3GUqcjfa1cY266fm4ohXmbGlJqeLlwXc+eT/oB99bs/k0tgKdiw68To1coZdd+uTK9tb0XDX6acP27c9m7C/v7EqtxdjVbLbtVd1WY5zsgq9Yyktfb3+3Rfj+a5GXsmElzOLfamu3n93T9YFLztnd2Bcv/wCn/wBoLP1HZ+zOT8tt5FccfZ1mC8al4lsr4y4PXfnZFzi3L26dnDhxPhNpU4kasqp5CVEM2yNc8eG/CSSWmmsuzTs4s52Hh7P2pVdPmLqlW0tOd3tfoV7UxtKYY2z8PMlXGbm5TrfF6JcOHwA6V+DiV4Dyek3aN7tcZVJOb+H2uz4mS5GztvEyMjHjm8zbXzcVCymUGlBLvj/9v7GBvEWFu8RciveON4KsciLkQ3jhyAm5HDZW5HGrAm5EXIiCjlvU4ACgAAAAAAAAAAAAAAAAAAAAAD1j1L8i/AZHmp+o6l+RfgMjzU/UM5Q8nA9Y9S/IvwGR5qfqOpfkX4DI81P1BlDycD1j1L8i/AZHmp+o6l+RfgMjzU/UGUPJwPWPUvyL8Bkean6jqX5F+AyPNT9QZQ8nA9Y9S/IvwGR5qfqOpfkX4DI81P1BlDycD1j1L8i/AZHmp+o6l+RfgMjzU/UGUPJwPWPUvyL8Bkean6jqX5F+AyPNT9QZQ8nA9Y9S/IvwGR5qfqOpfkX4DI81P1BlDycD1j1L8i/AZHmp+o6l+RfgMjzU/UGUPJwPWPUvyL8Bkean6jqX5F+AyPNT9QZQ8nA9Y9S/IvwGR5qfqOpfkX4DI81P1BlDyfqN5nrDqX5F+AyPNT9R1L8i/AZHmp+oTKHlDeJQtlB6xlKL9qeh6t6l+RfgMjzU/UdS/IvwGR5qfqDKHlXpNv8Au2fMznpNv+7Z8zPVPUvyL8Bkean6jqX5F+AyPNT9QZQ8puerbb1b72xvHqzqX5F+AyPNT9R1L8i/AZHmp+pDKHlPUanqzqX5F+AyPNT9R1L8i/AZHmp+osZQ8p6jePVnUvyL8Bkean6jqX5F+AyPNT9RYyh5UjdKH3Jyj+EtCXSbf92z5meqepfkX4DI81P1HUvyL8Bkean6lMoeVXkWtaO2xr+ZlW8er+pfkX4DI81P1HUvyL8Bkean6gyh5Q3jjVnrDqX5F+AyPNT9R1L8i/AZHmp+oMoeTgesepfkX4DI81P1HUvyL8Bkean6hcoeTgesepfkX4DI81P1HUvyL8Bkean6gyh5OB6x6l+RfgMjzU/UdS/IvwGR5qfqDKHk4HrHqX5F+AyPNT9R1L8i/AZHmp+oMoeTgesepfkX4DI81P1HUvyL8Bkean6gyh5OB6x6l+RfgMjzU/UdS/IvwGR5qfqDKHk4HrHqX5F+AyPNT9R1L8i/AZHmp+oMoeTgesepfkX4DI81P1HUvyL8Bkean6gyh5OB6x6l+RfgMjzU/UdS/IvwGR5qfqDKHk4HrHqX5F+AyPNT9R1L8i/AZHmp+oMoeTgesepfkX4DI81P1HUvyL8Bkean6gyh5OB6x6l+RfgMjzU/UAyh+jgAOYAAAAAAADuUU1yprk48XFN8SfR6vd+rOcb+Hq/kX7FgFXR6vd+rHR6vd+rLQBV0er3fqx0er3fqy0AVdHq936sdHq936stAFXR6vd+rHR6vd+rLQBV0er3fqx0er3fqy0+b2/ypp2NtOeLkQio9ElkQm2/tTT0UNEu/2liJnhmuuKIvU3+j1e79WOj1e79WfNU8otoX52yqa8DH5vaFKvjJ3vWKUU5ard7teHt+BmdYD/uWWX0GPSVfzfM87/o3dd/XT8i4S5z6jTjmX3HR6vd+rHR6vd+rMenbtluJtu2OLrPZ85wjCMtXZpFNd3DXUq2Xyilmcns7aM6albixm5UwnLg4x10lrFNP8iYy1u03tdu9Hq936sdHq936s+W2PyzrysDKyszG5uFPNKLok7FZKa4QXBfaXY0d/wDxXgOnHlVXlW3XTnBY8Km7IuH3tV3aFxlI1qJi8S2uj1e79WOj1e79WfPbN5VV35+Xh31y56m+2CVS13a4Jfbl7O3Q7mFygo2hsTK2jhws5umEpLnElvaLXuZMZWNWiriWr0er3fqx0er3fqzE2Rymx8/JxcPcs6XbRC6e7H7Ed6O938SeTyowcba0tn2wyOdjbCmU1XrCMprWOr+P9BjJu0WvdsdHq936sdHq936swFyy2ZKvIsjHJcKoO2L5vRWwUt2Uo+1Jl2Hyq2fl7QWHQrpXO6VC+ytG0m3Lt+79l8RjJGrRPds9Hq936sdHq936s+Z21yuey8rMosxN+dF1cVpP70JQcnPs7lFkpcssSiq2zLrnGPSLaaVX9p2Rr+9Pu0RcZTfova76To9Xu/Vjo9Xu/VnzeNyvx57auxLYS6PKdMMe+EG03ZDeW8+7XuOxtPlDPE5TY2yo146jbXGx2W3ODesnHditHq+HYMZN6i17+zc6PV7v1Y6PV7v1ZgPlls1YkMhwyOblRLIX2FruxnuPv7dRLlhgczJxqyuf53mVQ6XvuW7va6ezTiTGV3qPLf6PV7v1Y6PV7v1Z85i8rqIbK2bk7RqnXLLim5Vx1hDWWnHjqSu5abOqvsqdObKcJWQ+zTqpSh95J/BcfwLjKb1HN30PR6vd+rHR6vd+rMN8r9lLJxaVOxu+NclJR4Q3/u734lP+M9nyrulCnKcoV2WRUq9FPcekkn8BjJvafl9F0er3fqx0er3fqzCnysxaNnYOXmY2TRDKipcYp7nFLV/Dj3dx16uV9NVl1ebVLnOm24tMaVrvKGnF6vt4jGTeoju+l6PV7v1Y6PV7v1ZaDLqq6PV7v1Y6PV7v1ZaAKuj1e79WOj1e79WWgCro9Xu/Vjo9Xu/VloAq6PV7v1Y6PV7v1ZaAM/JjGF27FaLdT+rKy7M/if8Agv3ZSAAAAAAAAAAAAAAAAAAAAAAaGN/D1fyL9iwrxv4er+RfsWAAAAAAAAAAAAMzN2LjZmdblWuznbMWWJLR8NxvV/maYF7JMRPSWXj7ExaLtm2wlZvYFLpq1fbFpLj8eBl/4H2Vze5rf/6PMa7y10397Xs7e7X2H1ALlLE6VE8wwo8m6IZuVkU5ufU8iUpzhXdux3mtNdNO30L8PYGJi7OzMSM75rM3uetsnvTm2tNdfwNYC8rGnTHZ89Hkls6NFlMXfGuyFcWoz00lWkozXDhLh2/Q5fJTAVWPGqzKqupnOavrtask5/e1ffqfQAZSm1R4YFfJXAqzpZlM768qVtlkrITSb31o49nZ7PYy/Z/J7DwcHNxqpXSWZrzs5y1k9Vp7NOz4GrbbXTDfunGuGqW9J6LVvRL820iunMxb4zlTk02Rgt6ThNNJceL07uD/AEYylY06I4hlYvJjCx87DylZkTniVqumM56xilHd9ns/Ink8nMPIzL8myV3OXX1XySktN6taR7uz2mtRdXkUV3UWQspsipwnB6xlFrVNNdqaIVZWPdfbTTfVZdTorK4zTlDXs1Xd+YvJt0WtZjYvJPZuO8jcVzhbVOlQlNuNcJPWSiu7Vslsvkts/ZubjZWPzrtopdMd6WuqbbbfDt4vibsmoxbk0kuLb7jrvNxVgrNeTQsNwVivdi5txfFS3uzTj2jKUjSojiGdtLk5g7R2k83IVnOuiWO0paJxaa109ukmdezkjs2ez8LFTuisRydVikt/7T1lrw0ev4G/TbXdVC2mcbK5rejOD1Ul7UyNmRTXdVTZbXG23Xm4Skk56LV6Lv0QyknSonrZif4U2f8A3jHMcshyjOufN859huEd2La+BovZlD2w9pPeeQ6VRo39nd3tez26neAvKxp0xxD5dcidlqqytTytydcqt126qMXJS0Wq4cV9WdrI5K4F+RZfKeRG6dsbt+Fm64tR3dE13NdpvAZSmzR4fMWcidlTjRGUsnSmuNUf8ztSlvLXh7Ts/wCFsHnVZvX7ysvs+8u21aS7v0N4DKTZojs+eq5JbOqyMW6t3RnRCEPvL/MUPu73D9tCUOSmz4wqg3dKNcLoJOXarfva8P0N8DKTao8PmL+RWzciumN1uXPmquZTlbq3FS3l3dzLcrklgZVdtVtmTzVt8sicFNJSlLTXu7OHDv7eJ9EC5SmzR4EtEkuxAAy6gAAAAAAAAAA6OZ/E/wDBfuykuzP4n/gv3ZSAAAAAAAAAAAAAAAAAAAAAAaGN/D1fyL9iwrxv4er+RfsWAAAAAAAAAAAAAMfLhtmOTZPFnTKpP7EJ6cV/2T7/APQvawNgGXGvatlVe/bVXONrb0jrvw04J/n9CuUttyWsYY0E7Pu96hw0466avjqBsAxIT29ze9KvD3t5/Y4/d7nrr2nM3t1bu7HFeraaXBRWvbxfboBtAzoLaFuHfXc1VkJ/5dlbXFfnrxOtrtzSP2cdaR1ene9Px9v0/QDubd2bXtjY+Xs+2cq431uCsh96D7pL4p6NfgfGYX9l+DhY1FOPtTaMIVZPSNFPRSWiSg9NNUmm1/PL2n1mfPafRYTxa4q9Vveg2mt5NP8ANNKS/NdndRdLbz5zmo4y3klDX/T26vt7ez4arvA6XJzkbVsTZFOBVtXalkKtd18/uaLhw0XDu/czLv7OaZ2ZfNbb2rRVkZDyObrsS3ZN2Slx04vWxtN8U4x7dD6eie2Nbeeqx9Obk4JPT7fdrx7CNT2zKdXPLGjBuDnudq4reXF9mmv/AHiB8htXkBnyzcaez9q2XY8s95eTDNtn93VPSKj2vt4vTgkuzU72F/Z5j4uytoYMdqZ1leXj046dst5VqtRSaj2f6fZ3s35vbNagqo12P7XOOyS7dOG6lpw19vElZ/e9mJ/8qq9XcFXo04ae1/HTj9H2MPmI/wBmmNWp8ztnalUpU7kXCxR5ufOc45xitIrV68NNOJzZ/ZriyyL7IbX2lFTnKUE7N7m001urXu0enxikmfRa7dcIQ3cdNQW9P3pf0Wnw7S2mzbHMz56nH5zc+zuvRb2v4+z+gHx8P7NrbLdoLJ29tHmbYU007lz3nCEKdXZ2atyqlwXdJ97NvZXIynZ208LNr2jm2Tx7L7JKyxzVvO68Ja68I8NNOPDt4vXWontjdsd9eK5c23FQ1+9rwXF+wpslt6VdUVXiRm/vyi3w4d2vx4fl8QNsGE3t9ytajjR7ObTfDhrrr+PD8vYzt721HfjpwpVW5F2tdu9rxS+GgGkDGj/fUJtJVTj3ubXb8NNOHs14+3TtKq7dvTyo61Y8a4rSeq0TbfauPHRafq+3gBvAx5LbEbp806pQlY1/m6NKO9LRpLR9m72vtOHLbjtlLm8VQ3eEU9eL07/g+Hd3/ADZBi02bcsjFyqxa9a0+K1al3pre/qaWD0jo6eZu86+LUexcOz9wOwAAAAAAAAAAAAA6OZ/E/8ABfuykuzP4n/gv3ZSAAAAAAAAAAAAAAAAAAAAAAaGN/D1fyL9iwy1K6KSjkTUVwS0jw+g37/E2fLH0A1AZe/f4mz5Y+g37/E2fLH0A1AZe/f4mz5Y+g37/E2fLH0A1AZe/f4mz5Y+g37/ABNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/wATZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQDUBl79/ibPlj6Dfv8AE2fLH0A1AZe/f4mz5Y+g37/E2fLH0A1AZe/f4mz5Y+g37/E2fLH0A1AZe/f4mz5Y+g37/E2fLH0A1AZe/f4mz5Y+g37/ABNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/xNnyx9ANQGXv3+Js+WPoN+/wATZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQDUBl79/ibPlj6Dfv8TZ8sfQC7M/if+C/dlI+03rZNzl2atL+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAryL68amVt0lCuPa2VTz8SE1GWTUpN7um8u3/qLMnHqya1DIrjZDXXdktU/xXeddbLxFFR5t7qTWm/LTjrr39vF8S9GZy7LVm4zjGXSKkpLeWsktV/1HCz8ZzqirG+djvQe691rXTt0071+qKXsfBe63QtY8E958OCXt+C/culg48q4QlB6QW7H7T1S1T7dde2K/QdD6nH944bg5LJq0Wv8AqXc9P6MnDNxrLebhfXKfclLt7fRnWjsfBjwVPD7XDfl/qWj7/YSp2ThU3RtrpanF6p78nx/UdE+p3gARsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfM5vJVZmbZffluyuVytVNlalGP+ZXNpce9QcX/M/wfU2PyQy9l5qyKtrO1qUdI21NpRSsTj9722N/DgB9iD5P/CE3h7NpefuywpynFxq4SbnGS7W32Ra11149vc+LeTO1bsV02coLm2oaTUHrCUZqW8vtacdO/XTu0XAD60GDDY+0o4l9f98289PId0LNxvci1who5cY6luJsrNozVbPadttSnOXNSTa0a0S7e7TX9QLdvbTns+qivGpV+Zk2c1RW3otdNW2/YktSrZ9u1a81V7Tv2dZVKPHmd6E4y7lo29V+h1svYua8HDlVmK7aOHc7qrLU9JJ6pwfa9NHpr+B0btj5W2NqY+RmbKxdnuqyNtl8bFZbY4/dSaXBcF2+w9mnTpzp9ZiOb+fa3X9fLzVzXFff28f77vpKdqYF+ZPEpzMezJhrvVRmnJadvAuryqLLZV13QlZHtinxR8jhbC2gobLwrcaiivAtdjzIWaytWj7Fpqm9eOv1Neez8izFqx5xjRGmMlz8Jat6xa1S/PU+JX6jWiummKOk89J8x+OZm89Onu+tq6GlRfGq/wAx7/vxzF+qzP5Q4FWJmPEzMW3KornJVKxNuUYt6afkWYG28S3HwI5WVj1ZmTVCxUuaTbkteCf0PhFCzPhsjZ2Pj4TnXj31wupuUuc/ypR3mtNYptrXXvZo43JnaGPco346y6LFTJxeRzcYSjGKalot6WmnDR6fA+l67Tq9PVTFEXv/AHMdvt8PB/H29TqVbtVoiPzPTz9/l9+DGyNl5t+bfas+yqlzThXCUuzcS0fFacdXw9NOtj7G2lGW9btWzTRx3Enuy48Hwaev5/DVmGn0QOvs7Hni4NGPZZzsqoRhvvXWWi01erfE7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB16MLFx7rLaMamq2z784QScvxfedgAszM8pERHAACKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=",
+          "type": "screenshot"
+        }
+      },
+      "efficient-animated-content": {
+        "id": "efficient-animated-content",
+        "title": "Use video formats for animated content",
+        "description": "Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM videos for animations and PNG/WebP for static images instead of GIF to save network bytes. [Learn more](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/)",
+        "score": 1.0,
+        "scoreDisplayMode": "numeric",
+        "details": {
+          "type": "opportunity",
+          "items": [],
+          "overallSavingsBytes": 0.0,
+          "overallSavingsMs": 0.0,
+          "headings": []
+        }
+      }
     },
-    "version": {
-        "major": 1,
-        "minor": 15
+    "categories": {
+      "performance": {
+        "id": "performance",
+        "title": "Performance",
+        "score": 0.99,
+        "auditRefs": [
+          {
+            "id": "first-contentful-paint",
+            "weight": 3.0,
+            "group": "metrics"
+          },
+          {
+            "id": "first-meaningful-paint",
+            "weight": 1.0,
+            "group": "metrics"
+          },
+          {
+            "id": "speed-index",
+            "weight": 4.0,
+            "group": "metrics"
+          },
+          {
+            "id": "interactive",
+            "weight": 5.0,
+            "group": "metrics"
+          },
+          {
+            "id": "first-cpu-idle",
+            "weight": 2.0,
+            "group": "metrics"
+          },
+          {
+            "id": "estimated-input-latency",
+            "weight": 0.0,
+            "group": "metrics"
+          },
+          {
+            "id": "render-blocking-resources",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-responsive-images",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "offscreen-images",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "unminified-css",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "unminified-javascript",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "unused-css-rules",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-optimized-images",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-webp-images",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-text-compression",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-rel-preconnect",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "time-to-first-byte",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "redirects",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "uses-rel-preload",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "efficient-animated-content",
+            "weight": 0.0,
+            "group": "load-opportunities"
+          },
+          {
+            "id": "total-byte-weight",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "uses-long-cache-ttl",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "dom-size",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "critical-request-chains",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "network-requests",
+            "weight": 0.0
+          },
+          {
+            "id": "metrics",
+            "weight": 0.0
+          },
+          {
+            "id": "user-timings",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "bootup-time",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "screenshot-thumbnails",
+            "weight": 0.0
+          },
+          {
+            "id": "final-screenshot",
+            "weight": 0.0
+          },
+          {
+            "id": "mainthread-work-breakdown",
+            "weight": 0.0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "font-display",
+            "weight": 0.0,
+            "group": "diagnostics"
+          }
+        ]
+      }
+    },
+    "categoryGroups": {
+      "a11y-describe-contents": {
+        "title": "Elements Describe Contents Well",
+        "description": "These are opportunities to make your content easier to understand for a user of assistive technology, like a screen reader."
+      },
+      "load-opportunities": {
+        "title": "Opportunities",
+        "description": "These optimizations can speed up your page load."
+      },
+      "metrics": {
+        "title": "Metrics"
+      },
+      "a11y-meta": {
+        "title": "Meta Tags Used Properly",
+        "description": "These are opportunities to improve the user experience of your site."
+      },
+      "pwa-installable": {
+        "title": "Installable"
+      },
+      "seo-mobile": {
+        "title": "Mobile Friendly",
+        "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/)."
+      },
+      "diagnostics": {
+        "title": "Diagnostics",
+        "description": "More information about the performance of your application."
+      },
+      "a11y-well-structured": {
+        "title": "Elements Are Well Structured",
+        "description": "These are opportunities to make sure your HTML is appropriately structured."
+      },
+      "a11y-color-contrast": {
+        "title": "Color Contrast Is Satisfactory",
+        "description": "These are opportunities to improve the legibility of your content."
+      },
+      "seo-crawl": {
+        "title": "Crawling and Indexing",
+        "description": "To appear in search results, crawlers need access to your app."
+      },
+      "a11y-correct-attributes": {
+        "title": "Elements Use Attributes Correctly",
+        "description": "These are opportunities to improve the configuration of your HTML elements."
+      },
+      "pwa-optimized": {
+        "title": "PWA Optimized"
+      },
+      "seo-content": {
+        "title": "Content Best Practices",
+        "description": "Format your HTML in a way that enables crawlers to better understand your app’s content."
+      },
+      "pwa-fast-reliable": {
+        "title": "Fast and reliable"
+      },
+      "a11y-aria": {
+        "title": "ARIA Attributes Follow Best Practices",
+        "description": "These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader."
+      },
+      "a11y-element-names": {
+        "title": "Elements Have Discernible Names",
+        "description": "These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader."
+      },
+      "a11y-language": {
+        "title": "Page Specifies Valid Language",
+        "description": "These are opportunities to improve the interpretation of your content by users in different locales."
+      }
+    },
+    "timing": {
+      "total": 4042.654999997467
+    },
+    "i18n": {
+      "rendererFormattedStrings": {
+        "varianceDisclaimer": "Values are estimated and may vary.",
+        "opportunityResourceColumnLabel": "Opportunity",
+        "opportunitySavingsColumnLabel": "Estimated Savings",
+        "errorMissingAuditInfo": "Report error: no audit information",
+        "errorLabel": "Error!",
+        "warningHeader": "Warnings: ",
+        "auditGroupExpandTooltip": "Show audits",
+        "passedAuditsGroupTitle": "Passed audits",
+        "notApplicableAuditsGroupTitle": "Not applicable",
+        "manualAuditsGroupTitle": "Additional items to manually check",
+        "toplevelWarningsMessage": "There were issues affecting this run of Lighthouse:",
+        "scorescaleLabel": "Score scale:",
+        "crcLongestDurationLabel": "Maximum critical path latency:",
+        "crcInitialNavigation": "Initial Navigation",
+        "lsPerformanceCategoryDescription": "[Lighthouse](https://developers.google.com/web/tools/lighthouse/) analysis of the current page on an emulated mobile network. Values are estimated and may vary.",
+        "labDataTitle": "Lab Data"
+      }
     }
+  },
+  "analysisUTCTimestamp": "2019-03-15T16:34:41.321Z"
 }

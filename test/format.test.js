@@ -1,10 +1,8 @@
 /* eslint-env mocha */
-/* eslint-disable node/no-deprecated-api */
 'use strict';
-const assert = require('assert');
+const {assert} = require('chai');
 const stripAnsi = require('strip-ansi');
 const output = require('../lib/output');
-const psi = require('..');
 const response = require('./fixtures/response');
 
 describe('Formatting', () => {
@@ -24,7 +22,7 @@ describe('Formatting', () => {
 
   it('should correctly format PageSpeed Insights response', function () {
     return output({strategy: 'desktop'}, response).then(() => {
-      assert(/Speed: +88/.test(stripAnsi(this.formattedOutput)));
+      assert(/Performance: +99/.test(stripAnsi(this.formattedOutput)));
     });
   });
 
@@ -36,29 +34,13 @@ describe('Formatting', () => {
 
   it('should format PageSpeed Insights response as JSON output', function () {
     return output({strategy: 'desktop', format: 'json'}, response).then(() => {
-      assert(/"Speed": 88/.test(stripAnsi(this.formattedOutput)));
+      assert(/"Performance": 99/.test(stripAnsi(this.formattedOutput)));
     });
   });
 
   it('should have an error in the callback if threshold is not met', () => {
     return output({threshold: 100}, response).catch(error => {
       assert.equal(error.name, 'Error', 'Expected an error.');
-    });
-  });
-});
-
-describe('API', function () {
-  this.timeout(50000);
-
-  it('should get data from PageSpeed Insights', () => {
-    return psi('addyosmani.com/').then(data => {
-      assert.strictEqual(data.data.title, 'AddyOsmani.com');
-    });
-  });
-
-  it('should support options', () => {
-    return psi('addyosmani.com/', {locale: 'no'}).then(data => {
-      assert.strictEqual(data.data.formattedResults.locale, 'no');
     });
   });
 });

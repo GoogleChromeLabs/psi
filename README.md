@@ -4,7 +4,7 @@
 
 ![](screenshot.png)
 
-Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights v4](https://developers.google.com/speed/docs/insights/v4/about) with tidy reporting for your build process.
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights v5](https://developers.google.com/speed/docs/insights/v5/about) with tidy reporting for your build process.
 
 
 ## Install
@@ -15,6 +15,8 @@ $ npm install psi
 
 
 ## Usage
+
+<!-- TODO Update this section with v5+ information -->
 
 ```js
 const psi = require('psi');
@@ -114,8 +116,6 @@ $ psi --help
     --format     Output format: cli|json|tap
     --locale     Locale results should be generated in
     --threshold  Threshold score to pass the PageSpeed test
-    --optimized  Get the URL of optimized resources
-    --download   Download optimized resources
 
   Example
     $ psi https://addyosmani.com --strategy=mobile
