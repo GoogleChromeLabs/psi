@@ -1,4 +1,4 @@
-# psi [![Build Status](https://travis-ci.org/addyosmani/psi.svg?branch=master)](https://travis-ci.org/addyosmani/psi)
+# psi [![Build Status](https://travis-ci.org/googleChromeLabs/psi.svg?branch=master)](https://travis-ci.org/googleChromeLabs/psi)
 
 > PageSpeed Insights with reporting
 
