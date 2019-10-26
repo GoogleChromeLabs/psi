@@ -7,14 +7,15 @@
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
-    "url": "addyosmani.com"
+    "url": "https://addyosmani.com"
   },
   "bin": "cli.js",
   "engines": {
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && mocha"
+    "test": "xo && mocha",
+    "coverage": "nyc --reporter=html --reporter=text mocha"
   },
   "files": [
     "cli.js",
@@ -49,6 +50,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
+    "nyc": "^14.1.1",
     "xo": "^0.24.0"
   },
   "xo": {
