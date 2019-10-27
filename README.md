@@ -23,21 +23,20 @@ const psi = require('psi');
 
 (async () => {
   // Get the PageSpeed Insights report
-  const data = await psi('https://theverge.com');
-  console.log(data.ruleGroups.SPEED.score);
-  console.log(data.pageStats);
+  const { data } = await psi('https://theverge.com');
+  console.log('Speed score:', data.lighthouseResult.categories.performance.score);
+  // console.log(data.pageStats);
 
   // Output a formatted report to the terminal
   await psi.output('https://theverge.com');
   console.log('Done');
 
-  // Supply options to PSI and get back speed and usability scores
-  const data2 = await psi('https://theverge.com', {
+  // Supply options to PSI and get back speed
+  const data2 = await psi('https://google.com', {
     nokey: 'true',
-    strategy: 'mobile'
+    strategy: 'desktop'
   });
-  console.log('Speed score:', data.ruleGroups.SPEED.score);
-  console.log('Usability score:', data.ruleGroups.USABILITY.score);
+  console.log('Speed score:', data2.data.lighthouseResult.categories.performance.score);
 })();
 ```
 
