@@ -41,7 +41,6 @@ const psi = require('psi');
 
 As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores. The latter is based on [usability rules](https://developers.google.com/speed/docs/insights/rules) that score a page based on factors like the presence of a sensible mobile [viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport).
 
-
 ## API
 
 ### psi(url, [options])
