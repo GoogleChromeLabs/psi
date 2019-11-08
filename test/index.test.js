@@ -15,11 +15,12 @@ describe('Index file', () => {
         expect(error.message).to.eql('URL required');
       });
   });
-  describe('handleOpts method', () => {
+  describe('handleOpts method', async () => {
     const defaultConfig = {
       nokey: true,
       url: 'http://addyosmani.com'
     };
+
     it('should return strategy "mobile" if no strategy is passed', () => {
       const expectedOutput = {
         ...defaultConfig,

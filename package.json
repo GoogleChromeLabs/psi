@@ -14,7 +14,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && mocha"
+    "test": "mocha"
   },
   "files": [
     "cli.js",
