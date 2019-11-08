@@ -1,9 +1,9 @@
 {
   "name": "psi",
-  "version": "3.1.0",
+  "version": "4.0.1",
   "description": "PageSpeed Insights with reporting",
   "license": "Apache-2.0",
-  "repository": "addyosmani/psi",
+  "repository": "GoogleChromeLabs/psi",
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",

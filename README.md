@@ -23,26 +23,23 @@ const psi = require('psi');
 
 (async () => {
   // Get the PageSpeed Insights report
-  const data = await psi('https://theverge.com');
-  console.log(data.ruleGroups.SPEED.score);
-  console.log(data.pageStats);
+  const { data } = await psi('https://theverge.com');
+  console.log('Speed score:', data.lighthouseResult.categories.performance.score);
 
   // Output a formatted report to the terminal
   await psi.output('https://theverge.com');
   console.log('Done');
 
-  // Supply options to PSI and get back speed and usability scores
+  // Supply options to PSI and get back speed
   const data2 = await psi('https://theverge.com', {
     nokey: 'true',
-    strategy: 'mobile'
+    strategy: 'desktop'
   });
-  console.log('Speed score:', data.ruleGroups.SPEED.score);
-  console.log('Usability score:', data.ruleGroups.USABILITY.score);
+  console.log('Speed score:', data2.data.lighthouseResult.categories.performance.score);
 })();
 ```
 
 As of PSI 2.x, we expose both the PageSpeed Insights speed and usability scores. The latter is based on [usability rules](https://developers.google.com/speed/docs/insights/rules) that score a page based on factors like the presence of a sensible mobile [viewport](https://developers.google.com/speed/docs/insights/ConfigureViewport).
-
 
 ## API
 
