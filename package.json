@@ -7,7 +7,7 @@
   "author": {
     "name": "Addy Osmani",
     "email": "addyosmani@gmail.com",
-    "url": "addyosmani.com"
+    "url": "https://addyosmani.com"
   },
   "bin": "cli.js",
   "engines": {
