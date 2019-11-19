@@ -14,8 +14,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && mocha",
-    "coverage": "nyc --reporter=html --reporter=text mocha"
+    "test": "mocha"
   },
   "files": [
     "cli.js",
@@ -35,8 +34,8 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "download": "^7.0.0",
-    "googleapis": "^38.0.0",
-    "humanize-url": "^1.0.1",
+    "googleapis": "^45.0.0",
+    "humanize-url": "^2.1.0",
     "lodash": "^4.17.11",
     "meow": "^5.0.0",
     "pify": "^4.0.0",
@@ -51,8 +50,7 @@
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
     "rewire": "^4.0.1",
-    "nyc": "^14.1.1",
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   },
   "xo": {
     "space": true
