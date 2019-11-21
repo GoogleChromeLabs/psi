@@ -28,7 +28,7 @@ describe('Index file', () => {
       };
       expect(handleOptions('http://addyosmani.com')).to.eql(expectedOutput);
     });
-    it('should return strategy "desktop" if "desktop" is passed as strategy', () => {
+    it('should respect passed strategy options', () => {
       const expectedOutput = {
         ...defaultConfig,
         strategy: 'desktop'
