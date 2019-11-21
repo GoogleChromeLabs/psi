@@ -36,7 +36,6 @@
     "download": "^7.0.0",
     "googleapis": "^38.0.0",
     "humanize-url": "^1.0.1",
-    "lodash": "^4.17.11",
     "meow": "^5.0.0",
     "pify": "^4.0.0",
     "prepend-http": "^2.0.0",
