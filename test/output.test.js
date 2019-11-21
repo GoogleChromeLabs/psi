@@ -11,7 +11,7 @@ describe('getThreshold method', () => {
     expect(getThreshold(false)).to.equal(70);
     expect(getThreshold(101)).to.equal(70);
   });
-  it('should return the passed threshold value if correct', () => {
+  it('should respect passed threshold values', () => {
     expect(getThreshold(80)).to.equal(80);
   });
 });
