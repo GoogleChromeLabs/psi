@@ -14,7 +14,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "xo && mocha"
   },
   "files": [
     "cli.js",
@@ -34,7 +34,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "download": "^7.0.0",
-    "googleapis": "^45.0.0",
+    "googleapis": "^38.0.0",
     "humanize-url": "^2.1.0",
     "lodash": "^4.17.11",
     "meow": "^5.0.0",
