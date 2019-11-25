@@ -21,7 +21,7 @@ describe('Index file', () => {
       url: 'http://addyosmani.com'
     };
 
-    it('should respect passed strategy options', () => {
+    it('should return strategy "mobile" if no strategy is passed', () => {
       const expectedOutput = {
         ...defaultConfig,
         strategy: 'mobile'
