@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 const {expect} = require('chai');
 
-const {getOptions, getThreshold} = require('../lib/options-handler');
+const {getOptions, getThreshold, getReporter} = require('../lib/options-handler');
 
 describe('Options handler method', () => {
   describe('getOptions method', () => {
@@ -33,6 +33,17 @@ describe('Options handler method', () => {
     });
     it('should respect passed threshold values', () => {
       expect(getThreshold(80)).to.equal(80);
+    });
+  });
+
+  describe('getReporter method', () => {
+    it('should return "cli" if no valid format is passed', () => {
+      expect(getReporter('foo')).to.equal('cli');
+    });
+    it('should respect passed format if valid', () => {
+      expect(getReporter('cli')).to.equal('cli');
+      expect(getReporter('tap')).to.equal('tap');
+      expect(getReporter('json')).to.equal('json');
     });
   });
 });
