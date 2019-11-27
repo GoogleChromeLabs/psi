@@ -14,7 +14,8 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && mocha"
+    "test": "xo && mocha",
+    "coverage": "nyc --reporter=lcov mocha"
   },
   "files": [
     "cli.js",
