@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "xo && mocha",
-    "coverage": "nyc --reporter=lcov mocha"
+    "coverage": "nyc --reporter=html --reporter=text mocha"
   },
   "files": [
     "cli.js",
