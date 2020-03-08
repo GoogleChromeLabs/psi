@@ -1,4 +1,4 @@
-# psi [![Build Status](https://travis-ci.org/GoogleChromeLabs/psi.svg?branch=master)](https://travis-ci.org/GoogleChromeLabs/psi)
+# psi [![Build Status](https://travis-ci.org/GoogleChromeLabs/psi.svg?branch=master)](https://travis-ci.org/GoogleChromeLabs/psi) [![NPM psi package](https://img.shields.io/npm/v/psi.svg)](https://npmjs.org/package/psi)
 
 > PageSpeed Insights with reporting
 
