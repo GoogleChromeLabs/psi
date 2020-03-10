@@ -1,9 +1,9 @@
 'use strict';
-const {google} = require('googleapis');
+const { google } = require('googleapis');
 const pify = require('pify');
 const output = require('./lib/output');
-const {getOptions} = require('./lib/options-handler');
-const {pagespeedapi} = google.pagespeedonline('v5');
+const { getOptions } = require('./lib/options-handler');
+const { pagespeedapi } = google.pagespeedonline('v5');
 
 const runpagespeed = pify(pagespeedapi.runpagespeed).bind(pagespeedapi);
 
