@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "chalk": "^3.0.0",
-    "googleapis": "^47.0.0",
+    "googleapis": "^38.0.0",
     "humanize-url": "^2.1.0",
     "meow": "^6.0.1",
     "pify": "^4.0.0",

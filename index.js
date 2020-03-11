@@ -1,16 +1,17 @@
 'use strict';
-const { google } = require('googleapis');
+const {google} = require('googleapis');
 const pify = require('pify');
 const output = require('./lib/output');
 const {getOptions} = require('./lib/options-handler');
-const pagespeedonline = new google.pagespeedonline_v5.Pagespeedonline();
+
+const {runpagespeed} = pify(google.pagespeedonline('v5').pagespeedapi);
 
 const psi = (url, options) => Promise.resolve().then(() => {
   if (!url) {
     throw new Error('URL required');
   }
 
-  return pagespeedonline.pagespeedapi.runpagespeed(getOptions(url, options));
+  return runpagespeed(getOptions(url, options));
 });
 
 module.exports = psi;
