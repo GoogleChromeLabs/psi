@@ -2,17 +2,15 @@
 const { google } = require('googleapis');
 const pify = require('pify');
 const output = require('./lib/output');
-const { getOptions } = require('./lib/options-handler');
-const { pagespeedapi } = google.pagespeedonline('v5');
-
-const runpagespeed = pify(pagespeedapi.runpagespeed).bind(pagespeedapi);
+const {getOptions} = require('./lib/options-handler');
+const pagespeedonline = new google.pagespeedonline_v5.Pagespeedonline();
 
 const psi = (url, options) => Promise.resolve().then(() => {
   if (!url) {
     throw new Error('URL required');
   }
 
-  return runpagespeed(getOptions(url, options));
+  return pagespeedonline.pagespeedapi.runpagespeed(getOptions(url, options));
 });
 
 module.exports = psi;
