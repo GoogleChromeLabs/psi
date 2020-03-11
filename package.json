@@ -33,20 +33,20 @@
     "size"
   ],
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "googleapis": "^47.0.0",
     "humanize-url": "^2.1.0",
-    "meow": "^5.0.0",
-    "prepend-http": "^2.0.0",
-    "pretty-ms": "^4.0.0",
-    "sort-on": "^3.0.0",
-    "update-notifier": "^2.5.0"
+    "meow": "^6.0.1",
+    "prepend-http": "^3.0.1",
+    "pretty-ms": "^6.0.1",
+    "sort-on": "^4.1.0",
+    "update-notifier": "^4.1.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.0.2",
-    "strip-ansi": "^5.1.0",
-    "nyc": "^14.1.1",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "strip-ansi": "^6.0.0",
     "xo": "^0.25.3"
   },
   "xo": {
