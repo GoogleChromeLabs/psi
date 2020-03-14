@@ -3,8 +3,9 @@ const {google} = require('googleapis');
 const pify = require('pify');
 const output = require('./lib/output');
 const {getOptions} = require('./lib/options-handler');
+const {pagespeedapi} = google.pagespeedonline('v5');
 
-const {runpagespeed} = pify(google.pagespeedonline('v5').pagespeedapi);
+const runpagespeed = pify(pagespeedapi.runpagespeed).bind(pagespeedapi);
 
 const psi = (url, options) => Promise.resolve().then(() => {
   if (!url) {
