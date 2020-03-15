@@ -37,6 +37,7 @@
     "googleapis": "^47.0.0",
     "humanize-url": "^2.1.0",
     "meow": "^5.0.0",
+    "pify": "^4.0.1",
     "prepend-http": "^2.0.0",
     "pretty-ms": "^4.0.0",
     "sort-on": "^3.0.0",
