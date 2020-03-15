@@ -15,6 +15,7 @@ const cli = meow(`
     --format     Output format: cli|json|tap
     --locale     Locale results should be generated in
     --threshold  Threshold score to pass the PageSpeed test
+    --links  Adds link with more info about Oportunity
 
   Example
     $ psi https://addyosmani.com --strategy=mobile

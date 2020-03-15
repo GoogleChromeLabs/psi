@@ -40,6 +40,7 @@
     "prepend-http": "^2.0.0",
     "pretty-ms": "^4.0.0",
     "sort-on": "^3.0.0",
+    "terminal-link": "^2.1.1",
     "update-notifier": "^2.5.0"
   },
   "devDependencies": {
