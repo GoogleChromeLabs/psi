@@ -118,15 +118,34 @@ $ psi --help
     $ psi https://addyosmani.com --strategy=mobile
 ```
 
+## Common Use cases
 
-## Getting PSI into your build process
+<details>
+ <summary>Getting PSI into your build process.</summary><br>
 
 A sample [Gulp](https://github.com/addyosmani/psi-gulp-sample) project using PSI is available.
 
 If you use Grunt, [`grunt-pagespeed`](https://github.com/jrcryer/grunt-pagespeed) is a task by James Cryer that uses PSI under the hood.
 
 For testing local projects, we recommend using [`psi-ngrok`](https://github.com/denar90/psi-ngrok) or [`ngrok`](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/).
+</details>
 
+<details>
+  <summary>Getting filmstrips</summary>
+
+**Filmstrips** are returned by v5 but psi tool is not exposing that data. If you want to get **filmstrips** you can create a file that require `psi` tool and get the specific data from the `audits` object:
+
+```javascript
+const psi = require('psi');
+
+(async () => {
+  // Get the PageSpeed Insights report
+  const {data} = await psi('https://theverge.com');
+  console.log(data.lighthouseResult.audits['screenshot-thumbnails'].details.items);
+})();
+```
+
+</details>
 
 ## License
 
