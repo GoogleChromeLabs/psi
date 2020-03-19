@@ -133,7 +133,7 @@ For testing local projects, we recommend using [`psi-ngrok`](https://github.com/
 <details>
   <summary>Getting filmstrips</summary>
 
-**Filmstrips** are returned by v5 but psi tool is not exposing that data. If you want to get **filmstrips** you can create a file that require `psi` tool and get the specific data from the `audits` object:
+**Filmstrips** are returned by the v5 API as data uri's but the psi tool does not expose them on the cli. If you want to get **filmstrips** (or any audit details) you can require `psi` and get them from the `audits` object:
 
 ```javascript
 const psi = require('psi');
