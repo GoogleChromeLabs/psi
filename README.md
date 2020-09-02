@@ -86,6 +86,13 @@ Default: `70`
 
 Threshold score to pass the PageSpeed test. Useful for setting a performance budget.
 
+##### links
+
+Type: `boolean`<br>
+Default: `false`
+
+If passed adds links with more info about opportunities. Useful for checking documentation about opportunities.
+
 ### psi.output(url, [options])
 
 Output the formatted report to the terminal.
