@@ -599,13 +599,7 @@
         "description": "Consider adding preconnect or dns-prefetch resource hints to establish early connections to important third-party origins. [Learn more](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect).",
         "score": 1.0,
         "scoreDisplayMode": "numeric",
-        "warnings": [],
-        "details": {
-          "type": "opportunity",
-          "items": [],
-          "overallSavingsMs": 0.0,
-          "headings": []
-        }
+        "warnings": []
       },
       "bootup-time": {
         "id": "bootup-time",
